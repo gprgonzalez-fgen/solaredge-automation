@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_mbK7sBerEfGnmecgVvjMBQ" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_mbLiwBerEfGnmecgVvjMBQ" comment="" name="conn_pi_dev_raw_jdbcParameters" prompt="conn_pi_dev_raw_jdbcParameters?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_mbLiwRerEfGnmecgVvjMBQ" comment="" name="conn_pi_dev_raw_keyAlias" prompt="conn_pi_dev_raw_keyAlias?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="snowflake"/>
+  <contextParameter xmi:id="_mbLiwherEfGnmecgVvjMBQ" comment="" name="conn_pi_dev_raw_warehouse" prompt="conn_pi_dev_raw_warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="PI_ENERGY_WAREHOUSE"/>
+  <contextParameter xmi:id="_mbLiwxerEfGnmecgVvjMBQ" comment="" name="conn_pi_dev_raw_role" prompt="conn_pi_dev_raw_role?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_mbLixBerEfGnmecgVvjMBQ" comment="" name="conn_pi_dev_raw_account" prompt="conn_pi_dev_raw_account?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="YHSLVLG-FPH"/>
+  <contextParameter xmi:id="_mbLixRerEfGnmecgVvjMBQ" comment="" name="conn_pi_dev_raw_loginTimeout" prompt="conn_pi_dev_raw_loginTimeout?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="15"/>
+  <contextParameter xmi:id="_mbLixherEfGnmecgVvjMBQ" comment="" name="conn_pi_dev_raw_database" prompt="conn_pi_dev_raw_database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="PI_ENERGY_DEV"/>
+  <contextParameter xmi:id="_mbLixxerEfGnmecgVvjMBQ" comment="" name="conn_pi_dev_raw_userId" prompt="conn_pi_dev_raw_userId?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="pi_energy_etl_user"/>
+  <contextParameter xmi:id="_mbLiyBerEfGnmecgVvjMBQ" comment="" name="conn_pi_dev_raw_jdbcUrlSuffix" prompt="conn_pi_dev_raw_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=".snowflakecomputing.com"/>
+  <contextParameter xmi:id="_mbLiyRerEfGnmecgVvjMBQ" comment="" name="conn_pi_dev_raw_dbSchema" prompt="conn_pi_dev_raw_dbSchema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="RAW"/>
+</talendfile:ContextType>
