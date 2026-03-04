@@ -1,0 +1,23 @@
+# talend workspace junk
+.metadata/
+.config/
+p2/
+configuration/
+.JETEmitters/
+
+# talend project junk
+**/.Java/
+**/temp/
+**/bin/
+**/migration.log
+**/TDQ_Libraries/
+**/talend.project.local
+**/.settings/
+**/sqlPatterns/
+**/report/
+
+# talend build and maven junk
+**/poms/
+**/target/
+
+
