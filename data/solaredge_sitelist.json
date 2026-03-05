@@ -1,0 +1,630 @@
+{
+  "sites": {
+    "count": 17,
+    "site": [
+      {
+        "id": 1700517,
+        "name": "Citihardware Davao",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 287.28,
+        "lastUpdateTime": "2026-03-06",
+        "currency": "PHP",
+        "installationDate": "2020-07-08",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Davao City",
+          "address": "Davao City Diversion Road, Davao City Diversion Road",
+          "address2": "",
+          "zip": "8000",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 2,
+        "highestImpact": 2,
+        "primaryModule": {
+          "manufacturerName": "Risen Energy Co. Ltd.",
+          "modelName": "RSM72-6-380M",
+          "maximumPower": 380,
+          "temperatureCoef": -0.39
+        },
+        "uris": {
+          "SITE_IMAGE": "/site/1700517/siteImage/ct.PNG",
+          "DATA_PERIOD": "/site/1700517/dataPeriod",
+          "DETAILS": "/site/1700517/details",
+          "OVERVIEW": "/site/1700517/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 1396348,
+        "name": "CLSU - RM CARE",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 60.06,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2019-11-11",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Science City of Muñoz",
+          "address": "RM Care",
+          "address2": "",
+          "zip": "3120",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 0,
+        "highestImpact": 0,
+        "primaryModule": {
+          "manufacturerName": "JA solar",
+          "modelName": "JAM-385W",
+          "maximumPower": 385
+        },
+        "uris": {
+          "DETAILS": "/site/1396348/details",
+          "DATA_PERIOD": "/site/1396348/dataPeriod",
+          "OVERVIEW": "/site/1396348/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 1440148,
+        "name": "CLSU- AUDITORIUM",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 83.16,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2019-12-06",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Science City of Muñoz",
+          "address": "College Avenue ",
+          "address2": "",
+          "zip": "3102",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 1,
+        "highestImpact": 1,
+        "primaryModule": {
+          "manufacturerName": "JA solar",
+          "modelName": "JAM-385W",
+          "maximumPower": 385
+        },
+        "uris": {
+          "DETAILS": "/site/1440148/details",
+          "DATA_PERIOD": "/site/1440148/dataPeriod",
+          "OVERVIEW": "/site/1440148/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 1404557,
+        "name": "CLSU- COLLEGE AGRICULTURE",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 83.16,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2019-12-06",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Science City of Muñoz",
+          "address": "College of Agriculture",
+          "address2": "",
+          "zip": "3102",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 1,
+        "highestImpact": 2,
+        "primaryModule": {
+          "manufacturerName": "JA solar",
+          "modelName": "JAM-385W",
+          "maximumPower": 385
+        },
+        "uris": {
+          "DETAILS": "/site/1404557/details",
+          "DATA_PERIOD": "/site/1404557/dataPeriod",
+          "OVERVIEW": "/site/1404557/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 1396476,
+        "name": "CLSU-CHSI ARTS",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 124.74,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2019-12-05",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Science City of Muñoz",
+          "address": "South H. Escudero ",
+          "address2": "",
+          "zip": "3102",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 0,
+        "highestImpact": 0,
+        "primaryModule": {
+          "manufacturerName": "JA solar",
+          "modelName": "JAM-385W",
+          "maximumPower": 385
+        },
+        "uris": {
+          "DETAILS": "/site/1396476/details",
+          "DATA_PERIOD": "/site/1396476/dataPeriod",
+          "OVERVIEW": "/site/1396476/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 1365296,
+        "name": "CLSU-Clirdec",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 360.36,
+        "lastUpdateTime": "2026-01-09",
+        "installationDate": "2019-11-11",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Science City of Muñoz",
+          "address": "College Avenue ",
+          "address2": "",
+          "zip": "3120",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 0,
+        "highestImpact": 0,
+        "primaryModule": {
+          "manufacturerName": "JA solar",
+          "modelName": "JAM-385W",
+          "maximumPower": 385
+        },
+        "uris": {
+          "DETAILS": "/site/1365296/details",
+          "DATA_PERIOD": "/site/1365296/dataPeriod",
+          "OVERVIEW": "/site/1365296/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 1396398,
+        "name": "CLSU-FPJ HALL",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 120.12,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2019-12-05",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Science City of Muñoz",
+          "address": "FPJ Hall",
+          "address2": "",
+          "zip": "3120",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 0,
+        "highestImpact": 0,
+        "primaryModule": {
+          "manufacturerName": "JA solar",
+          "modelName": "JAM-385W",
+          "maximumPower": 385
+        },
+        "uris": {
+          "DETAILS": "/site/1396398/details",
+          "DATA_PERIOD": "/site/1396398/dataPeriod",
+          "OVERVIEW": "/site/1396398/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 1396387,
+        "name": "CLSU-MULTIPURPOSE HALL",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 62.37,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2019-11-11",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Science City of Muñoz",
+          "address": "Multipurpose Hall",
+          "address2": "",
+          "zip": "3120",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 0,
+        "highestImpact": 0,
+        "primaryModule": {
+          "manufacturerName": "JA solar",
+          "modelName": "JAM-385W",
+          "maximumPower": 385
+        },
+        "uris": {
+          "DETAILS": "/site/1396387/details",
+          "DATA_PERIOD": "/site/1396387/dataPeriod",
+          "OVERVIEW": "/site/1396387/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 1460909,
+        "name": "CLSU-TBI",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 83.16,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2020-01-21",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Science City of Muñoz",
+          "address": "College Avenue ",
+          "address2": "",
+          "zip": "3102",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 0,
+        "highestImpact": 0,
+        "primaryModule": {
+          "manufacturerName": "JA solar",
+          "modelName": "JAM-385W",
+          "maximumPower": 385
+        },
+        "uris": {
+          "DETAILS": "/site/1460909/details",
+          "DATA_PERIOD": "/site/1460909/dataPeriod",
+          "OVERVIEW": "/site/1460909/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 2218438,
+        "name": "FIRST PHILEC INC",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 393.38,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2021-04-27",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Tanauan",
+          "address": "Unnamed Road ",
+          "address2": "",
+          "zip": "4206",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 4,
+        "highestImpact": 6,
+        "primaryModule": {
+          "manufacturerName": "Risen",
+          "modelName": "RSM156",
+          "maximumPower": 445
+        },
+        "uris": {
+          "SITE_IMAGE": "/site/2218438/siteImage/philec%2520bldg%25202.jpg",
+          "DATA_PERIOD": "/site/2218438/dataPeriod",
+          "DETAILS": "/site/2218438/details",
+          "OVERVIEW": "/site/2218438/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 3471100,
+        "name": "First Philec Inc. Expansion",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 153.69,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2023-02-27",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Tanauan",
+          "address": "First Philec Inc.",
+          "address2": "",
+          "zip": "4027",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 1,
+        "highestImpact": 2,
+        "primaryModule": {
+          "manufacturerName": "JA solar",
+          "modelName": "JAM72S30-545/MR",
+          "maximumPower": 545,
+          "temperatureCoef": -0.35
+        },
+        "uris": {
+          "PUBLIC_URL": "https://monitoring.solaredge.com/solaredge-web/p/public?name=FPI",
+          "SITE_IMAGE": "/site/3471100/siteImage/FPI%2520Expansion.jpg",
+          "DATA_PERIOD": "/site/3471100/dataPeriod",
+          "DETAILS": "/site/3471100/details",
+          "OVERVIEW": "/site/3471100/overview"
+        },
+        "publicSettings": {
+          "name": "FPI",
+          "isPublic": true
+        }
+      },
+      {
+        "id": 1849165,
+        "name": "ILOILO DOCTORS COLLEGE",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 52.44,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2020-10-10",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Iloilo City",
+          "address": "Infante Street ",
+          "address2": "",
+          "zip": "5000",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 0,
+        "highestImpact": 0,
+        "primaryModule": {
+          "manufacturerName": "Risen",
+          "modelName": "Risen-380",
+          "maximumPower": 380
+        },
+        "uris": {
+          "DETAILS": "/site/1849165/details",
+          "DATA_PERIOD": "/site/1849165/dataPeriod",
+          "OVERVIEW": "/site/1849165/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 1849149,
+        "name": "Iloilo Doctors Hospital",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 453.72,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2020-10-10",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Iloilo City",
+          "address": "Infante Street ",
+          "address2": "",
+          "zip": "5000",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 13,
+        "highestImpact": 2,
+        "primaryModule": {
+          "manufacturerName": "Risen",
+          "modelName": "Risen-380",
+          "maximumPower": 380
+        },
+        "uris": {
+          "DETAILS": "/site/1849149/details",
+          "DATA_PERIOD": "/site/1849149/dataPeriod",
+          "OVERVIEW": "/site/1849149/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 1364633,
+        "name": "Marymart Mall Iloilo",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 218.88,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2019-11-09",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Iloilo",
+          "address": "Delgado St, Iloilo City Proper, Iloilo City, 5000 Iloilo",
+          "address2": "",
+          "zip": "5000",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 42,
+        "highestImpact": 2,
+        "primaryModule": {
+          "manufacturerName": "Risen Energy",
+          "modelName": "380W Mono PERC",
+          "maximumPower": 380,
+          "temperatureCoef": -0.39
+        },
+        "uris": {
+          "SITE_IMAGE": "/site/1364633/siteImage/file1576026481.jpg",
+          "DATA_PERIOD": "/site/1364633/dataPeriod",
+          "DETAILS": "/site/1364633/details",
+          "OVERVIEW": "/site/1364633/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 1518368,
+        "name": "Metro Iloilo Hospital and Medical Center Inc.",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 136.8,
+        "lastUpdateTime": "2026-03-06",
+        "installationDate": "2020-02-01",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Iloilo City",
+          "address": "Metropolis Avenue, Brgy. Tagbak, Jaro",
+          "address2": "",
+          "zip": "5012",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 0,
+        "highestImpact": 0,
+        "primaryModule": {
+          "manufacturerName": "Risen",
+          "modelName": "RSM72-6-360M-380M",
+          "maximumPower": 380
+        },
+        "uris": {
+          "SITE_IMAGE": "/site/1518368/siteImage/viber_image_2020-02-29_13-57-21.jpg",
+          "DATA_PERIOD": "/site/1518368/dataPeriod",
+          "DETAILS": "/site/1518368/details",
+          "OVERVIEW": "/site/1518368/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 4549321,
+        "name": "TUP-Manila",
+        "accountId": 317092,
+        "status": "PendingCommunication",
+        "peakPower": 313.5,
+        "installationDate": "2025-02-20",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Manila",
+          "address": "Ayala Boulevard",
+          "zip": "1000",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "primaryModule": {
+          "manufacturerName": "Longi Solar",
+          "modelName": "LR5-72HPH-550M",
+          "maximumPower": 550,
+          "temperatureCoef": -0.34
+        },
+        "uris": {
+          "DETAILS": "/site/4549321/details",
+          "DATA_PERIOD": "/site/4549321/dataPeriod",
+          "OVERVIEW": "/site/4549321/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      },
+      {
+        "id": 1214847,
+        "name": "Waltermart Nasugbu",
+        "accountId": 317092,
+        "status": "Active",
+        "peakPower": 118.4,
+        "lastUpdateTime": "2025-10-27",
+        "currency": "PHP",
+        "installationDate": "2019-07-31",
+        "ptoDate": null,
+        "notes": "",
+        "type": "Optimizers & Inverters",
+        "location": {
+          "country": "Philippines",
+          "city": "Nasugbu",
+          "address": "J P Laurel Street, J P Laurel Street",
+          "address2": "",
+          "zip": "4231",
+          "timeZone": "Asia/Manila",
+          "countryCode": "PH"
+        },
+        "alertQuantity": 2,
+        "highestImpact": 4,
+        "primaryModule": {
+          "manufacturerName": "Risen Energy",
+          "modelName": "370W Mono PERC",
+          "maximumPower": 370,
+          "temperatureCoef": -0.39
+        },
+        "uris": {
+          "SITE_IMAGE": "/site/1214847/siteImage/Waltermart%20Nasugbu",
+          "DATA_PERIOD": "/site/1214847/dataPeriod",
+          "DETAILS": "/site/1214847/details",
+          "OVERVIEW": "/site/1214847/overview"
+        },
+        "publicSettings": {
+          "isPublic": false
+        }
+      }
+    ]
+  }
+}
