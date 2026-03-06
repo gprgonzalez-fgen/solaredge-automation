@@ -1,0 +1,126 @@
+{
+  "datePeriodList": {
+    "count": 17,
+    "siteEnergyList": [
+      {
+        "siteId": 3471100,
+        "dataPeriod": {
+          "startDate": "2022-12-08",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1849165,
+        "dataPeriod": {
+          "startDate": "2020-10-19",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1404557,
+        "dataPeriod": {
+          "startDate": "2019-10-24",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1396476,
+        "dataPeriod": {
+          "startDate": "2019-12-06",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1396398,
+        "dataPeriod": {
+          "startDate": "2019-10-24",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1396387,
+        "dataPeriod": {
+          "startDate": "2019-10-24",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1849149,
+        "dataPeriod": {
+          "startDate": "2020-09-03",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1214847,
+        "dataPeriod": {
+          "startDate": "2019-09-25",
+          "endDate": "2025-10-27"
+        }
+      },
+      {
+        "siteId": 1364633,
+        "dataPeriod": {
+          "startDate": "2020-02-21",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1396348,
+        "dataPeriod": {
+          "startDate": "2019-12-06",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1460909,
+        "dataPeriod": {
+          "startDate": "2019-10-24",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 4549321,
+        "dataPeriod": {
+          "startDate": null,
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1700517,
+        "dataPeriod": {
+          "startDate": "2020-09-03",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1440148,
+        "dataPeriod": {
+          "startDate": "2020-01-02",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1365296,
+        "dataPeriod": {
+          "startDate": "2019-10-24",
+          "endDate": "2026-01-09"
+        }
+      },
+      {
+        "siteId": 2218438,
+        "dataPeriod": {
+          "startDate": "2021-04-30",
+          "endDate": "2026-03-06"
+        }
+      },
+      {
+        "siteId": 1518368,
+        "dataPeriod": {
+          "startDate": "2020-02-29",
+          "endDate": "2026-03-06"
+        }
+      }
+    ]
+  }
+}

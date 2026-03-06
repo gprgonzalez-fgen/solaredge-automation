@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_W8T1URk9EfGE-vukTPVQsQ" name="SolarEdge_SiteData_Bulk_Schema" id="_W8T1UBk9EfGE-vukTPVQsQ" dataPackage="_W8T1Vhk9EfGE-vukTPVQsQ" JSONFilePath="D:/Git/FGEN/solaredge-talend/data/solaredge_sitedata_bulk.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_W8T1Uhk9EfGE-vukTPVQsQ" LimitBoucle="50" AbsoluteXPathQuery="$.datePeriodList.siteEnergyList[*]">
+      <schemaTargets xmi:id="_W8T1Uxk9EfGE-vukTPVQsQ" RelativeXPathQuery="siteId" TagName="SITE_ID"/>
+      <schemaTargets xmi:id="_W8T1VBk9EfGE-vukTPVQsQ" RelativeXPathQuery="dataPeriod.startDate" TagName="START_DATE"/>
+      <schemaTargets xmi:id="_W8T1VRk9EfGE-vukTPVQsQ" RelativeXPathQuery="dataPeriod.endDate" TagName="END_DATE"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_W8T1Vhk9EfGE-vukTPVQsQ" name="default" dataManager="_W8T1URk9EfGE-vukTPVQsQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_W8T1Vxk9EfGE-vukTPVQsQ" id="_Mo99QBk9EfGE-vukTPVQsQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pFlu4Bk9EfGE-vukTPVQsQ" label="SITE_ID" length="10" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pFlu4Rk9EfGE-vukTPVQsQ" label="START_DATE" length="10" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pFlu4hk9EfGE-vukTPVQsQ" label="END_DATE" length="10" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
