@@ -1,8 +1,11 @@
+Clarifications:
+
+* Timestamp (in snowflake) is of TIMESTAMP\_NTZ or TIMESTAMP\_LTZ
+
 SolarEdge\_SiteList\_Schema
 
 * metadata - some columns have lengths of 0 since there's no entry where they have a value
-
-
+* publicSettings Snowflake column name, different in tables (DIM\_SOLAREDGE\_SITELIST v SOLAREDGE\_SITE\_DETAILS)
 
 
 
@@ -47,6 +50,4 @@ Format:
 Sample Data from Source:
 
 Remarks:
-
-
 

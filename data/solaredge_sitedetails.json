@@ -1,0 +1,41 @@
+{
+  "details": {
+    "id": 1700517,
+    "name": "Citihardware Davao",
+    "accountId": 317092,
+    "status": "Active",
+    "peakPower": 287.28,
+    "lastUpdateTime": "2026-03-06",
+    "installationDate": "2020-07-08",
+    "ptoDate": null,
+    "notes": "",
+    "type": "Optimizers & Inverters",
+    "location": {
+      "country": "Philippines",
+      "city": "Davao City",
+      "address": "Davao City Diversion Road, Davao City Diversion Road",
+      "address2": "",
+      "zip": "8000",
+      "timeZone": "Asia/Manila",
+      "countryCode": "PH",
+      "latitude": "7.065395384034475",
+      "longitude": "125.56540824472904"
+    },
+    "primaryModule": {
+      "manufacturerName": "Risen Energy Co. Ltd.",
+      "modelName": "RSM72-6-380M",
+      "maximumPower": 380,
+      "temperatureCoef": -0.39
+    },
+    "alertQuantity": 1,
+    "highestImpact": "2",
+    "uris": {
+      "DETAILS": "/site/1700517/details",
+      "DATA_PERIOD": "/site/1700517/dataPeriod",
+      "OVERVIEW": "/site/1700517/overview"
+    },
+    "publicSettings": {
+      "isPublic": null
+    }
+  }
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_N7CQoBkSEfGE-vukTPVQsQ" name="SolarEdge_SiteDetails" id="_N6-mQBkSEfGE-vukTPVQsQ" dataPackage="_N7CQvxkSEfGE-vukTPVQsQ" JSONFilePath="D:/Git/FGEN/solaredge-talend/data/solaredge_sitedetails.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_N7CQoRkSEfGE-vukTPVQsQ" LimitBoucle="50" AbsoluteXPathQuery="$.details">
+      <schemaTargets xmi:id="_N7CQohkSEfGE-vukTPVQsQ" RelativeXPathQuery="id" TagName="SITE_ID"/>
+      <schemaTargets xmi:id="_N7CQoxkSEfGE-vukTPVQsQ" RelativeXPathQuery="name" TagName="CUST_NAME"/>
+      <schemaTargets xmi:id="_N7CQpBkSEfGE-vukTPVQsQ" RelativeXPathQuery="accountId" TagName="ACCOUNT_ID"/>
+      <schemaTargets xmi:id="_N7CQpRkSEfGE-vukTPVQsQ" RelativeXPathQuery="status" TagName="STATUS"/>
+      <schemaTargets xmi:id="_N7CQphkSEfGE-vukTPVQsQ" RelativeXPathQuery="peakPower" TagName="PEAK_POWER"/>
+      <schemaTargets xmi:id="_N7CQpxkSEfGE-vukTPVQsQ" RelativeXPathQuery="lastUpdateTime" TagName="LAST_UPDATE_TIME"/>
+      <schemaTargets xmi:id="_N7CQqBkSEfGE-vukTPVQsQ" RelativeXPathQuery="installationDate" TagName="INSTALL_DATE"/>
+      <schemaTargets xmi:id="_N7CQqRkSEfGE-vukTPVQsQ" RelativeXPathQuery="ptoDate" TagName="PTO_DATE"/>
+      <schemaTargets xmi:id="_N7CQqhkSEfGE-vukTPVQsQ" RelativeXPathQuery="notes" TagName="NOTES"/>
+      <schemaTargets xmi:id="_N7CQqxkSEfGE-vukTPVQsQ" RelativeXPathQuery="type" TagName="TYPE"/>
+      <schemaTargets xmi:id="_N7CQrBkSEfGE-vukTPVQsQ" RelativeXPathQuery="location.country" TagName="LOC_COUNTRY"/>
+      <schemaTargets xmi:id="_N7CQrRkSEfGE-vukTPVQsQ" RelativeXPathQuery="location.city" TagName="LOC_CITY"/>
+      <schemaTargets xmi:id="_N7CQrhkSEfGE-vukTPVQsQ" RelativeXPathQuery="location.address" TagName="LOC_ADDR1"/>
+      <schemaTargets xmi:id="_N7CQrxkSEfGE-vukTPVQsQ" RelativeXPathQuery="location.address2" TagName="LOC_ADDR2"/>
+      <schemaTargets xmi:id="_N7CQsBkSEfGE-vukTPVQsQ" RelativeXPathQuery="location.zip" TagName="LOC_ZIP"/>
+      <schemaTargets xmi:id="_N7CQsRkSEfGE-vukTPVQsQ" RelativeXPathQuery="location.timeZone" TagName="LOC_TIMEZONE"/>
+      <schemaTargets xmi:id="_N7CQshkSEfGE-vukTPVQsQ" RelativeXPathQuery="location.countryCode" TagName="LOC_CNTRYCODE"/>
+      <schemaTargets xmi:id="_N7CQsxkSEfGE-vukTPVQsQ" RelativeXPathQuery="location.latitude" TagName="LATITUDE"/>
+      <schemaTargets xmi:id="_N7CQtBkSEfGE-vukTPVQsQ" RelativeXPathQuery="location.longitude" TagName="LONGITUDE"/>
+      <schemaTargets xmi:id="_N7CQtRkSEfGE-vukTPVQsQ" RelativeXPathQuery="primaryModule.manufacturerName" TagName="MANUFACTURER_NAME"/>
+      <schemaTargets xmi:id="_N7CQthkSEfGE-vukTPVQsQ" RelativeXPathQuery="primaryModule.modelName" TagName="MODEL_NAME"/>
+      <schemaTargets xmi:id="_N7CQtxkSEfGE-vukTPVQsQ" RelativeXPathQuery="primaryModule.maximumPower" TagName="MAX_POWER"/>
+      <schemaTargets xmi:id="_N7CQuBkSEfGE-vukTPVQsQ" RelativeXPathQuery="primaryModule.temperatureCoef" TagName="TEMP_COEF"/>
+      <schemaTargets xmi:id="_N7CQuRkSEfGE-vukTPVQsQ" RelativeXPathQuery="alertQuantity" TagName="ALERT_QTY"/>
+      <schemaTargets xmi:id="_N7CQuhkSEfGE-vukTPVQsQ" RelativeXPathQuery="highestImpact" TagName="HIGHEST_IMPACT"/>
+      <schemaTargets xmi:id="_N7CQuxkSEfGE-vukTPVQsQ" RelativeXPathQuery="uris.DETAILS" TagName="URIS_DETAILS"/>
+      <schemaTargets xmi:id="_N7CQvBkSEfGE-vukTPVQsQ" RelativeXPathQuery="uris.DATA_PERIOD" TagName="URIS_DATA_PD"/>
+      <schemaTargets xmi:id="_N7CQvRkSEfGE-vukTPVQsQ" RelativeXPathQuery="uris.OVERVIEW" TagName="URIS_OVERVIEW"/>
+      <schemaTargets xmi:id="_N7CQvhkSEfGE-vukTPVQsQ" RelativeXPathQuery="publicSettings.isPublic" TagName="PUBLIC_SETTINGS_IS_PUBLIC"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_N7CQvxkSEfGE-vukTPVQsQ" name="default" dataManager="_N7CQoBkSEfGE-vukTPVQsQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_N7CQwBkSEfGE-vukTPVQsQ" id="_CpybUBkREfGE-vukTPVQsQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLgBkVEfGE-vukTPVQsQ" label="SITE_ID" length="10" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLgRkVEfGE-vukTPVQsQ" label="CUST_NAME" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLghkVEfGE-vukTPVQsQ" label="ACCOUNT_ID" length="10" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLgxkVEfGE-vukTPVQsQ" label="STATUS" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLhBkVEfGE-vukTPVQsQ" label="PEAK_POWER" length="10" precision="5" talendType="id_Double" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLhRkVEfGE-vukTPVQsQ" label="LAST_UPDATE_TIME" length="10" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLhhkVEfGE-vukTPVQsQ" label="INSTALL_DATE" length="10" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLhxkVEfGE-vukTPVQsQ" label="PTO_DATE" length="10" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLiBkVEfGE-vukTPVQsQ" label="NOTES" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLiRkVEfGE-vukTPVQsQ" label="TYPE" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLihkVEfGE-vukTPVQsQ" label="LOC_COUNTRY" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLixkVEfGE-vukTPVQsQ" label="LOC_CITY" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLjBkVEfGE-vukTPVQsQ" label="LOC_ADDR1" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLjRkVEfGE-vukTPVQsQ" label="LOC_ADDR2" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLjhkVEfGE-vukTPVQsQ" label="LOC_ZIP" length="10" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLjxkVEfGE-vukTPVQsQ" label="LOC_TIMEZONE" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLkBkVEfGE-vukTPVQsQ" label="LOC_CNTRYCODE" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLkRkVEfGE-vukTPVQsQ" label="LATITUDE" length="20" precision="16" talendType="id_Double" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLkhkVEfGE-vukTPVQsQ" label="LONGITUDE" length="20" precision="15" talendType="id_Double" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLkxkVEfGE-vukTPVQsQ" label="MANUFACTURER_NAME" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLlBkVEfGE-vukTPVQsQ" label="MODEL_NAME" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLlRkVEfGE-vukTPVQsQ" label="MAX_POWER" length="10" precision="5" talendType="id_Double" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLlhkVEfGE-vukTPVQsQ" label="TEMP_COEF" length="10" precision="5" talendType="id_Double" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLlxkVEfGE-vukTPVQsQ" label="ALERT_QTY" length="10" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ANFLmBkVEfGE-vukTPVQsQ" label="HIGHEST_IMPACT" length="10" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hYlcMBkXEfGE-vukTPVQsQ" label="URIS_DETAILS" length="21" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_EXyKABkYEfGE-vukTPVQsQ" label="URIS_DATA_PD" length="24" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hYlcMhkXEfGE-vukTPVQsQ" label="URIS_OVERVIEW" length="22" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_hYlcMxkXEfGE-vukTPVQsQ" label="PUBLIC_SETTINGS_IS_PUBLIC" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
