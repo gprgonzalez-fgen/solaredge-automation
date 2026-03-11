@@ -435,8 +435,8 @@
       <column comment="" key="false" length="255" name="TIME_UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TYPE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="VALUE" nullable="true" pattern="" precision="5" sourceType="" type="id_Double" originalLength="25" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="VALUE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -494,15 +494,15 @@
       <column comment="" key="false" length="255" name="TIME_UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TYPE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="VALUE" nullable="true" pattern="" precision="5" sourceType="" type="id_Double" originalLength="25" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="VALUE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="255" name="TIME_UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TYPE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="VALUE" nullable="true" pattern="" precision="5" sourceType="" type="id_Double" originalLength="25" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="VALUE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -541,8 +541,8 @@
       <column comment="" key="false" length="255" name="TIME_UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TYPE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="VALUE" nullable="true" pattern="" precision="5" sourceType="" type="id_Double" originalLength="25" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="VALUE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1320" posY="240">
@@ -564,7 +564,7 @@
       <column comment="" key="false" length="255" name="TIME_UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TYPE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
-      <column comment="" key="false" length="25" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
+      <column comment="" key="false" length="25" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="25" usefulColumn="true"/>
       <column comment="" key="false" length="25" name="VALUE" nullable="true" pattern="" precision="5" sourceType="" type="id_Double" originalLength="25" usefulColumn="true"/>
       <column comment="" key="false" length="25" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="25" usefulColumn="true"/>
     </metadata>
@@ -576,7 +576,7 @@
         <mapperTableEntries name="TIME_UNIT" expression="row6.TIME_UNIT " type="id_String" nullable="true"/>
         <mapperTableEntries name="UNIT" expression="row6.UNIT " type="id_String" nullable="true"/>
         <mapperTableEntries name="TYPE" expression="row6.TYPE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="DATE" expression="row6.DATE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DATE" expression="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, row6.DATE)&#xD;&#xA;" type="id_Date" nullable="true"/>
         <mapperTableEntries name="VALUE" expression="row6.VALUE " type="id_Double" nullable="true"/>
         <mapperTableEntries name="SNOWFLAKE_DATE_CREATED" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
@@ -585,7 +585,7 @@
         <mapperTableEntries name="UNIT" type="id_String" nullable="true"/>
         <mapperTableEntries name="TYPE" type="id_String" nullable="true"/>
         <mapperTableEntries name="DATE" type="id_String" nullable="true"/>
-        <mapperTableEntries name="VALUE" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="VALUE" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -627,7 +627,7 @@
       <column comment="" key="false" length="255" name="TIME_UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="true" length="255" name="TYPE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
-      <column comment="" key="true" length="25" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
+      <column comment="" key="true" length="25" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="25" usefulColumn="true"/>
       <column comment="" key="false" length="25" name="VALUE" nullable="true" pattern="" precision="5" sourceType="" type="id_Double" originalLength="25" usefulColumn="true"/>
       <column comment="" key="false" length="25" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="25" usefulColumn="true"/>
     </metadata>
@@ -681,7 +681,7 @@
       <column comment="" key="false" length="255" name="TIME_UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
       <column comment="" key="true" length="255" name="TYPE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
-      <column comment="" key="true" length="25" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
+      <column comment="" key="true" length="25" name="DATE" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="25" usefulColumn="true"/>
       <column comment="" key="false" length="25" name="VALUE" nullable="true" pattern="" precision="5" sourceType="" type="id_Double" originalLength="25" usefulColumn="true"/>
       <column comment="" key="false" length="25" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="25" usefulColumn="true"/>
     </metadata>
