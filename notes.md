@@ -6,48 +6,10 @@ SolarEdge\_SiteList\_Schema
 
 * metadata - some columns have lengths of 0 since there's no entry where they have a value
 * publicSettings Snowflake column name, different in tables (DIM\_SOLAREDGE\_SITELIST v SOLAREDGE\_SITE\_DETAILS)
+* Site Data: Bulk	/sites/{siteIds}/dataPeriod - does this mean https://monitoringapi.solaredge.com/sites/{all siteids}/dataPeriod
 
 
 
+RAW.SOLAREDGE\_SITE\_ENERGY\_DETAILED
 
-
-**ADD**
-
-Source column: uris.PUBLIC\_URL
-
-Snowflake column: URIS\_PUBLIC\_URL
-
-Data type: String
-
-Format:
-
-Sample Data from Source:
-
-Remarks:
-
-
-
-**UPDATE**
-
-Source column: publicsettings.isPublic
-
-Snowflake column: PUBLIC\_SETTINGS\_IS\_PUBLIC
-
-Sample Data from Source: false
-
-
-
-**ADD**
-
-Source column: publicsettings.name
-
-Snowflake column: PUBLIC\_SETTINGS\_NAME
-
-Data type:
-
-Format:
-
-Sample Data from Source:
-
-Remarks:
-
+* instead of one primary key SITE\_ID, using composite key (SITE\_ID, DATE, TYPE)

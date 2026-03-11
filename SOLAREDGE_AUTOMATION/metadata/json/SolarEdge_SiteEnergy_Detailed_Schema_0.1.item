@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
-  <TalendJSON:JSONFileConnection xmi:id="_HXrLAB0oEfGECaCVzAvH3Q" name="SolarEdge_SiteEnergy_Detailed_Schema" dataPackage="_HXrLBx0oEfGECaCVzAvH3Q" JSONFilePath="D:/Git/FGEN/solaredge-talend/data/solaredge_siteenergy_detailed.json" Encoding="UTF-8" readbyMode="JSONPATH">
+  <TalendJSON:JSONFileConnection xmi:id="_HXrLAB0oEfGECaCVzAvH3Q" name="SolarEdge_SiteEnergy_Detailed_Schema" id="_HXoHsB0oEfGECaCVzAvH3Q" dataPackage="_HXrLBx0oEfGECaCVzAvH3Q" JSONFilePath="D:/Git/FGEN/solaredge-talend/data/solaredge_siteenergy_detailed.json" Encoding="UTF-8" readbyMode="JSONPATH">
     <schema xmi:id="_HXrLAR0oEfGECaCVzAvH3Q" LimitBoucle="50" AbsoluteXPathQuery="$.energyDetails">
-      <schemaTargets xmi:id="_HXrLAh0oEfGECaCVzAvH3Q" RelativeXPathQuery="timeUnit" TagName="TIME_UNIT"/>
-      <schemaTargets xmi:id="_HXrLAx0oEfGECaCVzAvH3Q" RelativeXPathQuery="unit" TagName="UNIT"/>
-      <schemaTargets xmi:id="_HXrLBB0oEfGECaCVzAvH3Q" RelativeXPathQuery="meters[*].type" TagName="TYPE"/>
-      <schemaTargets xmi:id="_HXrLBR0oEfGECaCVzAvH3Q" RelativeXPathQuery="meters[*].values[*].date" TagName="DATE"/>
-      <schemaTargets xmi:id="_HXrLBh0oEfGECaCVzAvH3Q" RelativeXPathQuery="meters[*].values[*].value" TagName="VALUE"/>
+      <schemaTargets xmi:id="_OEE_gB1SEfG0X-v853TsIQ" RelativeXPathQuery="timeUnit" TagName="TIME_UNIT"/>
+      <schemaTargets xmi:id="_OvGScB1SEfG0X-v853TsIQ" RelativeXPathQuery="unit" TagName="UNIT"/>
+      <schemaTargets xmi:id="_PF6P8B1SEfG0X-v853TsIQ" RelativeXPathQuery="meters" TagName="METERS"/>
     </schema>
   </TalendJSON:JSONFileConnection>
   <orgomg.cwm.resource.record:RecordFile xmi:id="_HXrLBx0oEfGECaCVzAvH3Q" name="default" dataManager="_HXrLAB0oEfGECaCVzAvH3Q">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_HXrLCB0oEfGECaCVzAvH3Q" id="_xYDSAB0nEfGECaCVzAvH3Q" label="metadata">
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_HXrLCR0oEfGECaCVzAvH3Q" label="TIME_UNIT" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_HXrLCh0oEfGECaCVzAvH3Q" label="UNIT" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_HXrLCx0oEfGECaCVzAvH3Q" label="TYPE" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_HXrLDB0oEfGECaCVzAvH3Q" label="DATE" length="25" talendType="id_Date" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_HXrLDR0oEfGECaCVzAvH3Q" label="VALUE" length="25" precision="5" talendType="id_Double" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_S5vG4B1SEfG0X-v853TsIQ" label="METERS" length="1075" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
     </ownedElement>
   </orgomg.cwm.resource.record:RecordFile>
 </xmi:XMI>
