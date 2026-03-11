@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_Nd_TYRmCEfGE-vukTPVQsQ" name="SolarEdge_ComponentsList_Schema" dataPackage="_Nd_TaBmCEfGE-vukTPVQsQ" JSONFilePath="D:/Git/FGEN/solaredge-talend/data/componentslist.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_Nd_TYhmCEfGE-vukTPVQsQ" LimitBoucle="50" AbsoluteXPathQuery="$.reporters.list[*]">
+      <schemaTargets xmi:id="_Nd_TYxmCEfGE-vukTPVQsQ" RelativeXPathQuery="serialNumber" TagName="SERIAL_NUMBER"/>
+      <schemaTargets xmi:id="_Nd_TZBmCEfGE-vukTPVQsQ" RelativeXPathQuery="name" TagName="NAME"/>
+      <schemaTargets xmi:id="_Nd_TZRmCEfGE-vukTPVQsQ" RelativeXPathQuery="manufacturer" TagName="MANUFACTURER"/>
+      <schemaTargets xmi:id="_Nd_TZhmCEfGE-vukTPVQsQ" RelativeXPathQuery="model" TagName="MODEL"/>
+      <schemaTargets xmi:id="_Nd_TZxmCEfGE-vukTPVQsQ" RelativeXPathQuery="kWpDC" TagName="KWPDC"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_Nd_TaBmCEfGE-vukTPVQsQ" name="default" dataManager="_Nd_TYRmCEfGE-vukTPVQsQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_Nd_TaRmCEfGE-vukTPVQsQ" id="_zb5DcBmBEfGE-vukTPVQsQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TahmCEfGE-vukTPVQsQ" label="SERIAL_NUMBER" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TaxmCEfGE-vukTPVQsQ" label="NAME" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TbBmCEfGE-vukTPVQsQ" label="MANUFACTURER" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TbRmCEfGE-vukTPVQsQ" label="MODEL" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TbhmCEfGE-vukTPVQsQ" label="KWPDC" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
