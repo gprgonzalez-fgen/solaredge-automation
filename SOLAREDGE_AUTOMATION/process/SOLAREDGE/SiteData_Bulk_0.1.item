@@ -246,7 +246,7 @@
     <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
     <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
     <metadata connector="FLOW" name="tSnowflakeInput_1">
-      <column comment="" key="false" length="-1" name="SITE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SITE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="LOOKUP" name="LOOKUP"/>
     <metadata connector="MERGE" name="MERGE"/>
@@ -407,14 +407,14 @@
     <elementParameter field="TEXT" name="LABEL" value="SolarEdge_SiteData_Bulk_Schema"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tExtractJSONFields_1">
-      <column comment="" key="false" length="10" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="START_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="END_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="START_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="END_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="metadata" name="REJECT">
-      <column comment="" key="false" length="10" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="START_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="END_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="START_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="END_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -446,9 +446,9 @@
     <elementParameter field="TEXT" name="LABEL" value="Extracted data"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tLogRow_2">
-      <column comment="" key="false" length="10" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="START_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="END_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="START_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="END_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="240">
@@ -466,24 +466,24 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out1">
-      <column comment="" key="false" length="10" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="START_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="END_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="20" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="START_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="END_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="20" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="SITE_ID" expression="row6.SITE_ID " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="START_DATE" expression="row6.START_DATE " type="id_Date" nullable="true"/>
-        <mapperTableEntries name="END_DATE" expression="row6.END_DATE " type="id_Date" nullable="true"/>
-        <mapperTableEntries name="SNOWFLAKE_DATE_CREATED" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="SITE_ID" expression="row6.SITE_ID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="START_DATE" expression="row6.START_DATE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="END_DATE" expression="row6.END_DATE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="SNOWFLAKE_DATE_CREATED" expression="TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="SITE_ID" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="START_DATE" type="id_Date" nullable="true"/>
-        <mapperTableEntries name="END_DATE" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="SITE_ID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="START_DATE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="END_DATE" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -515,10 +515,10 @@
     <elementParameter field="TEXT" name="LABEL" value="Data for ingestion"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_3">
-      <column comment="" key="true" length="10" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="START_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="END_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="20" usefulColumn="true"/>
+      <column comment="" key="true" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="START_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="END_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="20" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="240">
@@ -566,10 +566,10 @@
     <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
     <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
     <metadata connector="FLOW" name="tSnowflakeOutput_1">
-      <column comment="" key="true" length="10" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="START_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="END_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="20" usefulColumn="true"/>
+      <column comment="" key="true" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="START_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="END_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" originalLength="20" usefulColumn="true"/>
     </metadata>
     <metadata connector="LOOKUP" name="LOOKUP"/>
     <metadata connector="MERGE" name="MERGE"/>

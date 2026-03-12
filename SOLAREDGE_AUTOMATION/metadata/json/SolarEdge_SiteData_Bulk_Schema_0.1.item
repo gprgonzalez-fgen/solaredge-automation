@@ -9,9 +9,9 @@
   </TalendJSON:JSONFileConnection>
   <orgomg.cwm.resource.record:RecordFile xmi:id="_W8T1Vhk9EfGE-vukTPVQsQ" name="default" dataManager="_W8T1URk9EfGE-vukTPVQsQ">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_W8T1Vxk9EfGE-vukTPVQsQ" id="_Mo99QBk9EfGE-vukTPVQsQ" label="metadata">
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pFlu4Bk9EfGE-vukTPVQsQ" label="SITE_ID" length="10" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pFlu4Rk9EfGE-vukTPVQsQ" label="START_DATE" length="10" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pFlu4hk9EfGE-vukTPVQsQ" label="END_DATE" length="10" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pFlu4Bk9EfGE-vukTPVQsQ" label="SITE_ID" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pFlu4Rk9EfGE-vukTPVQsQ" label="START_DATE" length="255" talendType="id_String" pattern="&quot;yyyy-MM-dd&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pFlu4hk9EfGE-vukTPVQsQ" label="END_DATE" length="255" talendType="id_String" pattern="&quot;yyyy-MM-dd&quot;"/>
     </ownedElement>
   </orgomg.cwm.resource.record:RecordFile>
 </xmi:XMI>

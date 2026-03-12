@@ -11,11 +11,11 @@
   </TalendJSON:JSONFileConnection>
   <orgomg.cwm.resource.record:RecordFile xmi:id="_Nd_TaBmCEfGE-vukTPVQsQ" name="default" dataManager="_Nd_TYRmCEfGE-vukTPVQsQ">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_Nd_TaRmCEfGE-vukTPVQsQ" id="_zb5DcBmBEfGE-vukTPVQsQ" label="metadata">
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TahmCEfGE-vukTPVQsQ" label="SERIAL_NUMBER" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TaxmCEfGE-vukTPVQsQ" label="NAME" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TbBmCEfGE-vukTPVQsQ" label="MANUFACTURER" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TbRmCEfGE-vukTPVQsQ" label="MODEL" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TbhmCEfGE-vukTPVQsQ" label="KWPDC" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TahmCEfGE-vukTPVQsQ" label="SERIAL_NUMBER" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TaxmCEfGE-vukTPVQsQ" label="NAME" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TbBmCEfGE-vukTPVQsQ" label="MANUFACTURER" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TbRmCEfGE-vukTPVQsQ" label="MODEL" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Nd_TbhmCEfGE-vukTPVQsQ" label="KWPDC" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
     </ownedElement>
   </orgomg.cwm.resource.record:RecordFile>
 </xmi:XMI>

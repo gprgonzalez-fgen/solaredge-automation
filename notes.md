@@ -1,3 +1,11 @@
+GUIDELINES!:
+
+* Use StringHandling.TRIM() and REPLACE() logic on all serialNumber and siteId fields to prevent join failures caused by hidden spaces.
+* Map metrics (e.g. V, A, W, Wh) to Double in Talend and NUMBER(38,9) in Snowflake to balance performance with accuracy.
+
+
+
+
 Clarifications:
 
 * Timestamp (in snowflake) is of TIMESTAMP\_NTZ or TIMESTAMP\_LTZ

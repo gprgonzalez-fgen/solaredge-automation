@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
-  <TalendJSON:JSONFileConnection xmi:id="_N7CQoBkSEfGE-vukTPVQsQ" name="SolarEdge_SiteDetails_Schema" id="_N6-mQBkSEfGE-vukTPVQsQ" dataPackage="_N7CQvxkSEfGE-vukTPVQsQ" JSONFilePath="D:/Git/FGEN/solaredge-talend/data/in/solaredge_sitedetails.json" Encoding="UTF-8" readbyMode="JSONPATH">
+  <TalendJSON:JSONFileConnection xmi:id="_N7CQoBkSEfGE-vukTPVQsQ" name="SolarEdge_SiteDetails_Schema" id="_N6-mQBkSEfGE-vukTPVQsQ" dataPackage="_N7CQvxkSEfGE-vukTPVQsQ" JSONFilePath="D:/repos/FGEN/solaredge-talend/data/in/solaredge_sitedetails.json" Encoding="UTF-8" readbyMode="JSONPATH">
     <schema xmi:id="_N7CQoRkSEfGE-vukTPVQsQ" LimitBoucle="50" AbsoluteXPathQuery="$.details">
       <schemaTargets xmi:id="_N7CQohkSEfGE-vukTPVQsQ" RelativeXPathQuery="id" TagName="SITE_ID"/>
       <schemaTargets xmi:id="_N7CQoxkSEfGE-vukTPVQsQ" RelativeXPathQuery="name" TagName="CUST_NAME"/>

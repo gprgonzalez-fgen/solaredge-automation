@@ -413,15 +413,15 @@
     <elementParameter field="TEXT" name="LABEL" value="SolarEdge_SiteList_Schema"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tExtractJSONFields_1">
-      <column comment="" key="false" length="10" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CUST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STATUS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="PEAK_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PEAK_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CURRENCY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="INSTALL_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="PTO_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="INSTALL_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PTO_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NOTES" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TYPE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_COUNTRY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -431,12 +431,12 @@
       <column comment="" key="false" length="255" name="LOC_ZIP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_TIMEZONE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_CNTRYCODE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ALERT_QTY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="HIGHEST_IMPACT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ALERT_QTY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="HIGHEST_IMPACT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="MANUFACTURER_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="MODEL_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="MAX_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="TEMP_COEF" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MAX_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TEMP_COEF" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_SITE_IMAGE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_DATA_PD" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_DETAILS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -446,15 +446,15 @@
       <column comment="" key="false" length="255" name="PUBLIC_SETTINGS_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="metadata" name="REJECT">
-      <column comment="" key="false" length="10" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CUST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STATUS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="PEAK_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PEAK_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CURRENCY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="INSTALL_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="PTO_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="INSTALL_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PTO_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NOTES" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TYPE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_COUNTRY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -464,12 +464,12 @@
       <column comment="" key="false" length="255" name="LOC_ZIP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_TIMEZONE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_CNTRYCODE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ALERT_QTY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="HIGHEST_IMPACT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ALERT_QTY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="HIGHEST_IMPACT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="MANUFACTURER_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="MODEL_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="MAX_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="TEMP_COEF" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MAX_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TEMP_COEF" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_SITE_IMAGE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_DATA_PD" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_DETAILS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -564,15 +564,15 @@
     <elementParameter field="TEXT" name="LABEL" value="Extracted data"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tLogRow_1">
-      <column comment="" key="false" length="10" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CUST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STATUS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="PEAK_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PEAK_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CURRENCY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="INSTALL_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="PTO_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="INSTALL_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PTO_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NOTES" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TYPE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_COUNTRY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -582,12 +582,12 @@
       <column comment="" key="false" length="255" name="LOC_ZIP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_TIMEZONE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_CNTRYCODE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ALERT_QTY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="HIGHEST_IMPACT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ALERT_QTY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="HIGHEST_IMPACT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="MANUFACTURER_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="MODEL_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="MAX_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="TEMP_COEF" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MAX_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TEMP_COEF" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_SITE_IMAGE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_DATA_PD" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_DETAILS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -612,15 +612,15 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out1">
-      <column comment="" key="false" length="10" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CUST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STATUS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="PEAK_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PEAK_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CURRENCY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="INSTALL_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="PTO_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="INSTALL_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PTO_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NOTES" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TYPE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_COUNTRY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -630,12 +630,12 @@
       <column comment="" key="false" length="255" name="LOC_ZIP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_TIMEZONE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_CNTRYCODE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ALERT_QTY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="HIGHEST_IMPACT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ALERT_QTY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="HIGHEST_IMPACT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="MANUFACTURER_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="MODEL_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="MAX_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="TEMP_COEF" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MAX_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TEMP_COEF" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_SITE_IMAGE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_DATA_PD" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_DETAILS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -643,21 +643,21 @@
       <column comment="" key="false" length="255" name="URIS_PUBLIC_URL" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="PUBLIC_SETTINGS_IS_PUBLIC" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="PUBLIC_SETTINGS_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="20" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="SITE_ID" expression="row3.SITE_ID " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="SITE_ID" expression="row3.SITE_ID " type="id_String" nullable="true"/>
         <mapperTableEntries name="CUST_NAME" expression="row3.CUST_NAME " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ACCOUNT_ID" expression="row3.ACCOUNT_ID " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ACCOUNT_ID" expression="row3.ACCOUNT_ID " type="id_String" nullable="true"/>
         <mapperTableEntries name="STATUS" expression="row3.STATUS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="PEAK_POWER" expression="row3.PEAK_POWER " type="id_Double" nullable="true"/>
-        <mapperTableEntries name="LAST_UPDATE_TIME" expression="row3.LAST_UPDATE_TIME " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="PEAK_POWER" expression="row3.PEAK_POWER " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LAST_UPDATE_TIME" expression="row3.LAST_UPDATE_TIME " type="id_String" nullable="true"/>
         <mapperTableEntries name="CURRENCY" expression="row3.CURRENCY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="INSTALL_DATE" expression="row3.INSTALL_DATE " type="id_Date" nullable="true"/>
-        <mapperTableEntries name="PTO_DATE" expression="row3.PTO_DATE " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="INSTALL_DATE" expression="row3.INSTALL_DATE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PTO_DATE" expression="row3.PTO_DATE " type="id_String" nullable="true"/>
         <mapperTableEntries name="NOTES" expression="row3.NOTES " type="id_String" nullable="true"/>
         <mapperTableEntries name="TYPE" expression="row3.TYPE " type="id_String" nullable="true"/>
         <mapperTableEntries name="LOC_COUNTRY" expression="row3.LOC_COUNTRY " type="id_String" nullable="true"/>
@@ -667,12 +667,12 @@
         <mapperTableEntries name="LOC_ZIP" expression="row3.LOC_ZIP " type="id_String" nullable="true"/>
         <mapperTableEntries name="LOC_TIMEZONE" expression="row3.LOC_TIMEZONE " type="id_String" nullable="true"/>
         <mapperTableEntries name="LOC_CNTRYCODE" expression="row3.LOC_CNTRYCODE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ALERT_QTY" expression="row3.ALERT_QTY " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="HIGHEST_IMPACT" expression="row3.HIGHEST_IMPACT " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ALERT_QTY" expression="row3.ALERT_QTY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="HIGHEST_IMPACT" expression="row3.HIGHEST_IMPACT " type="id_String" nullable="true"/>
         <mapperTableEntries name="MANUFACTURER_NAME" expression="row3.MANUFACTURER_NAME " type="id_String" nullable="true"/>
         <mapperTableEntries name="MODEL_NAME" expression="row3.MODEL_NAME " type="id_String" nullable="true"/>
-        <mapperTableEntries name="MAX_POWER" expression="row3.MAX_POWER " type="id_Double" nullable="true"/>
-        <mapperTableEntries name="TEMP_COEF" expression="row3.TEMP_COEF " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="MAX_POWER" expression="row3.MAX_POWER " type="id_String" nullable="true"/>
+        <mapperTableEntries name="TEMP_COEF" expression="row3.TEMP_COEF " type="id_String" nullable="true"/>
         <mapperTableEntries name="URIS_SITE_IMAGE" expression="row3.URIS_SITE_IMAGE " type="id_String" nullable="true"/>
         <mapperTableEntries name="URIS_DATA_PD" expression="row3.URIS_DATA_PD " type="id_String" nullable="true"/>
         <mapperTableEntries name="URIS_DETAILS" expression="row3.URIS_DETAILS " type="id_String" nullable="true"/>
@@ -680,18 +680,18 @@
         <mapperTableEntries name="URIS_PUBLIC_URL" expression="row3.URIS_PUBLIC_URL " type="id_String" nullable="true"/>
         <mapperTableEntries name="PUBLIC_SETTINGS_IS_PUBLIC" expression="row3.PUBLIC_SETTINGS_IS_PUBLIC " type="id_String" nullable="true"/>
         <mapperTableEntries name="PUBLIC_SETTINGS_NAME" expression="row3.PUBLIC_SETTINGS_NAME " type="id_String" nullable="true"/>
-        <mapperTableEntries name="SNOWFLAKE_DATE_CREATED" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="SNOWFLAKE_DATE_CREATED" expression="TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="SITE_ID" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="SITE_ID" type="id_String" nullable="true"/>
         <mapperTableEntries name="CUST_NAME" type="id_String" nullable="true"/>
-        <mapperTableEntries name="ACCOUNT_ID" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ACCOUNT_ID" type="id_String" nullable="true"/>
         <mapperTableEntries name="STATUS" type="id_String" nullable="true"/>
-        <mapperTableEntries name="PEAK_POWER" type="id_Double" nullable="true"/>
-        <mapperTableEntries name="LAST_UPDATE_TIME" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="PEAK_POWER" type="id_String" nullable="true"/>
+        <mapperTableEntries name="LAST_UPDATE_TIME" type="id_String" nullable="true"/>
         <mapperTableEntries name="CURRENCY" type="id_String" nullable="true"/>
-        <mapperTableEntries name="INSTALL_DATE" type="id_Date" nullable="true"/>
-        <mapperTableEntries name="PTO_DATE" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="INSTALL_DATE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="PTO_DATE" type="id_String" nullable="true"/>
         <mapperTableEntries name="NOTES" type="id_String" nullable="true"/>
         <mapperTableEntries name="TYPE" type="id_String" nullable="true"/>
         <mapperTableEntries name="LOC_COUNTRY" type="id_String" nullable="true"/>
@@ -701,12 +701,12 @@
         <mapperTableEntries name="LOC_ZIP" type="id_String" nullable="true"/>
         <mapperTableEntries name="LOC_TIMEZONE" type="id_String" nullable="true"/>
         <mapperTableEntries name="LOC_CNTRYCODE" type="id_String" nullable="true"/>
-        <mapperTableEntries name="ALERT_QTY" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="HIGHEST_IMPACT" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ALERT_QTY" type="id_String" nullable="true"/>
+        <mapperTableEntries name="HIGHEST_IMPACT" type="id_String" nullable="true"/>
         <mapperTableEntries name="MANUFACTURER_NAME" type="id_String" nullable="true"/>
         <mapperTableEntries name="MODEL_NAME" type="id_String" nullable="true"/>
-        <mapperTableEntries name="MAX_POWER" type="id_Double" nullable="true"/>
-        <mapperTableEntries name="TEMP_COEF" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="MAX_POWER" type="id_String" nullable="true"/>
+        <mapperTableEntries name="TEMP_COEF" type="id_String" nullable="true"/>
         <mapperTableEntries name="URIS_SITE_IMAGE" type="id_String" nullable="true"/>
         <mapperTableEntries name="URIS_DATA_PD" type="id_String" nullable="true"/>
         <mapperTableEntries name="URIS_DETAILS" type="id_String" nullable="true"/>
@@ -801,15 +801,15 @@
     <elementParameter field="TEXT" name="LABEL" value="Data for ingestion"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_2">
-      <column comment="" key="true" length="10" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="true" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CUST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STATUS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="PEAK_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PEAK_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CURRENCY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="INSTALL_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="PTO_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="INSTALL_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PTO_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NOTES" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TYPE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_COUNTRY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -819,12 +819,12 @@
       <column comment="" key="false" length="255" name="LOC_ZIP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_TIMEZONE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_CNTRYCODE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ALERT_QTY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="HIGHEST_IMPACT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ALERT_QTY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="HIGHEST_IMPACT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="MANUFACTURER_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="MODEL_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="MAX_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="TEMP_COEF" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MAX_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TEMP_COEF" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_SITE_IMAGE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_DATA_PD" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_DETAILS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -832,7 +832,7 @@
       <column comment="" key="false" length="255" name="URIS_PUBLIC_URL" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="PUBLIC_SETTINGS_IS_PUBLIC" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="PUBLIC_SETTINGS_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="20" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="840" posY="240">
@@ -880,15 +880,15 @@
     <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
     <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
     <metadata connector="FLOW" name="tSnowflakeOutput_1">
-      <column comment="" key="true" length="10" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="true" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CUST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STATUS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="PEAK_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PEAK_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CURRENCY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="INSTALL_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="PTO_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="INSTALL_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PTO_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NOTES" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TYPE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_COUNTRY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -898,12 +898,12 @@
       <column comment="" key="false" length="255" name="LOC_ZIP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_TIMEZONE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="LOC_CNTRYCODE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="ALERT_QTY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="HIGHEST_IMPACT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ALERT_QTY" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="HIGHEST_IMPACT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="MANUFACTURER_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="MODEL_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="MAX_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="TEMP_COEF" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MAX_POWER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TEMP_COEF" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_SITE_IMAGE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_DATA_PD" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="URIS_DETAILS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -911,7 +911,7 @@
       <column comment="" key="false" length="255" name="URIS_PUBLIC_URL" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="PUBLIC_SETTINGS_IS_PUBLIC" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="PUBLIC_SETTINGS_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="20" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
     </metadata>
     <metadata connector="LOOKUP" name="LOOKUP"/>
     <metadata connector="MERGE" name="MERGE"/>
