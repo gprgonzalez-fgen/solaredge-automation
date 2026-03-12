@@ -1,38 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Desktop" jobType="Standard">
-  <context confirmationNeeded="false" hide="false" name="Dev">
-    <contextParameter comment="" name="conn_pi_dev_raw_account" prompt="conn_pi_dev_raw_account?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="YHSLVLG-FPH" internalId="_d86ZABk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_database" prompt="conn_pi_dev_raw_database?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="PI_ENERGY_DEV" internalId="_d86ZARk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_dbSchema" prompt="conn_pi_dev_raw_dbSchema?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="RAW" internalId="_d86ZAhk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_jdbcParameters" prompt="conn_pi_dev_raw_jdbcParameters?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="" internalId="_d86ZAxk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_jdbcUrlSuffix" prompt="conn_pi_dev_raw_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value=".snowflakecomputing.com" internalId="_d86ZBBk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_keyAlias" prompt="conn_pi_dev_raw_keyAlias?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="snowflake" internalId="_d86ZBRk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_loginTimeout" prompt="conn_pi_dev_raw_loginTimeout?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="15" internalId="_d86ZBhk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_role" prompt="conn_pi_dev_raw_role?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="" internalId="_d86ZBxk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_userId" prompt="conn_pi_dev_raw_userId?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="pi_energy_etl_user" internalId="_d86ZCBk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_warehouse" prompt="conn_pi_dev_raw_warehouse?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="PI_ENERGY_WAREHOUSE" internalId="_d86ZCRk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="https://monitoringapi.solaredge.com" internalId="_d86ZChk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="solaredge_api_endpoint_SiteList" prompt="solaredge_api_endpoint_SiteList?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="/sites/list" internalId="_d86ZCxk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK" internalId="_d86ZDBk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="snowflake_keystore_jks" prompt="snowflake_keystore_jks?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_String" value="&quot;D:/gprgonzalez/keystores/PI_SOLAREDGE/keystore.jks&quot;" internalId="_d86ZDRk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="snowflake_keystore_password" prompt="snowflake_keystore_password?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_Password" value="enc:system.encryption.key.v1:HluegzbUkvtf3acysc/IUSTR99/OiR/uI/WIZMzRHFzbS6GpTg==" internalId="_d86ZDhk3EfGE-vukTPVQsQ"/>
-  </context>
-  <context confirmationNeeded="false" hide="false" name="Desktop">
-    <contextParameter comment="" name="conn_pi_dev_raw_account" prompt="conn_pi_dev_raw_account?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="YHSLVLG-FPH" internalId="_d86ZDxk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_database" prompt="conn_pi_dev_raw_database?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="PI_ENERGY_DEV" internalId="_d86ZEBk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_dbSchema" prompt="conn_pi_dev_raw_dbSchema?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="RAW" internalId="_d86ZERk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_jdbcParameters" prompt="conn_pi_dev_raw_jdbcParameters?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="" internalId="_d86ZEhk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_jdbcUrlSuffix" prompt="conn_pi_dev_raw_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value=".snowflakecomputing.com" internalId="_d86ZExk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_keyAlias" prompt="conn_pi_dev_raw_keyAlias?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="snowflake" internalId="_d86ZFBk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_loginTimeout" prompt="conn_pi_dev_raw_loginTimeout?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="15" internalId="_d86ZFRk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_role" prompt="conn_pi_dev_raw_role?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="" internalId="_d86ZFhk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_userId" prompt="conn_pi_dev_raw_userId?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="pi_energy_etl_user" internalId="_d86ZFxk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_warehouse" prompt="conn_pi_dev_raw_warehouse?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="PI_ENERGY_WAREHOUSE" internalId="_d86ZGBk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="https://monitoringapi.solaredge.com" internalId="_d86ZGRk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="solaredge_api_endpoint_SiteList" prompt="solaredge_api_endpoint_SiteList?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="/sites/list" internalId="_d86ZGhk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK" internalId="_d86ZGxk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="snowflake_keystore_jks" prompt="snowflake_keystore_jks?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_String" value="&quot;D:/keystores/PI_SOLAREDGE/keystore.jks&quot;" internalId="_d86ZHBk3EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="snowflake_keystore_password" prompt="snowflake_keystore_password?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_Password" value="enc:system.encryption.key.v1:CSoYCM71mRZj+k5tDnSKmORyHA8U9ddWGOY0k4h4AbhUhmQNGA==" internalId="_d86ZHRk3EfGE-vukTPVQsQ"/>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter comment="" name="snowflake_keystore_jks" prompt="snowflake_keystore_jks?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_String" value="&quot;D:/keystores/PI_SOLAREDGE/keystore.jks&quot;" internalId="_XlD9-h5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="snowflake_keystore_password" prompt="snowflake_keystore_password?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_Password" value="enc:system.encryption.key.v1:/OQFrSWOxO1mEEDT1yTWcq3/Ft6Fh67cGXkiOPNkNcSA7y9oLA==" internalId="_XlD9-x5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="https://monitoringapi.solaredge.com" internalId="_XlD9_B5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="solaredge_api_endpoint_SiteList" prompt="solaredge_api_endpoint_SiteList?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="/sites/list" internalId="_XlD9_R5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK" internalId="_XlD9_h5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="conn_snowflake_userId" prompt="conn_snowflake_userId?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="pi_energy_etl_user" internalId="_c2Qx0B5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="conn_snowflake_loginTimeout" prompt="conn_snowflake_loginTimeout?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_Integer" value="15" internalId="_c2Qx0R5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="conn_snowflake_database" prompt="conn_snowflake_database?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="PI_ENERGY_DEV" internalId="_c2Qx0h5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="conn_snowflake_jdbcParameters" prompt="conn_snowflake_jdbcParameters?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="" internalId="_c2Qx0x5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="conn_snowflake_warehouse" prompt="conn_snowflake_warehouse?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="PI_ENERGY_WAREHOUSE" internalId="_c2Qx1B5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="conn_snowflake_account" prompt="conn_snowflake_account?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="YHSLVLG-FPH" internalId="_c2Qx1R5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="conn_snowflake_dbSchema" prompt="conn_snowflake_dbSchema?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="RAW" internalId="_c2Qx1h5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="conn_snowflake_keyAlias" prompt="conn_snowflake_keyAlias?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="snowflake" internalId="_c2Qx1x5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="conn_snowflake_role" prompt="conn_snowflake_role?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="" internalId="_c2Qx2B5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="conn_snowflake_jdbcUrlSuffix" prompt="conn_snowflake_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value=".snowflakecomputing.com" internalId="_c2Qx2R5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_6ApBUB5MEfG3QbAgMyqCWQ"/>
+    <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_6ApBUR5MEfG3QbAgMyqCWQ"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -201,8 +186,66 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="240">
+  <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="240" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tReplicate_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tReplicate_1">
+      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
+    <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="string"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;$.sites.site[*]&quot;" show="false"/>
+    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$.sites&quot;"/>
+    <elementParameter field="TABLE" name="MAPPING" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="COUNT" id="0"/>
+      <elementValue elementRef="QUERY" value="" id="1"/>
+      <elementValue elementRef="NODECHECK" value="false" id="2"/>
+      <elementValue elementRef="ISARRAY" value="false" id="3"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH">
+      <elementValue elementRef="SCHEMA_COLUMN" value="COUNT" id="0"/>
+      <elementValue elementRef="QUERY" value="&quot;count&quot;" id="1"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_K6eckBi4EfGooOXNr5EJ9A - metadata" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8" show="false"/>
+    <elementParameter field="CHECK" name="USE_LOOP_AS_ROOT" value="false"/>
+    <elementParameter field="CHECK" name="SPLIT_LIST" value="true" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="SOURCE_ROW_COUNT"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tExtractJSONFields_1">
+      <column comment="" key="false" length="-1" name="COUNT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="metadata" name="REJECT">
+      <column comment="" key="false" length="-1" name="COUNT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="520" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;SOURCE_ROW_COUNT&quot;" id="0"/>
+      <elementValue elementRef="VALUE" value="row3.COUNT" id="1"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="Get SOURCE_ROW_COUNT"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tSetGlobalVar_1">
+      <column comment="" key="false" length="-1" name="COUNT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_3" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_K6eckBi4EfGooOXNr5EJ9A" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
@@ -412,7 +455,7 @@
     <elementParameter field="CHECK" name="SPLIT_LIST" value="true" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="SolarEdge_SiteList_Schema"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="tExtractJSONFields_1">
+    <metadata connector="FLOW" label="metadata" name="tExtractJSONFields_3">
       <column comment="" key="false" length="255" name="SITE_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="CUST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="ACCOUNT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -482,7 +525,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="440" posY="240">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="520" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -597,7 +640,7 @@
       <column comment="" key="false" length="255" name="PUBLIC_SETTINGS_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="560" posY="240">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="640" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -646,43 +689,45 @@
       <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="DATE_CREATED" expression="TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)" type="id_String"/>
+      </varTables>
       <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="SITE_ID" expression="row3.SITE_ID " type="id_String" nullable="true"/>
-        <mapperTableEntries name="CUST_NAME" expression="row3.CUST_NAME " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ACCOUNT_ID" expression="row3.ACCOUNT_ID " type="id_String" nullable="true"/>
-        <mapperTableEntries name="STATUS" expression="row3.STATUS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="PEAK_POWER" expression="row3.PEAK_POWER " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LAST_UPDATE_TIME" expression="row3.LAST_UPDATE_TIME " type="id_String" nullable="true"/>
-        <mapperTableEntries name="CURRENCY" expression="row3.CURRENCY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="INSTALL_DATE" expression="row3.INSTALL_DATE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="PTO_DATE" expression="row3.PTO_DATE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="NOTES" expression="row3.NOTES " type="id_String" nullable="true"/>
-        <mapperTableEntries name="TYPE" expression="row3.TYPE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_COUNTRY" expression="row3.LOC_COUNTRY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_CITY" expression="row3.LOC_CITY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_ADDR1" expression="row3.LOC_ADDR1 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_ADDR2" expression="row3.LOC_ADDR2 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_ZIP" expression="row3.LOC_ZIP " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_TIMEZONE" expression="row3.LOC_TIMEZONE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_CNTRYCODE" expression="row3.LOC_CNTRYCODE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ALERT_QTY" expression="row3.ALERT_QTY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="HIGHEST_IMPACT" expression="row3.HIGHEST_IMPACT " type="id_String" nullable="true"/>
-        <mapperTableEntries name="MANUFACTURER_NAME" expression="row3.MANUFACTURER_NAME " type="id_String" nullable="true"/>
-        <mapperTableEntries name="MODEL_NAME" expression="row3.MODEL_NAME " type="id_String" nullable="true"/>
-        <mapperTableEntries name="MAX_POWER" expression="row3.MAX_POWER " type="id_String" nullable="true"/>
-        <mapperTableEntries name="TEMP_COEF" expression="row3.TEMP_COEF " type="id_String" nullable="true"/>
-        <mapperTableEntries name="URIS_SITE_IMAGE" expression="row3.URIS_SITE_IMAGE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="URIS_DATA_PD" expression="row3.URIS_DATA_PD " type="id_String" nullable="true"/>
-        <mapperTableEntries name="URIS_DETAILS" expression="row3.URIS_DETAILS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="URIS_OVERVIEW" expression="row3.URIS_OVERVIEW " type="id_String" nullable="true"/>
-        <mapperTableEntries name="URIS_PUBLIC_URL" expression="row3.URIS_PUBLIC_URL " type="id_String" nullable="true"/>
-        <mapperTableEntries name="PUBLIC_SETTINGS_IS_PUBLIC" expression="row3.PUBLIC_SETTINGS_IS_PUBLIC " type="id_String" nullable="true"/>
-        <mapperTableEntries name="PUBLIC_SETTINGS_NAME" expression="row3.PUBLIC_SETTINGS_NAME " type="id_String" nullable="true"/>
-        <mapperTableEntries name="SNOWFLAKE_DATE_CREATED" expression="TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SITE_ID" expression="row6.SITE_ID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CUST_NAME" expression="row6.CUST_NAME " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ACCOUNT_ID" expression="row6.ACCOUNT_ID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="STATUS" expression="row6.STATUS " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PEAK_POWER" expression="row6.PEAK_POWER " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LAST_UPDATE_TIME" expression="row6.LAST_UPDATE_TIME " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CURRENCY" expression="row6.CURRENCY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="INSTALL_DATE" expression="row6.INSTALL_DATE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PTO_DATE" expression="row6.PTO_DATE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="NOTES" expression="row6.NOTES " type="id_String" nullable="true"/>
+        <mapperTableEntries name="TYPE" expression="row6.TYPE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_COUNTRY" expression="row6.LOC_COUNTRY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_CITY" expression="row6.LOC_CITY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_ADDR1" expression="row6.LOC_ADDR1 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_ADDR2" expression="row6.LOC_ADDR2 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_ZIP" expression="row6.LOC_ZIP " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_TIMEZONE" expression="row6.LOC_TIMEZONE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_CNTRYCODE" expression="row6.LOC_CNTRYCODE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ALERT_QTY" expression="row6.ALERT_QTY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="HIGHEST_IMPACT" expression="row6.HIGHEST_IMPACT " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MANUFACTURER_NAME" expression="row6.MANUFACTURER_NAME " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MODEL_NAME" expression="row6.MODEL_NAME " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MAX_POWER" expression="row6.MAX_POWER " type="id_String" nullable="true"/>
+        <mapperTableEntries name="TEMP_COEF" expression="row6.TEMP_COEF " type="id_String" nullable="true"/>
+        <mapperTableEntries name="URIS_SITE_IMAGE" expression="row6.URIS_SITE_IMAGE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="URIS_DATA_PD" expression="row6.URIS_DATA_PD " type="id_String" nullable="true"/>
+        <mapperTableEntries name="URIS_DETAILS" expression="row6.URIS_DETAILS " type="id_String" nullable="true"/>
+        <mapperTableEntries name="URIS_OVERVIEW" expression="row6.URIS_OVERVIEW " type="id_String" nullable="true"/>
+        <mapperTableEntries name="URIS_PUBLIC_URL" expression="row6.URIS_PUBLIC_URL " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PUBLIC_SETTINGS_IS_PUBLIC" expression="row6.PUBLIC_SETTINGS_IS_PUBLIC " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PUBLIC_SETTINGS_NAME" expression="row6.PUBLIC_SETTINGS_NAME " type="id_String" nullable="true"/>
+        <mapperTableEntries name="SNOWFLAKE_DATE_CREATED" expression="Var.DATE_CREATED " type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="SITE_ID" type="id_String" nullable="true"/>
         <mapperTableEntries name="CUST_NAME" type="id_String" nullable="true"/>
         <mapperTableEntries name="ACCOUNT_ID" type="id_String" nullable="true"/>
@@ -717,7 +762,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="680" posY="240">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="760" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -835,34 +880,32 @@
       <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="840" posY="240">
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="920" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_neL34BerEfGnmecgVvjMBQ"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="TEXT" name="LABEL" value="DIM_SOLAREDGE_SITELIST"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.conn_pi_dev_raw_account" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.conn_snowflake_account" show="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="KEY_PAIR" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.conn_pi_dev_raw_userId" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.keyAlias" value="context.conn_pi_dev_raw_keyAlias" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.conn_snowflake_userId" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.keyAlias" value="context.conn_snowflake_keyAlias" show="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.conn_pi_dev_raw_warehouse" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_pi_dev_raw_dbSchema" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_pi_dev_raw_database" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.conn_snowflake_warehouse" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_snowflake_dbSchema" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_snowflake_database" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="DIM_SOLAREDGE_SITELIST"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="context.output_table"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="UPSERT"/>
     <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="SITE_ID" show="false"/>
     <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="context.conn_pi_dev_raw_jdbcParameters" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="context.conn_pi_dev_raw_loginTimeout" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.role" value="context.conn_pi_dev_raw_role" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value="context.conn_pi_dev_raw_jdbcUrlSuffix" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="context.conn_snowflake_jdbcParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="context.conn_snowflake_loginTimeout" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.role" value="context.conn_snowflake_role" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value="context.conn_snowflake_jdbcUrlSuffix" show="false"/>
     <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.convertColumnsAndTableToUppercase" value="true"/>
     <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useSchemaKeysForUpsert" value="true"/>
     <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.enforceDatabaseSchema" value="false"/>
@@ -927,11 +970,25 @@
       <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="240" posY="440">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_2" show="false"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;API_STATUS_CODE&quot;" id="0"/>
+      <elementValue elementRef="VALUE" value="row8.statusCode" id="1"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="Get API_STATUS_CODE"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_2">
+      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
   <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="80">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="80">
+  <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="80">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetKeystore_1" show="false"/>
     <elementParameter field="RADIO" name="SET_TRUSTSTORE" value="false"/>
     <elementParameter field="RADIO" name="NEED_CLIENT_AUTH" value="true"/>
@@ -946,54 +1003,11 @@
     <elementParameter field="CHECK" name="USE_SSLCONTEXT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="SnowflakeConnection" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="440" posY="80" sizeX="81" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
-    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAConnection" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_neL34BerEfGnmecgVvjMBQ"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="TEXT" name="LABEL" value="pi_dev_raw"/>
-    <elementParameter field="TEXT" name="configuration.account" value="context.conn_pi_dev_raw_account"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeAuth.authenticationType" value="KEY_PAIR"/>
-    <elementParameter field="TEXT" name="configuration.snowflakeAuth.userId" value="context.conn_pi_dev_raw_userId"/>
-    <elementParameter field="TEXT" name="configuration.snowflakeAuth.keyAlias" value="context.conn_pi_dev_raw_keyAlias"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
-    <elementParameter field="TEXT" name="configuration.warehouse" value="context.conn_pi_dev_raw_warehouse"/>
-    <elementParameter field="TEXT" name="configuration.dbSchema" value="context.conn_pi_dev_raw_dbSchema"/>
-    <elementParameter field="TEXT" name="configuration.database" value="context.conn_pi_dev_raw_database"/>
-    <elementParameter field="CHECK" name="configuration.shareConnection" value="false"/>
-    <elementParameter field="CHECK" name="configuration.autoCommit" value="true"/>
-    <elementParameter field="TEXT" name="configuration.jdbcParameters" value="context.conn_pi_dev_raw_jdbcParameters"/>
-    <elementParameter field="TEXT" name="configuration.loginTimeout" value="context.conn_pi_dev_raw_loginTimeout"/>
-    <elementParameter field="TEXT" name="configuration.role" value="context.conn_pi_dev_raw_role"/>
-    <elementParameter field="TEXT" name="configuration.jdbcUrlSuffix" value="context.conn_pi_dev_raw_jdbcUrlSuffix"/>
-    <elementParameter field="TECHNICAL" name="configuration.__version" value="-1" show="false"/>
-    <metadata connector="FLOW" name="tDBConnection_1"/>
-    <metadata connector="LOOKUP" name="LOOKUP"/>
-    <metadata connector="MERGE" name="MERGE"/>
-    <metadata connector="REJECT" name="REJECT"/>
-  </node>
-  <node componentName="SnowflakeClose" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="280" posY="400" sizeX="81" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
-    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAClose" show="false"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="TEXT" name="LABEL" value="pi_dev_raw"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
-    <elementParameter field="TECHNICAL" name="configuration.__version" value="-1" show="false"/>
-    <metadata connector="FLOW" name="tDBClose_1"/>
-    <metadata connector="LOOKUP" name="LOOKUP"/>
-    <metadata connector="MERGE" name="MERGE"/>
-    <metadata connector="REJECT" name="REJECT"/>
-  </node>
-  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="400">
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="600">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_2" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="520" posY="400">
+  <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="600">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetKeystore_2" show="false"/>
     <elementParameter field="RADIO" name="SET_TRUSTSTORE" value="false"/>
     <elementParameter field="RADIO" name="NEED_CLIENT_AUTH" value="true"/>
@@ -1008,39 +1022,400 @@
     <elementParameter field="CHECK" name="USE_SSLCONTEXT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <connection connectorName="RESPONSE" label="row1" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_1" target="tExtractJSONFields_1">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="280" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="globalMap.put(&quot;JOB_START_TIME&quot;, System.currentTimeMillis());&#xD;&#xA;//System.out.println(&quot;JOB - START_TIME: &quot; + new java.util.Date((Long)globalMap.get(&quot;JOB_START_TIME&quot;)));&#xD;&#xA;System.out.println(&quot;JOB - START_TIME: &quot; + TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, new java.util.Date((Long)globalMap.get(&quot;JOB_START_TIME&quot;))));"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="600">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="JOB_NAME" id="0"/>
+      <elementValue elementRef="VALUE" value="" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="START_TIME" id="2"/>
+      <elementValue elementRef="VALUE" value="" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="END_TIME" id="4"/>
+      <elementValue elementRef="VALUE" value="" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RUN_DURATION" id="6"/>
+      <elementValue elementRef="VALUE" value="" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SCHEMA" id="8"/>
+      <elementValue elementRef="VALUE" value="" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TABLE_NAME" id="10"/>
+      <elementValue elementRef="VALUE" value="" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_ROW_COUNT" id="12"/>
+      <elementValue elementRef="VALUE" value="" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_ROW_COUNT" id="14"/>
+      <elementValue elementRef="VALUE" value="" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="API_STATUS_CODE" id="16"/>
+      <elementValue elementRef="VALUE" value="" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STATUS" id="18"/>
+      <elementValue elementRef="VALUE" value="" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ERROR_LOG" id="20"/>
+      <elementValue elementRef="VALUE" value="" id="21"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" show="false"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="JOB_NAME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="START_TIME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="END_TIME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="RUN_DURATION" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SCHEMA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TABLE_NAME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SOURCE_ROW_COUNT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TARGET_ROW_COUNT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="API_STATUS_CODE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STATUS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ERROR_LOG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="560" posY="600">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_JD1EoBhjEfGhtfL56Mw9Aw-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out2" name="out2">
+      <column comment="" key="false" length="-1" name="JOB_NAME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="START_TIME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="END_TIME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="RUN_DURATION" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SCHEMA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TABLE_NAME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SOURCE_ROW_COUNT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TARGET_ROW_COUNT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="API_STATUS_CODE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STATUS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ERROR_LOG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="JOB_END_TIME" expression="System.currentTimeMillis() " type="id_Long"/>
+      </varTables>
+      <outputTables sizeState="INTERMEDIATE" name="out2">
+        <mapperTableEntries name="JOB_NAME" expression="jobName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="START_TIME" expression="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, new java.util.Date((Long)globalMap.get(&quot;JOB_START_TIME&quot;))) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="END_TIME" expression="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, new java.util.Date(Var.JOB_END_TIME)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="RUN_DURATION" expression="String.format(&quot;%.2f&quot;, (double)((System.currentTimeMillis() - (Long)globalMap.get(&quot;JOB_START_TIME&quot;)) / 1000.00)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="SCHEMA" expression="context.conn_snowflake_dbSchema" type="id_String" nullable="true"/>
+        <mapperTableEntries name="TABLE_NAME" expression="context.output_table" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SOURCE_ROW_COUNT" expression="(String)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;)" type="id_String" nullable="true"/>
+        <mapperTableEntries name="TARGET_ROW_COUNT" expression="String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;tSnowflakeOutput_1_NB_SUCCESS&quot;)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="API_STATUS_CODE" expression="String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;API_STATUS_CODE&quot;)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="STATUS" expression="" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ERROR_LOG" expression="" type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row9" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="JOB_NAME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="START_TIME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="END_TIME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="RUN_DURATION" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SCHEMA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="TABLE_NAME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SOURCE_ROW_COUNT" type="id_String" nullable="true"/>
+        <mapperTableEntries name="TARGET_ROW_COUNT" type="id_String" nullable="true"/>
+        <mapperTableEntries name="API_STATUS_CODE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="STATUS" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ERROR_LOG" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="680" posY="600">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_3" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="JOB_NAME" id="0"/>
+      <elementValue elementRef="LENGTH" value="10" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="START_TIME" id="2"/>
+      <elementValue elementRef="LENGTH" value="10" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="END_TIME" id="4"/>
+      <elementValue elementRef="LENGTH" value="10" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RUN_DURATION" id="6"/>
+      <elementValue elementRef="LENGTH" value="10" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SCHEMA" id="8"/>
+      <elementValue elementRef="LENGTH" value="10" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TABLE_NAME" id="10"/>
+      <elementValue elementRef="LENGTH" value="10" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SOURCE_ROW_COUNT" id="12"/>
+      <elementValue elementRef="LENGTH" value="10" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TARGET_ROW_COUNT" id="14"/>
+      <elementValue elementRef="LENGTH" value="10" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="API_STATUS_CODE" id="16"/>
+      <elementValue elementRef="LENGTH" value="10" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STATUS" id="18"/>
+      <elementValue elementRef="LENGTH" value="10" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ERROR_LOG" id="20"/>
+      <elementValue elementRef="LENGTH" value="10" id="21"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Process log"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out2" name="tLogRow_3">
+      <column comment="" key="false" length="-1" name="JOB_NAME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="START_TIME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="END_TIME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="RUN_DURATION" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SCHEMA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TABLE_NAME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SOURCE_ROW_COUNT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TARGET_ROW_COUNT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="API_STATUS_CODE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STATUS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ERROR_LOG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="840" posY="600">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeOutput_2" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_YUm2cB5KEfGXkP-cdHyBXw"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="SOLAREDGE_ETL_PROCESS_LOG"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.conn_snowflake_account" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="KEY_PAIR" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.conn_snowflake_userId" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.keyAlias" value="context.conn_snowflake_keyAlias" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.conn_snowflake_warehouse" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_snowflake_dbSchema" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_snowflake_database" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="context.process_log_table"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="INSERT"/>
+    <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="JOB_NAME" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="context.conn_snowflake_jdbcParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="context.conn_snowflake_loginTimeout" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.role" value="context.conn_snowflake_role" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value="context.conn_snowflake_jdbcUrlSuffix" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.convertColumnsAndTableToUppercase" value="true"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useSchemaKeysForUpsert" value="true" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.enforceDatabaseSchema" value="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.usePersonalDBType" value="false" show="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.columnAndDBTypes" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDateMapping" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dateMapping" value="DATE" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDBMappingFile" value="false" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useVectors" value="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.vectorConfigs" show="false"/>
+    <elementParameter field="CHECK" name="configuration.convertEmptyStringsToNull" value="false"/>
+    <elementParameter field="CHECK" name="configuration.useSchemaDatePattern" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" label="out2" name="tSnowflakeOutput_2">
+      <column comment="" key="false" length="-1" name="JOB_NAME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="START_TIME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="END_TIME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="RUN_DURATION" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SCHEMA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TABLE_NAME" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SOURCE_ROW_COUNT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TARGET_ROW_COUNT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="API_STATUS_CODE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STATUS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ERROR_LOG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="columnName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="rowNumber" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="category" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="character" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="byteOffset" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="line" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="sqlState" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeClose" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="1040" posY="600" sizeX="81" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAClose" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="pi_dev_raw"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TECHNICAL" name="configuration.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBClose_1"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
+  </node>
+  <node componentName="SnowflakeConnection" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="600" posY="80" sizeX="121" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" value="SnowflakeConnection" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAConnection" show="false"/>
+    <elementParameter field="TEXT" name="VERSION" value="1" show="false"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Snowflake" show="false"/>
+    <elementParameter field="CHECK" name="START" value="false" show="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="true" show="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true" show="false"/>
+    <elementParameter field="TEXT" name="HELP" value="HELP" show="false"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_YUm2cB5KEfGXkP-cdHyBXw"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="conn_snowflake"/>
+    <elementParameter field="TEXT" name="configuration.account" value="context.conn_snowflake_account"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeAuth.authenticationType" value="KEY_PAIR"/>
+    <elementParameter field="TEXT" name="configuration.snowflakeAuth.userId" value="context.conn_snowflake_userId"/>
+    <elementParameter field="TEXT" name="configuration.snowflakeAuth.keyAlias" value="context.conn_snowflake_keyAlias"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="TEXT" name="configuration.warehouse" value="context.conn_snowflake_warehouse"/>
+    <elementParameter field="TEXT" name="configuration.dbSchema" value="context.conn_snowflake_dbSchema"/>
+    <elementParameter field="TEXT" name="configuration.database" value="context.conn_snowflake_database"/>
+    <elementParameter field="CHECK" name="configuration.shareConnection" value="false"/>
+    <elementParameter field="CHECK" name="configuration.autoCommit" value="true"/>
+    <elementParameter field="TEXT" name="configuration.jdbcParameters" value="context.conn_snowflake_jdbcParameters"/>
+    <elementParameter field="TEXT" name="configuration.loginTimeout" value="context.conn_snowflake_loginTimeout"/>
+    <elementParameter field="TEXT" name="configuration.role" value="context.conn_snowflake_role"/>
+    <elementParameter field="TEXT" name="configuration.jdbcUrlSuffix" value="context.conn_snowflake_jdbcUrlSuffix"/>
+    <elementParameter field="TECHNICAL" name="configuration.__version" value="-1" show="false"/>
+    <elementParameter field="TEXT" name="___TACOKIT_COMPONENT_PLUGIN_NAME___" value="snowflake" show="false"/>
+    <metadata connector="FLOW" name="tDBConnection_1"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
+  </node>
+  <connection connectorName="RESPONSE" label="row1" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_1" target="tReplicate_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tLogRow_1">
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tReplicate_1" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tMap_1">
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tReplicate_1" target="tExtractJSONFields_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tReplicate_1" target="tSetGlobalVar_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tSetGlobalVar_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tExtractJSONFields_3" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_3" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="out1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tLogRow_2" offsetLabelX="0" offsetLabelY="0" source="tLogRow_2" target="tSnowflakeOutput_1">
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tLogRow_2" offsetLabelX="0" offsetLabelY="0" source="tLogRow_2" target="tSnowflakeOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tSetKeystore_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetKeystore_1" offsetLabelX="0" offsetLabelY="0" source="tSetKeystore_1" target="tDBConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBClose_1" offsetLabelX="0" offsetLabelY="0" source="tDBClose_1" target="tSetKeystore_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_2" offsetLabelX="0" offsetLabelY="0" source="tPostjob_2" target="tDBClose_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_2" offsetLabelX="0" offsetLabelY="0" source="tPostjob_2" target="tSetKeystore_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
   </connection>
-  <note opaque="true" posX="920" posY="40" sizeHeight="121" sizeWidth="241" text="NOTE&#xD;&#xA;&#xD;&#xA;query parameter/s: api_key&#xD;&#xA;headers: Accept=application/json&#xD;&#xA;">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetKeystore_2" offsetLabelX="0" offsetLabelY="0" source="tSetKeystore_2" target="tFixedFlowInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk4" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tSetKeystore_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tMap_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="out2" lineStyle="0" metaname="out2" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tLogRow_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="START_TIME" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+      <elementValue elementRef="TRACE_COLUMN" value="TABLE_NAME" id="3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="4"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="5"/>
+      <elementValue elementRef="TRACE_COLUMN" value="STATUS" id="6"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="7"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="8"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ERROR_LOG" id="9"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="10"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="11"/>
+      <elementValue elementRef="TRACE_COLUMN" value="END_TIME" id="12"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="13"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="14"/>
+      <elementValue elementRef="TRACE_COLUMN" value="SCHEMA" id="15"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="16"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="17"/>
+      <elementValue elementRef="TRACE_COLUMN" value="TARGET_ROW_COUNT" id="18"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="19"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="20"/>
+      <elementValue elementRef="TRACE_COLUMN" value="API_STATUS_CODE" id="21"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="22"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="23"/>
+      <elementValue elementRef="TRACE_COLUMN" value="RUN_DURATION" id="24"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="25"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="26"/>
+      <elementValue elementRef="TRACE_COLUMN" value="SOURCE_ROW_COUNT" id="27"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="28"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="29"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tLogRow_3" offsetLabelX="0" offsetLabelY="0" source="tLogRow_3" target="tSnowflakeOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSnowflakeOutput_2" offsetLabelX="0" offsetLabelY="0" source="tSnowflakeOutput_2" target="tDBClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  </connection>
+  <note opaque="true" posX="1480" posY="80" sizeHeight="121" sizeWidth="241" text="NOTE&#xD;&#xA;&#xD;&#xA;query parameter/s: api_key&#xD;&#xA;headers: Accept=application/json&#xD;&#xA;">
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
     <elementParameter field="RADIO" name="NOTETXT_CENTER" value="false"/>
     <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="false"/>
@@ -1067,9 +1442,29 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="open snowflake connection"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetKeystore_2" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="clear keystore"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="get START_TIME"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="process log"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
@@ -1081,15 +1476,9 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_2" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
-  </subjob>
-  <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetKeystore_2" show="false"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="clear keystore"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="open snowflake connection"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>

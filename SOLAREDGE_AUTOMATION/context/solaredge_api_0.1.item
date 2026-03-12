@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_V3-usBk2EfGE-vukTPVQsQ" confirmationNeeded="false" hide="false" name="Dev">
-  <contextParameter xmi:id="_V3-usRk2EfGE-vukTPVQsQ" comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="https://monitoringapi.solaredge.com"/>
-  <contextParameter xmi:id="_V3-ushk2EfGE-vukTPVQsQ" comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK"/>
-  <contextParameter xmi:id="_Om0YwBk3EfGE-vukTPVQsQ" comment="" name="solaredge_api_endpoint_SiteList" prompt="solaredge_api_endpoint_SiteList?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/sites/list"/>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_BBi_oB5KEfGXkP-cdHyBXw" confirmationNeeded="false" hide="false" name="Desktop">
+  <contextParameter xmi:id="_BBi_oR5KEfGXkP-cdHyBXw" comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="https://monitoringapi.solaredge.com"/>
+  <contextParameter xmi:id="_BBi_oh5KEfGXkP-cdHyBXw" comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK"/>
+  <contextParameter xmi:id="_BBi_ox5KEfGXkP-cdHyBXw" comment="" name="solaredge_api_endpoint_SiteList" prompt="solaredge_api_endpoint_SiteList?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/sites/list"/>
 </talendfile:ContextType>

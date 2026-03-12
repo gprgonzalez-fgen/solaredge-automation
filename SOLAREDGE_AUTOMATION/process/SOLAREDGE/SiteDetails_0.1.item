@@ -1,33 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Desktop" jobType="Standard">
-  <context confirmationNeeded="false" hide="false" name="Dev">
-    <contextParameter comment="" name="conn_pi_dev_raw_jdbcParameters" prompt="conn_pi_dev_raw_jdbcParameters?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="" internalId="_ViaKgBk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_keyAlias" prompt="conn_pi_dev_raw_keyAlias?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="snowflake" internalId="_ViaKgRk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_warehouse" prompt="conn_pi_dev_raw_warehouse?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="PI_ENERGY_WAREHOUSE" internalId="_ViaKghk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_role" prompt="conn_pi_dev_raw_role?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="" internalId="_ViaKgxk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_account" prompt="conn_pi_dev_raw_account?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="YHSLVLG-FPH" internalId="_ViaKhBk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_loginTimeout" prompt="conn_pi_dev_raw_loginTimeout?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="15" internalId="_ViaKhRk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_database" prompt="conn_pi_dev_raw_database?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="PI_ENERGY_DEV" internalId="_ViaKhhk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_userId" prompt="conn_pi_dev_raw_userId?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="pi_energy_etl_user" internalId="_ViaKhxk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_jdbcUrlSuffix" prompt="conn_pi_dev_raw_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value=".snowflakecomputing.com" internalId="_ViaKiBk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_dbSchema" prompt="conn_pi_dev_raw_dbSchema?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="RAW" internalId="_ViaKiRk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="snowflake_keystore_password" prompt="snowflake_keystore_password?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_Password" value="enc:system.encryption.key.v1:oMv1axq+tY+SCORHbojxLDnfaX+yw4AfJpOyGhpZRobca1oWaw==" internalId="_ViaKihk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="snowflake_keystore_jks" prompt="snowflake_keystore_jks?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_String" value="&quot;D:/gprgonzalez/keystores/PI_SOLAREDGE/keystore.jks&quot;" internalId="_ViaKixk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK" internalId="_ViaKjBk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="solaredge_api_endpoint_SiteList" prompt="solaredge_api_endpoint_SiteList?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="/sites/list" internalId="_ViaKjRk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="https://monitoringapi.solaredge.com" internalId="_ViaKjhk6EfGE-vukTPVQsQ"/>
-  </context>
-  <context confirmationNeeded="false" hide="false" name="Desktop">
-    <contextParameter comment="" name="conn_pi_dev_raw_jdbcParameters" prompt="conn_pi_dev_raw_jdbcParameters?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="" internalId="_ViaKgBk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_keyAlias" prompt="conn_pi_dev_raw_keyAlias?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="snowflake" internalId="_ViaKgRk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_warehouse" prompt="conn_pi_dev_raw_warehouse?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="PI_ENERGY_WAREHOUSE" internalId="_ViaKghk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_role" prompt="conn_pi_dev_raw_role?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="" internalId="_ViaKgxk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_account" prompt="conn_pi_dev_raw_account?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="YHSLVLG-FPH" internalId="_ViaKhBk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_loginTimeout" prompt="conn_pi_dev_raw_loginTimeout?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="15" internalId="_ViaKhRk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_database" prompt="conn_pi_dev_raw_database?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="PI_ENERGY_DEV" internalId="_ViaKhhk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_userId" prompt="conn_pi_dev_raw_userId?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="pi_energy_etl_user" internalId="_ViaKhxk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_jdbcUrlSuffix" prompt="conn_pi_dev_raw_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value=".snowflakecomputing.com" internalId="_ViaKiBk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_pi_dev_raw_dbSchema" prompt="conn_pi_dev_raw_dbSchema?" promptNeeded="false" repositoryContextId="_maK2IBerEfGnmecgVvjMBQ" type="id_String" value="RAW" internalId="_ViaKiRk6EfGE-vukTPVQsQ"/>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter comment="" name="conn_snowflake_jdbcParameters" prompt="conn_snowflake_jdbcParameters?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_ViaKgBk6EfGE-vukTPVQsQ"/>
+    <contextParameter comment="" name="conn_snowflake_keyAlias" prompt="conn_snowflake_keyAlias?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="snowflake" internalId="_ViaKgRk6EfGE-vukTPVQsQ"/>
+    <contextParameter comment="" name="conn_snowflake_warehouse" prompt="conn_snowflake_warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="PI_ENERGY_WAREHOUSE" internalId="_ViaKghk6EfGE-vukTPVQsQ"/>
+    <contextParameter comment="" name="conn_snowflake_role" prompt="conn_snowflake_role?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_ViaKgxk6EfGE-vukTPVQsQ"/>
+    <contextParameter comment="" name="conn_snowflake_account" prompt="conn_snowflake_account?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="YHSLVLG-FPH" internalId="_ViaKhBk6EfGE-vukTPVQsQ"/>
+    <contextParameter comment="" name="conn_snowflake_loginTimeout" prompt="conn_snowflake_loginTimeout?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="15" internalId="_ViaKhRk6EfGE-vukTPVQsQ"/>
+    <contextParameter comment="" name="conn_snowflake_database" prompt="conn_snowflake_database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="PI_ENERGY_DEV" internalId="_ViaKhhk6EfGE-vukTPVQsQ"/>
+    <contextParameter comment="" name="conn_snowflake_userId" prompt="conn_snowflake_userId?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="pi_energy_etl_user" internalId="_ViaKhxk6EfGE-vukTPVQsQ"/>
+    <contextParameter comment="" name="conn_snowflake_jdbcUrlSuffix" prompt="conn_snowflake_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=".snowflakecomputing.com" internalId="_ViaKiBk6EfGE-vukTPVQsQ"/>
+    <contextParameter comment="" name="conn_snowflake_dbSchema" prompt="conn_snowflake_dbSchema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="RAW" internalId="_ViaKiRk6EfGE-vukTPVQsQ"/>
     <contextParameter comment="" name="snowflake_keystore_password" prompt="snowflake_keystore_password?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_Password" value="enc:system.encryption.key.v1:oMv1axq+tY+SCORHbojxLDnfaX+yw4AfJpOyGhpZRobca1oWaw==" internalId="_ViaKihk6EfGE-vukTPVQsQ"/>
     <contextParameter comment="" name="snowflake_keystore_jks" prompt="snowflake_keystore_jks?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_String" value="&quot;D:/keystores/PI_SOLAREDGE/keystore.jks&quot;" internalId="_ViaKixk6EfGE-vukTPVQsQ"/>
     <contextParameter comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK" internalId="_ViaKjBk6EfGE-vukTPVQsQ"/>
@@ -153,28 +136,38 @@
   </node>
   <node componentName="SnowflakeConnection" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="440" posY="80" sizeX="81" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" value="SnowflakeConnection" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAConnection" show="false"/>
+    <elementParameter field="TEXT" name="VERSION" value="1" show="false"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Snowflake" show="false"/>
+    <elementParameter field="CHECK" name="START" value="false" show="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="true" show="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true" show="false"/>
+    <elementParameter field="TEXT" name="HELP" value="HELP" show="false"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_neL34BerEfGnmecgVvjMBQ"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_YUm2cB5KEfGXkP-cdHyBXw"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="TEXT" name="LABEL" value="pi_dev_raw"/>
-    <elementParameter field="TEXT" name="configuration.account" value="context.conn_pi_dev_raw_account"/>
+    <elementParameter field="TEXT" name="configuration.account" value="context.conn_snowflake_account"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeAuth.authenticationType" value="KEY_PAIR"/>
-    <elementParameter field="TEXT" name="configuration.snowflakeAuth.userId" value="context.conn_pi_dev_raw_userId"/>
-    <elementParameter field="TEXT" name="configuration.snowflakeAuth.keyAlias" value="context.conn_pi_dev_raw_keyAlias"/>
+    <elementParameter field="TEXT" name="configuration.snowflakeAuth.userId" value="context.conn_snowflake_userId"/>
+    <elementParameter field="TEXT" name="configuration.snowflakeAuth.keyAlias" value="context.conn_snowflake_keyAlias"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
-    <elementParameter field="TEXT" name="configuration.warehouse" value="context.conn_pi_dev_raw_warehouse"/>
-    <elementParameter field="TEXT" name="configuration.dbSchema" value="context.conn_pi_dev_raw_dbSchema"/>
-    <elementParameter field="TEXT" name="configuration.database" value="context.conn_pi_dev_raw_database"/>
+    <elementParameter field="TEXT" name="configuration.warehouse" value="context.conn_snowflake_warehouse"/>
+    <elementParameter field="TEXT" name="configuration.dbSchema" value="context.conn_snowflake_dbSchema"/>
+    <elementParameter field="TEXT" name="configuration.database" value="context.conn_snowflake_database"/>
     <elementParameter field="CHECK" name="configuration.shareConnection" value="false"/>
     <elementParameter field="CHECK" name="configuration.autoCommit" value="true"/>
-    <elementParameter field="TEXT" name="configuration.jdbcParameters" value="context.conn_pi_dev_raw_jdbcParameters"/>
-    <elementParameter field="TEXT" name="configuration.loginTimeout" value="context.conn_pi_dev_raw_loginTimeout"/>
-    <elementParameter field="TEXT" name="configuration.role" value="context.conn_pi_dev_raw_role"/>
-    <elementParameter field="TEXT" name="configuration.jdbcUrlSuffix" value="context.conn_pi_dev_raw_jdbcUrlSuffix"/>
+    <elementParameter field="TEXT" name="configuration.jdbcParameters" value="context.conn_snowflake_jdbcParameters"/>
+    <elementParameter field="TEXT" name="configuration.loginTimeout" value="context.conn_snowflake_loginTimeout"/>
+    <elementParameter field="TEXT" name="configuration.role" value="context.conn_snowflake_role"/>
+    <elementParameter field="TEXT" name="configuration.jdbcUrlSuffix" value="context.conn_snowflake_jdbcUrlSuffix"/>
     <elementParameter field="TECHNICAL" name="configuration.__version" value="-1" show="false"/>
+    <elementParameter field="TEXT" name="___TACOKIT_COMPONENT_PLUGIN_NAME___" value="snowflake" show="false"/>
     <metadata connector="FLOW" name="tDBConnection_1"/>
     <metadata connector="LOOKUP" name="LOOKUP"/>
     <metadata connector="MERGE" name="MERGE"/>
@@ -183,29 +176,27 @@
   <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="160" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dA" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_neL34BerEfGnmecgVvjMBQ"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="TEXT" name="LABEL" value="DIM_SOLAREDGE_SITELIST"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.conn_pi_dev_raw_account" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.conn_snowflake_account" show="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="KEY_PAIR" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.conn_pi_dev_raw_userId" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.keyAlias" value="context.conn_pi_dev_raw_keyAlias" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.conn_snowflake_userId" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.keyAlias" value="context.conn_snowflake_keyAlias" show="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.conn_pi_dev_raw_warehouse" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_pi_dev_raw_dbSchema" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_pi_dev_raw_database" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.conn_snowflake_warehouse" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_snowflake_dbSchema" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_snowflake_database" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
     <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="DIM_SOLAREDGE_SITELIST"/>
     <elementParameter field="CHECK" name="configuration.dataSet.manualQuery" value="true"/>
     <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT DISTINCT SITE_ID FROM DIM_SOLAREDGE_SITELIST&quot;"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="context.conn_pi_dev_raw_jdbcParameters" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="context.conn_pi_dev_raw_loginTimeout" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.role" value="context.conn_pi_dev_raw_role" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value="context.conn_pi_dev_raw_jdbcUrlSuffix" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="context.conn_snowflake_jdbcParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="context.conn_snowflake_loginTimeout" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.role" value="context.conn_snowflake_role" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value="context.conn_snowflake_jdbcUrlSuffix" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.useUnquotedObjectIdentifiers" value="true" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.useSessionTimezone" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
@@ -706,7 +697,7 @@
       <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="SITE_ID" expression="row4.SITE_ID " type="id_String" nullable="true"/>
@@ -888,20 +879,18 @@
   <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="1040" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_neL34BerEfGnmecgVvjMBQ"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="TEXT" name="LABEL" value="SOLAREDGE_SITE_DETAILS"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.conn_pi_dev_raw_account" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.conn_snowflake_account" show="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="KEY_PAIR" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.conn_pi_dev_raw_userId" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.keyAlias" value="context.conn_pi_dev_raw_keyAlias" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.conn_snowflake_userId" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.keyAlias" value="context.conn_snowflake_keyAlias" show="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.conn_pi_dev_raw_warehouse" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_pi_dev_raw_dbSchema" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_pi_dev_raw_database" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.conn_snowflake_warehouse" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_snowflake_dbSchema" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_snowflake_database" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
     <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="SOLAREDGE_SITE_DETAILS"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
@@ -909,10 +898,10 @@
     <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="SITE_ID" show="false"/>
     <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="context.conn_pi_dev_raw_jdbcParameters" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="context.conn_pi_dev_raw_loginTimeout" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.role" value="context.conn_pi_dev_raw_role" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value="context.conn_pi_dev_raw_jdbcUrlSuffix" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="context.conn_snowflake_jdbcParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="context.conn_snowflake_loginTimeout" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.role" value="context.conn_snowflake_role" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value="context.conn_snowflake_jdbcUrlSuffix" show="false"/>
     <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.convertColumnsAndTableToUppercase" value="true"/>
     <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useSchemaKeysForUpsert" value="true"/>
     <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.enforceDatabaseSchema" value="false"/>

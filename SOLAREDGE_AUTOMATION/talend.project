@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
   <TalendProperties:Project xmi:id="_1tp9YReiEfGpoK9hFnqpYA" label="solaredge_automation" description="" language="java" technicalLabel="SOLAREDGE_AUTOMATION" local="true" author="_1tvc8BeiEfGpoK9hFnqpYA" productVersion="Talend Cloud Data Management Platform-8.0.1.20260211_0926-patch" type="DQ" itemsRelationVersion="1.3" bigData="false">
-    <componentsSettings xmi:id="_h2XfQBhlEfGhtfL56Mw9Aw" name="DI|tREST" family="Deprecated"/>
-    <componentsSettings xmi:id="_iNlFYBhlEfGhtfL56Mw9Aw" name="DI|tHashInput" family="Technical"/>
-    <componentsSettings xmi:id="_ic1pYBhlEfGhtfL56Mw9Aw" name="DI|tHashOutput" family="Technical"/>
     <migrationTask xmi:id="_1vCdcBeiEfGpoK9hFnqpYA" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_1tvc8BeiEfGpoK9hFnqpYA" login="gprgonzalez@firstgen.com.ph"/>
