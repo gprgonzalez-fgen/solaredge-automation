@@ -15,6 +15,7 @@ configuration/
 **/.settings/
 **/sqlPatterns/
 **/report/
+**/recycle_bin.index
 
 # talend build and maven junk
 **/poms/
