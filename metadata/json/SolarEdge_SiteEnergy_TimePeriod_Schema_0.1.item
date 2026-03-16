@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_QQlcwCFXEfGTI91mAoNfUg" name="SolarEdge_SiteEnergy_TimePeriod_Schema" dataPackage="_QQlcyyFXEfGTI91mAoNfUg" JSONFilePath="D:/repos/FGEN/solaredge-talend/SOLAREDGE_AUTOMATION/data/in/solaredge_siteenergy_timeperiod.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_QQlcwSFXEfGTI91mAoNfUg" LimitBoucle="50" AbsoluteXPathQuery="$.timeFrameEnergy">
+      <schemaTargets xmi:id="_QQlcwiFXEfGTI91mAoNfUg" RelativeXPathQuery="energy" TagName="ENERGY"/>
+      <schemaTargets xmi:id="_QQlcwyFXEfGTI91mAoNfUg" RelativeXPathQuery="unit" TagName="UNIT"/>
+      <schemaTargets xmi:id="_QQlcxCFXEfGTI91mAoNfUg" RelativeXPathQuery="measuredBy" TagName="MEASURED_BY"/>
+      <schemaTargets xmi:id="_QQlcxSFXEfGTI91mAoNfUg" RelativeXPathQuery="startLifetimeEnergy.date" TagName="ST_DATE"/>
+      <schemaTargets xmi:id="_QQlcxiFXEfGTI91mAoNfUg" RelativeXPathQuery="startLifetimeEnergy.energy" TagName="ST_ENERGY"/>
+      <schemaTargets xmi:id="_QQlcxyFXEfGTI91mAoNfUg" RelativeXPathQuery="startLifetimeEnergy.unit" TagName="ST_UNIT"/>
+      <schemaTargets xmi:id="_QQlcyCFXEfGTI91mAoNfUg" RelativeXPathQuery="endLifetimeEnergy.date" TagName="END_DATE"/>
+      <schemaTargets xmi:id="_QQlcySFXEfGTI91mAoNfUg" RelativeXPathQuery="endLifetimeEnergy.energy" TagName="END_ENERGY"/>
+      <schemaTargets xmi:id="_QQlcyiFXEfGTI91mAoNfUg" RelativeXPathQuery="endLifetimeEnergy.unit" TagName="END_UNIT"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_QQlcyyFXEfGTI91mAoNfUg" name="default" dataManager="_QQlcwCFXEfGTI91mAoNfUg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_QQlczCFXEfGTI91mAoNfUg" id="_0cwwgCFWEfGTI91mAoNfUg" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QQlczSFXEfGTI91mAoNfUg" label="ENERGY" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QQlcziFXEfGTI91mAoNfUg" label="UNIT" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QQlczyFXEfGTI91mAoNfUg" label="MEASURED_BY" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QQlc0CFXEfGTI91mAoNfUg" label="ST_DATE" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QQlc0SFXEfGTI91mAoNfUg" label="ST_ENERGY" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QQlc0iFXEfGTI91mAoNfUg" label="ST_UNIT" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QQlc0yFXEfGTI91mAoNfUg" label="END_DATE" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QQlc1CFXEfGTI91mAoNfUg" label="END_ENERGY" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QQlc1SFXEfGTI91mAoNfUg" label="END_UNIT" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

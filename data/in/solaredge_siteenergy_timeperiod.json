@@ -1,0 +1,17 @@
+{
+  "timeFrameEnergy": {
+    "energy": 298042200,
+    "unit": "Wh",
+    "measuredBy": "",
+    "startLifetimeEnergy": {
+      "date": "2025-03-17",
+      "energy": 1465195534,
+      "unit": "Wh"
+    },
+    "endLifetimeEnergy": {
+      "date": "2026-03-17",
+      "energy": 1763237734,
+      "unit": "Wh"
+    }
+  }
+}
