@@ -10,10 +10,8 @@ configuration/
 **/temp/
 **/bin/
 **/migration.log
-**/TDQ_Libraries/
 **/talend.project.local
 **/.settings/
-**/sqlPatterns/
 **/report/
 **/recycle_bin.index
 
