@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" hide="false" name="Default">
-    <contextParameter comment="" name="conn_snowflake_jdbcParameters" prompt="conn_snowflake_jdbcParameters?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_ViaKgBk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_snowflake_keyAlias" prompt="conn_snowflake_keyAlias?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="snowflake" internalId="_ViaKgRk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_snowflake_warehouse" prompt="conn_snowflake_warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="PI_ENERGY_WAREHOUSE" internalId="_ViaKghk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_snowflake_role" prompt="conn_snowflake_role?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_ViaKgxk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_snowflake_account" prompt="conn_snowflake_account?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="YHSLVLG-FPH" internalId="_ViaKhBk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_snowflake_loginTimeout" prompt="conn_snowflake_loginTimeout?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="15" internalId="_ViaKhRk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_snowflake_database" prompt="conn_snowflake_database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="PI_ENERGY_DEV" internalId="_ViaKhhk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_snowflake_userId" prompt="conn_snowflake_userId?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="pi_energy_etl_user" internalId="_ViaKhxk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_snowflake_jdbcUrlSuffix" prompt="conn_snowflake_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=".snowflakecomputing.com" internalId="_ViaKiBk6EfGE-vukTPVQsQ"/>
-    <contextParameter comment="" name="conn_snowflake_dbSchema" prompt="conn_snowflake_dbSchema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="RAW" internalId="_ViaKiRk6EfGE-vukTPVQsQ"/>
     <contextParameter comment="" name="snowflake_keystore_password" prompt="snowflake_keystore_password?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_Password" value="enc:system.encryption.key.v1:oMv1axq+tY+SCORHbojxLDnfaX+yw4AfJpOyGhpZRobca1oWaw==" internalId="_ViaKihk6EfGE-vukTPVQsQ"/>
     <contextParameter comment="" name="snowflake_keystore_jks" prompt="snowflake_keystore_jks?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_String" value="&quot;D:/keystores/PI_SOLAREDGE/keystore.jks&quot;" internalId="_ViaKixk6EfGE-vukTPVQsQ"/>
     <contextParameter comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK" internalId="_ViaKjBk6EfGE-vukTPVQsQ"/>
     <contextParameter comment="" name="solaredge_api_endpoint_SiteList" prompt="solaredge_api_endpoint_SiteList?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="/sites/list" internalId="_ViaKjRk6EfGE-vukTPVQsQ"/>
     <contextParameter comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="https://monitoringapi.solaredge.com" internalId="_ViaKjhk6EfGE-vukTPVQsQ"/>
+    <contextParameter comment="" name="conn_snowflake_userId" prompt="conn_snowflake_userId?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="pi_energy_etl_user" internalId="_9O6cQCFOEfG7yqEj-0QZOQ"/>
+    <contextParameter comment="" name="conn_snowflake_loginTimeout" prompt="conn_snowflake_loginTimeout?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_Integer" value="15" internalId="_9O6cQSFOEfG7yqEj-0QZOQ"/>
+    <contextParameter comment="" name="conn_snowflake_database" prompt="conn_snowflake_database?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="PI_ENERGY_DEV" internalId="_9O6cQiFOEfG7yqEj-0QZOQ"/>
+    <contextParameter comment="" name="conn_snowflake_jdbcParameters" prompt="conn_snowflake_jdbcParameters?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="" internalId="_9O6cQyFOEfG7yqEj-0QZOQ"/>
+    <contextParameter comment="" name="conn_snowflake_warehouse" prompt="conn_snowflake_warehouse?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="PI_ENERGY_WAREHOUSE" internalId="_9O6cRCFOEfG7yqEj-0QZOQ"/>
+    <contextParameter comment="" name="conn_snowflake_account" prompt="conn_snowflake_account?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="YHSLVLG-FPH" internalId="_9O6cRSFOEfG7yqEj-0QZOQ"/>
+    <contextParameter comment="" name="conn_snowflake_dbSchema" prompt="conn_snowflake_dbSchema?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="RAW" internalId="_9O6cRiFOEfG7yqEj-0QZOQ"/>
+    <contextParameter comment="" name="conn_snowflake_keyAlias" prompt="conn_snowflake_keyAlias?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="snowflake" internalId="_9O6cRyFOEfG7yqEj-0QZOQ"/>
+    <contextParameter comment="" name="conn_snowflake_role" prompt="conn_snowflake_role?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="" internalId="_9O6cSCFOEfG7yqEj-0QZOQ"/>
+    <contextParameter comment="" name="conn_snowflake_jdbcUrlSuffix" prompt="conn_snowflake_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value=".snowflakecomputing.com" internalId="_9O6cSSFOEfG7yqEj-0QZOQ"/>
+    <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_SITE_DETAILS" internalId="_zWzcwCFQEfGTI91mAoNfUg"/>
+    <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_zWzcwSFQEfGTI91mAoNfUg"/>
+    <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_zWzcwiFQEfGTI91mAoNfUg"/>
+    <contextParameter comment="" name="status" prompt="status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="FAILED" internalId="_zWzcwyFQEfGTI91mAoNfUg"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -60,7 +64,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:nH4pHKfrmJ2ye2We+AMFnP6bXz4kqB+b4L3MFNiC" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:EfSDBSvaaydU67i5lfvPqCT0o/YCWXo7QIu0ofzx" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -75,7 +79,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/Git/FGEN/solaredge-talend/.metadata&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/repos/FGEN/solaredge-talend/.metadata&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
@@ -95,7 +99,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:5Q84JfIsoDwXqXO6xyrq4R1dq2lDR580Nzsacvsq" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:FUtjtc3t05HrAfYjcg4V0DZ3iwyCU6q1M7EuTEYd" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -179,7 +183,7 @@
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_snowflake_dbSchema" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_snowflake_database" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="DIM_SOLAREDGE_SITELIST"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="context.input_table"/>
     <elementParameter field="CHECK" name="configuration.dataSet.manualQuery" value="true"/>
     <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT DISTINCT SITE_ID FROM DIM_SOLAREDGE_SITELIST&quot;"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
@@ -687,7 +691,7 @@
       <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" originalLength="255" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="SITE_ID" expression="row4.SITE_ID " type="id_String" nullable="true"/>
@@ -882,7 +886,7 @@
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_snowflake_dbSchema" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_snowflake_database" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="SOLAREDGE_SITE_DETAILS"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="context.output_table"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="UPSERT"/>
     <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="SITE_ID" show="false"/>

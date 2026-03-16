@@ -20,8 +20,9 @@
     <contextParameter comment="" name="conn_snowflake_role" prompt="conn_snowflake_role?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="" internalId="_fGs0uB6fEfG21ZB4jusu4g"/>
     <contextParameter comment="" name="conn_snowflake_jdbcUrlSuffix" prompt="conn_snowflake_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value=".snowflakecomputing.com" internalId="_fGs0uR6fEfG21ZB4jusu4g"/>
     <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_SITE_ENERGY_BULK" internalId="_fGs0uh6fEfG21ZB4jusu4g"/>
-    <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_SITE_ENERGY_BULK" internalId="_fGs0ux6fEfG21ZB4jusu4g"/>
+    <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_fGs0ux6fEfG21ZB4jusu4g"/>
     <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_fGs0vB6fEfG21ZB4jusu4g"/>
+    <contextParameter comment="" name="status" prompt="status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="FAILED" internalId="_faqecCFQEfGTI91mAoNfUg"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -148,7 +149,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="TEXT" name="LABEL" value="PI_DEV_RAW"/>
+    <elementParameter field="TEXT" name="LABEL" value="pi_dev_raw"/>
     <elementParameter field="TEXT" name="configuration.account" value="context.conn_snowflake_account"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeAuth.authenticationType" value="KEY_PAIR"/>
     <elementParameter field="TEXT" name="configuration.snowflakeAuth.userId" value="context.conn_snowflake_userId"/>
@@ -179,7 +180,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="TEXT" name="LABEL" value="PI_DEV_RAW"/>
+    <elementParameter field="TEXT" name="LABEL" value="pi_dev_raw"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
     <elementParameter field="TECHNICAL" name="configuration.__version" value="-1" show="false"/>
     <metadata connector="FLOW" name="tDBClose_1"/>
@@ -719,7 +720,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="120" posY="240" sizeX="160" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="// get date now&#xD;&#xA;java.util.Date now = TalendDate.getCurrentDate();&#xD;&#xA;System.out.println(&quot;now: &quot; + now);&#xD;&#xA;// endTime: now (formatted)&#xD;&#xA;globalMap.put(&quot;endDate&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, now));&#xD;&#xA;&#xD;&#xA;//startTime: now minus 28 days&#xD;&#xA;java.util.Date monthAgo = TalendDate.addDate(now, -28, &quot;dd&quot;);&#xD;&#xA;System.out.println(&quot;month Ago: &quot; + monthAgo);&#xD;&#xA;globalMap.put(&quot;startDate&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, monthAgo));&#xD;&#xA;&#xD;&#xA;context.startDate = ((String)globalMap.get(&quot;startDate&quot;));&#xD;&#xA;context.endDate = ((String)globalMap.get(&quot;endDate&quot;));&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Start Date: &quot; + context.startDate);&#xD;&#xA;System.out.println(&quot;End Date: &quot; + context.endDate);&#xD;&#xA;System.out.println(&quot;Time unit: &quot; + context.timeUnit);&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="// get date now&#xD;&#xA;java.util.Date now = TalendDate.getCurrentDate();&#xD;&#xA;System.out.println(&quot;now: &quot; + now);&#xD;&#xA;// endTime: now (formatted)&#xD;&#xA;globalMap.put(&quot;endDate&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, now));&#xD;&#xA;&#xD;&#xA;// startTime: now minus 28 days&#xD;&#xA;java.util.Date monthAgo = TalendDate.addDate(now, -28, &quot;dd&quot;);&#xD;&#xA;System.out.println(&quot;month Ago: &quot; + monthAgo);&#xD;&#xA;globalMap.put(&quot;startDate&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, monthAgo));&#xD;&#xA;&#xD;&#xA;context.startDate = ((String)globalMap.get(&quot;startDate&quot;));&#xD;&#xA;context.endDate = ((String)globalMap.get(&quot;endDate&quot;));&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Start Date: &quot; + context.startDate);&#xD;&#xA;System.out.println(&quot;End Date: &quot; + context.endDate);&#xD;&#xA;System.out.println(&quot;Time unit: &quot; + context.timeUnit);&#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>
@@ -821,8 +822,10 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="get Site Energy: Bulk and ingest into snowflake table"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>

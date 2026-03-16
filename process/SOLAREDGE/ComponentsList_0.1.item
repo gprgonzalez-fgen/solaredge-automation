@@ -16,6 +16,10 @@
     <contextParameter comment="" name="conn_snowflake_keyAlias" prompt="conn_snowflake_keyAlias?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="snowflake" internalId="_m1XncSFOEfG7yqEj-0QZOQ"/>
     <contextParameter comment="" name="conn_snowflake_role" prompt="conn_snowflake_role?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="" internalId="_m1XnciFOEfG7yqEj-0QZOQ"/>
     <contextParameter comment="" name="conn_snowflake_jdbcUrlSuffix" prompt="conn_snowflake_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value=".snowflakecomputing.com" internalId="_m1XncyFOEfG7yqEj-0QZOQ"/>
+    <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_COMPONENTS" internalId="_FpyE4CFREfGTI91mAoNfUg"/>
+    <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_FpyE4SFREfGTI91mAoNfUg"/>
+    <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_FpyE4iFREfGTI91mAoNfUg"/>
+    <contextParameter comment="" name="status" prompt="status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="FAILED" internalId="_FpyE4yFREfGTI91mAoNfUg"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -212,7 +216,7 @@
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_snowflake_dbSchema" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_snowflake_database" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="DIM_SOLAREDGE_SITELIST"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="context.input_table"/>
     <elementParameter field="CHECK" name="configuration.dataSet.manualQuery" value="true"/>
     <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT DISTINCT SITE_ID FROM DIM_SOLAREDGE_SITELIST&quot;"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
@@ -514,7 +518,7 @@
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_snowflake_dbSchema" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_snowflake_database" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="DIM_SOLAREDGE_COMPONENTS"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="context.output_table"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="UPSERT"/>
     <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="SITE_ID" show="false"/>
