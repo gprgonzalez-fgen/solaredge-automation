@@ -6,8 +6,8 @@
     <contextParameter comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK" internalId="_FmbzvB0kEfG1rIUtyb4OhQ"/>
     <contextParameter comment="" name="solaredge_api_endpoint_SiteList" prompt="solaredge_api_endpoint_SiteList?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="/sites/list" internalId="_FmbzvR0kEfG1rIUtyb4OhQ"/>
     <contextParameter comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="https://monitoringapi.solaredge.com" internalId="_Fmbzvh0kEfG1rIUtyb4OhQ"/>
-    <contextParameter comment="" name="startDate" prompt="startDate?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2013-05-01" internalId="_GfmyYB1bEfGgGvbcRFChhQ"/>
-    <contextParameter comment="" name="endDate" prompt="endDate?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2013-05-30" internalId="_GfmyYR1bEfGgGvbcRFChhQ"/>
+    <contextParameter comment="" name="startDate" prompt="startDate?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_GfmyYB1bEfGgGvbcRFChhQ"/>
+    <contextParameter comment="" name="endDate" prompt="endDate?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_GfmyYR1bEfGgGvbcRFChhQ"/>
     <contextParameter comment="Granularity" name="timeUnit" prompt="timeUnit?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;QUARTER_OF_AN_HOUR&quot;" internalId="_GfmyYh1bEfGgGvbcRFChhQ"/>
     <contextParameter comment="" name="conn_snowflake_userId" prompt="conn_snowflake_userId?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="pi_energy_etl_user" internalId="_R7xsgB6UEfG21ZB4jusu4g"/>
     <contextParameter comment="" name="conn_snowflake_loginTimeout" prompt="conn_snowflake_loginTimeout?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_Integer" value="15" internalId="_R7xsgR6UEfG21ZB4jusu4g"/>
@@ -312,15 +312,6 @@
   </node>
   <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="760" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_4" show="false"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tExtractJSONFields" show="false"/>
-    <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Processing/Fields" show="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" value="false" show="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="false" show="false"/>
-    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tExtractJSONFields" show="false"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_n6TBYCFJEfG7yqEj-0QZOQ" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
@@ -441,7 +432,7 @@
       <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" originalLength="25" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="SITE_ID" expression="row1.SITE_ID" type="id_String" nullable="true"/>
@@ -565,7 +556,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="120" posY="240" sizeX="121" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//get date now&#xD;&#xA;java.util.Date now = TalendDate.getCurrentDate();&#xD;&#xA;&#xD;&#xA;//endTime: now (formatted)&#xD;&#xA;globalMap.put(&quot;endDate&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, now));&#xD;&#xA;&#xD;&#xA;//startTime: now minus 30 days&#xD;&#xA;java.util.Date monthAgo = TalendDate.addDate(now, -27, &quot;dd&quot;);&#xD;&#xA;globalMap.put(&quot;startDate&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, monthAgo));&#xD;&#xA;&#xD;&#xA;//context.startDate = ((String)globalMap.get(&quot;startDate&quot;));&#xD;&#xA;//context.endDate = ((String)globalMap.get(&quot;endDate&quot;));&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Start date: &quot; + context.startDate);&#xD;&#xA;System.out.println(&quot;End date: &quot; + context.endDate);&#xD;&#xA;System.out.println(&quot;Time unit: &quot; + context.timeUnit);&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//get date now&#xD;&#xA;java.util.Date now = TalendDate.getCurrentDate();&#xD;&#xA;&#xD;&#xA;//endTime: now (formatted)&#xD;&#xA;globalMap.put(&quot;endDate&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, now));&#xD;&#xA;&#xD;&#xA;//startTime: now minus 30 days&#xD;&#xA;java.util.Date monthAgo = TalendDate.addDate(now, -28, &quot;dd&quot;);&#xD;&#xA;globalMap.put(&quot;startDate&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, monthAgo));&#xD;&#xA;&#xD;&#xA;context.startDate = ((String)globalMap.get(&quot;startDate&quot;));&#xD;&#xA;context.endDate = ((String)globalMap.get(&quot;endDate&quot;));&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Start date: &quot; + context.startDate);&#xD;&#xA;System.out.println(&quot;End date: &quot; + context.endDate);&#xD;&#xA;System.out.println(&quot;Time unit: &quot; + context.timeUnit);&#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>
