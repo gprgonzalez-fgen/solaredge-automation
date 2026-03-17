@@ -34,4 +34,9 @@ API Corrections
 
     * CorrectURL: /sites/{siteId 1},{siteId 2},…,{siteId n}/timeFrameEnergy
   * Did not mention limits
+* Site Power
+
+  * Example url is incorrect: '...startTime=2013-05-5%2011:00:00\&endTime=2013-05-05%2013:00:00...'
+
+    * Correct: '...startTime=2013-05-05%2011:00:00\&endTime=2013-05-06%2013:00:00...'
 

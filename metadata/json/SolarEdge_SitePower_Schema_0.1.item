@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_8jZC4CImEfGyZ7Xm8w07DQ" name="SolarEdge_SitePower_Schema" dataPackage="_8jZC5iImEfGyZ7Xm8w07DQ" JSONFilePath="D:/repos/FGEN/solaredge-talend/SOLAREDGE_AUTOMATION/data/in/solaredge_sitepower.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_8jZC4SImEfGyZ7Xm8w07DQ" LimitBoucle="50" AbsoluteXPathQuery="$.power.values[*]">
+      <schemaTargets xmi:id="_8jZC4iImEfGyZ7Xm8w07DQ" RelativeXPathQuery="$.power.timeUnit" TagName="TIME_UNIT"/>
+      <schemaTargets xmi:id="_8jZC4yImEfGyZ7Xm8w07DQ" RelativeXPathQuery="$.power.unit" TagName="UNIT"/>
+      <schemaTargets xmi:id="_8jZC5CImEfGyZ7Xm8w07DQ" RelativeXPathQuery="date" TagName="DATE"/>
+      <schemaTargets xmi:id="_8jZC5SImEfGyZ7Xm8w07DQ" RelativeXPathQuery="value" TagName="VALUE"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_8jZC5iImEfGyZ7Xm8w07DQ" name="default" dataManager="_8jZC4CImEfGyZ7Xm8w07DQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_8jZC5yImEfGyZ7Xm8w07DQ" id="_oEJXgCImEfGyZ7Xm8w07DQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_8jZC6CImEfGyZ7Xm8w07DQ" label="TIME_UNIT" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_8jZC6SImEfGyZ7Xm8w07DQ" label="UNIT" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_8jZC6iImEfGyZ7Xm8w07DQ" label="DATE" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_8jZC6yImEfGyZ7Xm8w07DQ" label="VALUE" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
