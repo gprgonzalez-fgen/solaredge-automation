@@ -23,3 +23,15 @@ SolarEdge\_SiteList\_Schema
 RAW.SOLAREDGE\_SITE\_ENERGY\_DETAILED
 
 * instead of one primary key SITE\_ID, using composite key (SITE\_ID, DATE, TYPE)
+
+
+
+API Corrections
+
+* Site Energy - Time Period: Bulk
+
+  * Example url is incorrect: '.../1,4/energy?timeFrameEnergy?'
+
+    * CorrectURL: /sites/{siteId 1},{siteId 2},…,{siteId n}/timeFrameEnergy
+  * Did not mention limits
+

@@ -1,0 +1,313 @@
+{
+  "timeFrameEnergyList": {
+    "count": 17,
+    "timeFrameEnergyList": [
+      {
+        "siteId": 1396398,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1518368,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1396476,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1365296,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1396387,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1849149,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1460909,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1700517,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1404557,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 3471100,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1396348,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 2218438,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1849165,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1440148,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1364633,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 4549321,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      },
+      {
+        "siteId": 1214847,
+        "timeFrameEnergy": {
+          "energy": null,
+          "unit": "Wh",
+          "measuredBy": "",
+          "startLifetimeEnergy": {
+            "date": "2013-05-01",
+            "energy": null,
+            "unit": "Wh"
+          },
+          "endLifetimeEnergy": {
+            "date": "2013-05-06",
+            "energy": null,
+            "unit": "Wh"
+          }
+        }
+      }
+    ]
+  }
+}
