@@ -1,0 +1,120 @@
+
+{
+  "powerDateValuesList": {
+    "timeUnit": "QUARTER_OF_AN_HOUR",
+    "unit": "W",
+    "count": 2,
+    "siteEnergyList": [
+      {
+        "siteId": 1700517,
+        "powerDataValueSeries": {
+          "values": [
+            {
+              "date": "2013-06-04 11:00:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 11:15:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 11:30:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 11:45:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 12:00:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 12:15:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 12:30:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 12:45:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 13:00:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 13:15:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 13:30:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 13:45:00",
+              "value": null
+            }
+          ]
+        }
+      },
+      {
+        "siteId": 1440148,
+        "powerDataValueSeries": {
+          "values": [
+            {
+              "date": "2013-06-04 11:00:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 11:15:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 11:30:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 11:45:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 12:00:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 12:15:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 12:30:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 12:45:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 13:00:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 13:15:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 13:30:00",
+              "value": null
+            },
+            {
+              "date": "2013-06-04 13:45:00",
+              "value": null
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
