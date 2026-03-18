@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_-4llISLVEfGyZ7Xm8w07DQ" name="SolarEdge_SiteOverview_Schema" dataPackage="_-4llKyLVEfGyZ7Xm8w07DQ" JSONFilePath="D:/repos/FGEN/solaredge-talend/SOLAREDGE_AUTOMATION/data/in/solaredge_siteoverview.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_-4llIiLVEfGyZ7Xm8w07DQ" LimitBoucle="50" AbsoluteXPathQuery="$.overview">
+      <schemaTargets xmi:id="_-4llIyLVEfGyZ7Xm8w07DQ" RelativeXPathQuery="lastUpdateTime" TagName="LAST_UPDATE_TIME"/>
+      <schemaTargets xmi:id="_-4llJCLVEfGyZ7Xm8w07DQ" RelativeXPathQuery="lifeTimeData.energy" TagName="LIFETIME_ENERGY"/>
+      <schemaTargets xmi:id="_-4llJSLVEfGyZ7Xm8w07DQ" RelativeXPathQuery="lifeTimeData.revenue" TagName="LIFETIME_REVENUE"/>
+      <schemaTargets xmi:id="_-4llJiLVEfGyZ7Xm8w07DQ" RelativeXPathQuery="lastYearData.energy" TagName="LASTYR_ENERGY"/>
+      <schemaTargets xmi:id="_-4llJyLVEfGyZ7Xm8w07DQ" RelativeXPathQuery="lastMonthData.energy" TagName="LASTMON_ENERGY"/>
+      <schemaTargets xmi:id="_-4llKCLVEfGyZ7Xm8w07DQ" RelativeXPathQuery="lastDayData.energy" TagName="LASTDAY_ENERGY"/>
+      <schemaTargets xmi:id="_-4llKSLVEfGyZ7Xm8w07DQ" RelativeXPathQuery="currentPower.power" TagName="POWER"/>
+      <schemaTargets xmi:id="_-4llKiLVEfGyZ7Xm8w07DQ" RelativeXPathQuery="measuredBy" TagName="MEASURED_BY"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_-4llKyLVEfGyZ7Xm8w07DQ" name="default" dataManager="_-4llISLVEfGyZ7Xm8w07DQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_-4llLCLVEfGyZ7Xm8w07DQ" id="_iZUvMCLVEfGyZ7Xm8w07DQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_-4llLSLVEfGyZ7Xm8w07DQ" label="LAST_UPDATE_TIME" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_-4llLiLVEfGyZ7Xm8w07DQ" label="LIFETIME_ENERGY" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_-4llLyLVEfGyZ7Xm8w07DQ" label="LIFETIME_REVENUE" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_-4llMCLVEfGyZ7Xm8w07DQ" label="LASTYR_ENERGY" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_-4llMSLVEfGyZ7Xm8w07DQ" label="LASTMON_ENERGY" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_-4llMiLVEfGyZ7Xm8w07DQ" label="LASTDAY_ENERGY" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_-4llMyLVEfGyZ7Xm8w07DQ" label="POWER" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_-4llNCLVEfGyZ7Xm8w07DQ" label="MEASURED_BY" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

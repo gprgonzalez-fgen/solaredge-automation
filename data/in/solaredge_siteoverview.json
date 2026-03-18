@@ -1,0 +1,22 @@
+{
+  "overview": {
+    "lastUpdateTime": "2026-03-18 22:19:13",
+    "lifeTimeData": {
+      "energy": 1860708600,
+      "revenue": 0
+    },
+    "lastYearData": {
+      "energy": 79407150
+    },
+    "lastMonthData": {
+      "energy": 20971344
+    },
+    "lastDayData": {
+      "energy": 1350924
+    },
+    "currentPower": {
+      "power": 0
+    },
+    "measuredBy": ""
+  }
+}
