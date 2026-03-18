@@ -19,7 +19,7 @@
     <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_SITE_POWER_DETAILED" internalId="_6ApBUB5MEfG3QbAgMyqCWQ"/>
     <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_6ApBUR5MEfG3QbAgMyqCWQ"/>
     <contextParameter comment="" name="status" prompt="status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="FAILED" internalId="_0bYI4CE0EfG9NPBuAoJfiQ"/>
-    <contextParameter comment="" name="inpit_table" prompt="inpit_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_cax74CLPEfGyZ7Xm8w07DQ"/>
+    <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_cax74CLPEfGyZ7Xm8w07DQ"/>
     <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_V_4DECLREfGyZ7Xm8w07DQ"/>
     <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_V_4DESLREfGyZ7Xm8w07DQ"/>
     <contextParameter comment="" name="meters" prompt="meters?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_mganwCLSEfGyZ7Xm8w07DQ"/>
@@ -43,7 +43,7 @@
     <contextParameter comment="" name="status" prompt="status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="FAILED" internalId="_0bYI4CE0EfG9NPBuAoJfiQ"/>
     <contextParameter comment="" name="snowflake_keystore_jks" prompt="snowflake_keystore_jks?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_String" value="&quot;D:/gprgonzalez/keystores/PI_SOLAREDGE/keystore.jks&quot;" internalId="_IfRTnSG6EfGoPOZjltsGMA"/>
     <contextParameter comment="" name="snowflake_keystore_password" prompt="snowflake_keystore_password?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_Password" value="enc:system.encryption.key.v1:nJiCznuuhZ5Q/3/CNlCKGma3jtZXi3oOc+jcIqrDKJWEnwoTQg==" internalId="_IfRTniG6EfGoPOZjltsGMA"/>
-    <contextParameter comment="" name="inpit_table" prompt="inpit_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_cax74SLPEfGyZ7Xm8w07DQ"/>
+    <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_cax74SLPEfGyZ7Xm8w07DQ"/>
     <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_V_5RMCLREfGyZ7Xm8w07DQ"/>
     <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_V_5RMSLREfGyZ7Xm8w07DQ"/>
     <contextParameter comment="" name="meters" prompt="meters?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_mganwSLSEfGyZ7Xm8w07DQ"/>
@@ -529,7 +529,7 @@
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_snowflake_dbSchema" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_snowflake_database" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="DIM_SOLAREDGE_SITELIST"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="context.input_table"/>
     <elementParameter field="CHECK" name="configuration.dataSet.manualQuery" value="true"/>
     <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT DISTINCT SITE_ID FROM DIM_SOLAREDGE_SITELIST&quot;"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
@@ -857,7 +857,7 @@
       <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="255" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="SITE_ID" expression="row1.SITE_ID" type="id_String" nullable="true"/>
@@ -922,15 +922,7 @@
   </node>
   <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeOutput_1" show="false"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" value="Output" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
-    <elementParameter field="TEXT" name="VERSION" value="1" show="false"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Snowflake" show="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" value="false" show="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="true" show="false"/>
-    <elementParameter field="TEXT" name="HELP" value="HELP" show="false"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_YUm2cB5KEfGXkP-cdHyBXw"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
@@ -972,7 +964,6 @@
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
     <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
     <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
-    <elementParameter field="TEXT" name="DATASTORE_PATH" value="configuration.dataSet.dataStore" show="false"/>
     <metadata connector="FLOW" name="tSnowflakeOutput_1">
       <column comment="" key="true" length="-1" name="SITE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TIME_UNIT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>

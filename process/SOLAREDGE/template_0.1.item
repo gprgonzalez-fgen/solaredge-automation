@@ -19,7 +19,7 @@
     <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_6ApBUB5MEfG3QbAgMyqCWQ"/>
     <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_6ApBUR5MEfG3QbAgMyqCWQ"/>
     <contextParameter comment="" name="status" prompt="status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="FAILED" internalId="_0bYI4CE0EfG9NPBuAoJfiQ"/>
-    <contextParameter comment="" name="inpit_table" prompt="inpit_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_cax74CLPEfGyZ7Xm8w07DQ"/>
+    <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_cax74CLPEfGyZ7Xm8w07DQ"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="Laptop">
     <contextParameter comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="https://monitoringapi.solaredge.com" internalId="_IfRTkCG6EfGoPOZjltsGMA"/>
@@ -40,7 +40,7 @@
     <contextParameter comment="" name="status" prompt="status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="FAILED" internalId="_0bYI4CE0EfG9NPBuAoJfiQ"/>
     <contextParameter comment="" name="snowflake_keystore_jks" prompt="snowflake_keystore_jks?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_String" value="&quot;D:/gprgonzalez/keystores/PI_SOLAREDGE/keystore.jks&quot;" internalId="_IfRTnSG6EfGoPOZjltsGMA"/>
     <contextParameter comment="" name="snowflake_keystore_password" prompt="snowflake_keystore_password?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_Password" value="enc:system.encryption.key.v1:nJiCznuuhZ5Q/3/CNlCKGma3jtZXi3oOc+jcIqrDKJWEnwoTQg==" internalId="_IfRTniG6EfGoPOZjltsGMA"/>
-    <contextParameter comment="" name="inpit_table" prompt="inpit_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_cax74SLPEfGyZ7Xm8w07DQ"/>
+    <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_cax74SLPEfGyZ7Xm8w07DQ"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
