@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_E7CdgCLbEfGZN7zNwY0M1g" name="SolarEdge_SiteOverview_Bulk" dataPackage="_E7CdjCLbEfGZN7zNwY0M1g" JSONFilePath="D:/repos/FGEN/solaredge-talend/SOLAREDGE_AUTOMATION/data/in/solaredge_siteoverview_bulk.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_E7CdgSLbEfGZN7zNwY0M1g" LimitBoucle="50" AbsoluteXPathQuery="$.sitesOverviews.siteEnergyList[*]">
+      <schemaTargets xmi:id="_E7CdgiLbEfGZN7zNwY0M1g" RelativeXPathQuery="siteId" TagName="SITE_ID"/>
+      <schemaTargets xmi:id="_E7CdgyLbEfGZN7zNwY0M1g" RelativeXPathQuery="siteOverview.lastUpdateTime" TagName="LAST_UPDATE_TIME"/>
+      <schemaTargets xmi:id="_E7CdhCLbEfGZN7zNwY0M1g" RelativeXPathQuery="siteOverview.lifeTimeData.energy" TagName="LIFETIME_ENERGY"/>
+      <schemaTargets xmi:id="_E7CdhSLbEfGZN7zNwY0M1g" RelativeXPathQuery="siteOverview.lifeTimeData.revenue" TagName="LIFETIME_REVENUE"/>
+      <schemaTargets xmi:id="_E7CdhiLbEfGZN7zNwY0M1g" RelativeXPathQuery="siteOverview.lastYearData.energy" TagName="LASTYR_ENERGY"/>
+      <schemaTargets xmi:id="_E7CdhyLbEfGZN7zNwY0M1g" RelativeXPathQuery="siteOverview.lastMonthData.energy" TagName="LASTMON_ENERGY"/>
+      <schemaTargets xmi:id="_E7CdiCLbEfGZN7zNwY0M1g" RelativeXPathQuery="siteOverview.lastDayData.energy" TagName="LASTDAY_ENERGY"/>
+      <schemaTargets xmi:id="_E7CdiSLbEfGZN7zNwY0M1g" RelativeXPathQuery="siteOverview.currentPower.power" TagName="POWER"/>
+      <schemaTargets xmi:id="_E7CdiiLbEfGZN7zNwY0M1g" RelativeXPathQuery="siteOverview.measuredBy" TagName="MEASURED_BY"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_E7CdjCLbEfGZN7zNwY0M1g" name="default" dataManager="_E7CdgCLbEfGZN7zNwY0M1g">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_E7CdjSLbEfGZN7zNwY0M1g" id="_c0KrQCLaEfGZN7zNwY0M1g" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_E7CdjiLbEfGZN7zNwY0M1g" label="SITE_ID" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_E7CdjyLbEfGZN7zNwY0M1g" label="LAST_UPDATE_TIME" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_E7CdkCLbEfGZN7zNwY0M1g" label="LIFETIME_ENERGY" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_E7CdkSLbEfGZN7zNwY0M1g" label="LIFETIME_REVENUE" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_E7CdkiLbEfGZN7zNwY0M1g" label="LASTYR_ENERGY" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_E7CdkyLbEfGZN7zNwY0M1g" label="LASTMON_ENERGY" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_E7CdlCLbEfGZN7zNwY0M1g" label="LASTDAY_ENERGY" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_E7CdlSLbEfGZN7zNwY0M1g" label="POWER" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_E7CdliLbEfGZN7zNwY0M1g" label="MEASURED_BY" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

@@ -1,0 +1,53 @@
+{
+  "sitesOverviews": {
+    "count": 2,
+    "siteEnergyList": [
+      {
+        "siteId": 1700517,
+        "siteOverview": {
+          "lastUpdateTime": "2026-03-18 22:52:54",
+          "lifeTimeData": {
+            "energy": 1860708600,
+            "revenue": 0
+          },
+          "lastYearData": {
+            "energy": 79407150
+          },
+          "lastMonthData": {
+            "energy": 20971344
+          },
+          "lastDayData": {
+            "energy": 1350924
+          },
+          "currentPower": {
+            "power": 0
+          },
+          "measuredBy": ""
+        }
+      },
+      {
+        "siteId": 1440148,
+        "siteOverview": {
+          "lastUpdateTime": "2026-03-18 22:51:36",
+          "lifeTimeData": {
+            "energy": 452973200,
+            "revenue": 0
+          },
+          "lastYearData": {
+            "energy": 23875824
+          },
+          "lastMonthData": {
+            "energy": 6512976
+          },
+          "lastDayData": {
+            "energy": 333387
+          },
+          "currentPower": {
+            "power": 0
+          },
+          "measuredBy": ""
+        }
+      }
+    ]
+  }
+}
