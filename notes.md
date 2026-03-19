@@ -7,6 +7,14 @@ GUIDELINES!:
 
 
 
+Considerations:
+
+* Example for Components List, since it's not bulk, per request only returns count: 2-4 but target 
+
+
+
+
+
 Clarifications:
 
 * Timestamp (in snowflake) is of TIMESTAMP\_NTZ or TIMESTAMP\_LTZ
@@ -39,4 +47,10 @@ API Corrections
   * Example url is incorrect: '...startTime=2013-05-5%2011:00:00\&endTime=2013-05-05%2013:00:00...'
 
     * Correct: '...startTime=2013-05-05%2011:00:00\&endTime=2013-05-06%2013:00:00...'
+
+
+
+Prejob component is useless on this project. Snowflake components are initializing parallel to prejob, causing errors 
+
+
 
