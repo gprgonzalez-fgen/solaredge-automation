@@ -9,11 +9,12 @@ GUIDELINES!:
 
 Considerations:
 
-* Example for Components List, since it's not bulk, per request only returns count: 2-4 but target 
+* Example for Components List, since it's not bulk, per request only returns count: 2-4 but target
+* How to handle process log for isHistorical/Looping since multiple request using trestclient, so multiple API\_STATUS\_CODE etc.
 
-
-
-
+  * do i only log the last iteration? or do i log per iteration? 
+  * for columns like API\_STATUS\_CODE, do i update it per request?
+* not all api endpoint requests return a "count" field. therefore, should i keep the count to 0?
 
 Clarifications:
 
@@ -25,12 +26,6 @@ SolarEdge\_SiteList\_Schema
 * publicSettings Snowflake column name, different in tables (DIM\_SOLAREDGE\_SITELIST v SOLAREDGE\_SITE\_DETAILS)
 * Site Data: Bulk	/sites/{siteIds}/dataPeriod - does this mean https://monitoringapi.solaredge.com/sites/{all siteids}/dataPeriod
 * Consult about connection context.
-
-
-
-RAW.SOLAREDGE\_SITE\_ENERGY\_DETAILED
-
-* instead of one primary key SITE\_ID, using composite key (SITE\_ID, DATE, TYPE)
 
 
 
@@ -47,10 +42,25 @@ API Corrections
   * Example url is incorrect: '...startTime=2013-05-5%2011:00:00\&endTime=2013-05-05%2013:00:00...'
 
     * Correct: '...startTime=2013-05-05%2011:00:00\&endTime=2013-05-06%2013:00:00...'
+* Site Energy: Bulk
+
+  * startDate 2013-05-01 and endDate 2013-05-30 works but not 2014-02-25 to 2014-03-26 even if they have the same time/day difference
 
 
 
-Prejob component is useless on this project. Snowflake components are initializing parallel to prejob, causing errors 
+Prejob component is useless on this project. Snowflake components are initializing parallel to prejob, causing errors
+
+
+
+Talend Common Bugs:
+
+* Snowflake components might run or initialize before or parallel to prejob -- Prejob component is useless on this project. Snowflake components are initializing parallel to prejob, causing errors
+* tRestClient component causing context variable values to not update when changed
+* When updating repository context groups/metadata, it might not propagate properly to jobs that are currently using it
+
+
+
+
 
 
 
