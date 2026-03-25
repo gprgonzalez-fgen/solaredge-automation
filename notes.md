@@ -55,12 +55,22 @@ Prejob component is useless on this project. Snowflake components are initializi
 Talend Common Bugs:
 
 * Snowflake components might run or initialize before or parallel to prejob -- Prejob component is useless on this project. Snowflake components are initializing parallel to prejob, causing errors
-* tRestClient component causing context variable values to not update when changed
+* tRestClient component causing context variable values to not update when changed -- https://community.qlik.com/t5/Talend-Studio/context-variables-are-not-populated-correctly/td-p/2362722
 * When updating repository context groups/metadata, it might not propagate properly to jobs that are currently using it
 
 
 
+Process log
 
+* how to handle process log API\_STATUS\_CODE
+
+  * (String)globalMap.get("tRESTClient\_1\_ERROR\_MESSAGE") - contains, for example, HTTP 401 Unauthorized/HTTP 400 Bad Request
+  * globalMap.put("API\_STATUS\_CODE", rowASC.statusCode); - from response schema
+  * even if globalMap.get("tRESTClient\_1\_ERROR\_MESSAGE") is present
+  * Questions: 
+
+    * Should i kill the job as soon as there's an error on trestclient?
+    * Since parallel execution is enabled, there's a chance na one of those executions has an error
 
 
 
