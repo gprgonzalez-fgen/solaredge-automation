@@ -16,6 +16,8 @@ Considerations:
   * for columns like API\_STATUS\_CODE, do i update it per request?
 * not all api endpoint requests return a "count" field. therefore, should i keep the count to 0?
 
+
+
 Clarifications:
 
 * Timestamp (in snowflake) is of TIMESTAMP\_NTZ or TIMESTAMP\_LTZ
