@@ -6,8 +6,8 @@
     <contextParameter comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK" internalId="_FmbzvB0kEfG1rIUtyb4OhQ"/>
     <contextParameter comment="" name="solaredge_api_endpoint_SiteList" prompt="solaredge_api_endpoint_SiteList?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="/sites/list" internalId="_FmbzvR0kEfG1rIUtyb4OhQ"/>
     <contextParameter comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="https://monitoringapi.solaredge.com" internalId="_Fmbzvh0kEfG1rIUtyb4OhQ"/>
-    <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_GfmyYB1bEfGgGvbcRFChhQ"/>
-    <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_GfmyYR1bEfGgGvbcRFChhQ"/>
+    <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2013-01-01 11:00:00" internalId="_GfmyYB1bEfGgGvbcRFChhQ"/>
+    <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2013-01-30 14:00:00" internalId="_GfmyYR1bEfGgGvbcRFChhQ"/>
     <contextParameter comment="Granularity" name="timeUnit" prompt="timeUnit?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;QUARTER_OF_AN_HOUR&quot;" internalId="_GfmyYh1bEfGgGvbcRFChhQ"/>
     <contextParameter comment="" name="conn_snowflake_userId" prompt="conn_snowflake_userId?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="pi_energy_etl_user" internalId="_R7xsgB6UEfG21ZB4jusu4g"/>
     <contextParameter comment="" name="conn_snowflake_loginTimeout" prompt="conn_snowflake_loginTimeout?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_Integer" value="15" internalId="_R7xsgR6UEfG21ZB4jusu4g"/>
@@ -21,15 +21,15 @@
     <contextParameter comment="" name="conn_snowflake_jdbcUrlSuffix" prompt="conn_snowflake_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value=".snowflakecomputing.com" internalId="_R7xsiR6UEfG21ZB4jusu4g"/>
     <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_SITE_ENERGY_DETAILED" internalId="_A0pXYCFQEfGTI91mAoNfUg"/>
     <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_A0pXYSFQEfGTI91mAoNfUg"/>
-    <contextParameter comment="" name="status" prompt="status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="FAILED" internalId="_A0pXYiFQEfGTI91mAoNfUg"/>
     <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_cSOG0CFQEfGTI91mAoNfUg"/>
+    <contextParameter comment="" name="isHistorical" prompt="isHistorical?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="true" internalId="_Z6lkoCjxEfGunZ1iJI6g7g"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="Laptop">
     <contextParameter comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK" internalId="_IhL_ICG6EfGoPOZjltsGMA"/>
     <contextParameter comment="" name="solaredge_api_endpoint_SiteList" prompt="solaredge_api_endpoint_SiteList?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="/sites/list" internalId="_IhL_ISG6EfGoPOZjltsGMA"/>
     <contextParameter comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="https://monitoringapi.solaredge.com" internalId="_IhL_IiG6EfGoPOZjltsGMA"/>
-    <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_GfmyYB1bEfGgGvbcRFChhQ"/>
-    <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_GfmyYR1bEfGgGvbcRFChhQ"/>
+    <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2013-05-01 00:00:00" internalId="_GfmyYB1bEfGgGvbcRFChhQ"/>
+    <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2013-05-01 00:00:00" internalId="_GfmyYR1bEfGgGvbcRFChhQ"/>
     <contextParameter comment="Granularity" name="timeUnit" prompt="timeUnit?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;QUARTER_OF_AN_HOUR&quot;" internalId="_GfmyYh1bEfGgGvbcRFChhQ"/>
     <contextParameter comment="" name="conn_snowflake_userId" prompt="conn_snowflake_userId?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="pi_energy_etl_user" internalId="_IhL_IyG6EfGoPOZjltsGMA"/>
     <contextParameter comment="" name="conn_snowflake_loginTimeout" prompt="conn_snowflake_loginTimeout?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_Integer" value="15" internalId="_IhL_JCG6EfGoPOZjltsGMA"/>
@@ -43,10 +43,10 @@
     <contextParameter comment="" name="conn_snowflake_jdbcUrlSuffix" prompt="conn_snowflake_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value=".snowflakecomputing.com" internalId="_IhL_LCG6EfGoPOZjltsGMA"/>
     <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_SITE_ENERGY_DETAILED" internalId="_A0pXYCFQEfGTI91mAoNfUg"/>
     <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_A0pXYSFQEfGTI91mAoNfUg"/>
-    <contextParameter comment="" name="status" prompt="status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="FAILED" internalId="_A0pXYiFQEfGTI91mAoNfUg"/>
     <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_cSOG0CFQEfGTI91mAoNfUg"/>
     <contextParameter comment="" name="snowflake_keystore_jks" prompt="snowflake_keystore_jks?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_String" value="&quot;D:/gprgonzalez/keystores/PI_SOLAREDGE/keystore.jks&quot;" internalId="_IhL_LSG6EfGoPOZjltsGMA"/>
     <contextParameter comment="" name="snowflake_keystore_password" prompt="snowflake_keystore_password?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_Password" value="enc:system.encryption.key.v1:nJiCznuuhZ5Q/3/CNlCKGma3jtZXi3oOc+jcIqrDKJWEnwoTQg==" internalId="_IhL_LiG6EfGoPOZjltsGMA"/>
+    <contextParameter comment="" name="isHistorical" prompt="isHistorical?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="true" internalId="_Z6lkoSjxEfGunZ1iJI6g7g"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -146,11 +146,11 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
   </parameters>
-  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="80">
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="80">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="80">
+  <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="80">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetKeystore_1" show="false"/>
     <elementParameter field="RADIO" name="SET_TRUSTSTORE" value="false"/>
     <elementParameter field="RADIO" name="NEED_CLIENT_AUTH" value="true"/>
@@ -165,7 +165,7 @@
     <elementParameter field="CHECK" name="USE_SSLCONTEXT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="SnowflakeConnection" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="440" posY="80" sizeX="81" sizeY="40">
+  <node componentName="SnowflakeConnection" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="560" posY="80" sizeX="81" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAConnection" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -194,11 +194,11 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="400">
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="SnowflakeClose" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="280" posY="400" sizeX="81" sizeY="40">
+  <node componentName="SnowflakeClose" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="240" posY="640" sizeX="81" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAClose" show="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
@@ -212,7 +212,7 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="520" posY="400">
+  <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetKeystore_2" show="false"/>
     <elementParameter field="RADIO" name="SET_TRUSTSTORE" value="false"/>
     <elementParameter field="RADIO" name="NEED_CLIENT_AUTH" value="true"/>
@@ -227,7 +227,80 @@
     <elementParameter field="CHECK" name="USE_SSLCONTEXT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="440" posY="240" sizeX="40" sizeY="41">
+  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="120" posY="440">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_2" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dA" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_YUm2cB5KEfGXkP-cdHyBXw"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="QUERYSTORE_TYPE : &quot;BUILT_IN&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="SOLAREDGE_SITE_ENERGY_BULK"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.conn_snowflake_account" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="KEY_PAIR" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.conn_snowflake_userId" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.keyAlias" value="context.conn_snowflake_keyAlias" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.conn_snowflake_warehouse" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_snowflake_dbSchema" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_snowflake_database" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="context.output_table"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.manualQuery" value="true"/>
+    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT &#xD;&#xA;    COALESCE(TO_CHAR(MAX(\&quot;DATE\&quot;), 'YYYY-MM-DD HH24:MI:SS.FF3'), '2023-01-01 00:00:00') as MAX_DATE &#xD;&#xA;FROM PI_ENERGY_DEV.RAW.SOLAREDGE_SITE_ENERGY_BULK&quot;"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="context.conn_snowflake_jdbcParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="context.conn_snowflake_loginTimeout" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.role" value="context.conn_snowflake_role" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value="context.conn_snowflake_jdbcUrlSuffix" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.useUnquotedObjectIdentifiers" value="true" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.useSessionTimezone" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tSnowflakeInput_2">
+      <column comment="" key="false" length="-1" name="MAX_DATE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="400" posY="440">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="globalMap.put(&quot;MAX_DATE&quot;, rowLD.MAX_DATE);&#xD;&#xA;System.out.println(&quot;Max date: &quot; + globalMap.get(&quot;MAX_DATE&quot;));&#xD;&#xA;&#xD;&#xA;String maxDate = (String)globalMap.get(&quot;MAX_DATE&quot;);&#xD;&#xA;Date today = TalendDate.getCurrentDate();&#xD;&#xA;&#xD;&#xA;//String api_startDate = TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, maxDate));&#xD;&#xA;String api_startDate = &quot;2026-03-20&quot;;&#xD;&#xA;String api_endDate = TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, today);&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;api_startDate&quot;, api_startDate);&#xD;&#xA;globalMap.put(&quot;api_endDate&quot;, api_endDate);&#xD;&#xA;//context.startDate = api_startDate;&#xD;&#xA;//context.endDate = api_endDate;&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;IsHistorical: &quot; + context.isHistorical);&#xD;&#xA;System.out.println(&quot;Start Date: &quot; + (String)globalMap.get(&quot;api_startDate&quot;));&#xD;&#xA;System.out.println(&quot;End Date: &quot; + (String)globalMap.get(&quot;api_endDate&quot;));&#xD;&#xA;System.out.println(&quot;Time unit: &quot; + context.timeUnit);&#xD;&#xA;//// get date now&#xD;&#xA;//java.util.Date now = TalendDate.getCurrentDate();&#xD;&#xA;//System.out.println(&quot;now: &quot; + now);&#xD;&#xA;//// endTime: now (formatted)&#xD;&#xA;//globalMap.put(&quot;endDate&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, now));&#xD;&#xA;//&#xD;&#xA;//// startTime: now minus 28 days&#xD;&#xA;//java.util.Date monthAgo = TalendDate.addDate(now, -28, &quot;dd&quot;);&#xD;&#xA;//System.out.println(&quot;month Ago: &quot; + monthAgo);&#xD;&#xA;//globalMap.put(&quot;startDate&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, monthAgo));&#xD;&#xA;//&#xD;&#xA;//context.startDate = ((String)globalMap.get(&quot;startDate&quot;));&#xD;&#xA;//context.endDate = ((String)globalMap.get(&quot;endDate&quot;));&#xD;&#xA;//&#xD;&#xA;//System.out.println(&quot;Start Date: &quot; + context.startDate);&#xD;&#xA;//System.out.println(&quot;End Date: &quot; + context.endDate);&#xD;&#xA;//System.out.println(&quot;Time unit: &quot; + context.timeUnit);&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="240" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="globalMap.put(&quot;JOB_START_TIME&quot;, System.currentTimeMillis());&#xD;&#xA;System.out.println(&quot;JOB - START_TIME: &quot; + TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, new java.util.Date((Long)globalMap.get(&quot;JOB_START_TIME&quot;))));"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
+    <elementParameter field="RADIO" name="FORLOOP" value="true"/>
+    <elementParameter field="RADIO" name="WHILELOOP" value="false"/>
+    <elementParameter field="TEXT" name="FROM" value="1"/>
+    <elementParameter field="TEXT" name="TO" value="(Integer)globalMap.get(&quot;totalIterations&quot;)"/>
+    <elementParameter field="TEXT" name="STEP" value="1"/>
+    <elementParameter field="CHECK" name="INCREASE" value="true"/>
+    <elementParameter field="TEXT" name="DECLARATION" value="int i=0" show="false"/>
+    <elementParameter field="TEXT" name="CONDITION" value="i&lt;10" show="false"/>
+    <elementParameter field="TEXT" name="ITERATION" value="i++" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="440" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="int i = ((Integer)globalMap.get(&quot;tLoop_1_CURRENT_VALUE&quot;)) - 1;&#xD;&#xA;java.util.Date globalStart = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.startTime);&#xD;&#xA;java.util.Date globalEnd = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.endTime);&#xD;&#xA;&#xD;&#xA;if (context.isHistorical) {&#xD;&#xA;    // 1. Calculate the start of this 28-day chunk&#xD;&#xA;    java.util.Date currentChunkStart = TalendDate.addDate(globalStart, (i * 28), &quot;dd&quot;);&#xD;&#xA;    &#xD;&#xA;    // 2. Calculate the end (Jump 28 days total from start)&#xD;&#xA;    // CHANGE: We calculate the start of the NEXT chunk, then subtract 1 second.&#xD;&#xA;    // This ensures Iteration 1 ends exactly where Iteration 2 begins (No Gaps).&#xD;&#xA;    java.util.Date nextChunkStart = TalendDate.addDate(currentChunkStart, 28, &quot;dd&quot;);&#xD;&#xA;    java.util.Date currentChunkEnd = TalendDate.addDate(nextChunkStart, -1, &quot;ss&quot;); &#xD;&#xA;&#xD;&#xA;    // 3. Boundary Guard: If the 28-day window exceeds context.endTime, cap it.&#xD;&#xA;    if (currentChunkEnd.after(globalEnd)) {&#xD;&#xA;        currentChunkEnd = globalEnd;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    String format = &quot;yyyy-MM-dd HH:mm:ss&quot;;&#xD;&#xA;&#xD;&#xA;    // Set Global Variables&#xD;&#xA;    // Use globalStart for i=0 to keep the specific starting hour (e.g., 11:00:00)&#xD;&#xA;    globalMap.put(&quot;api_startTime&quot;, TalendDate.formatDate(format, (i == 0 ? globalStart : currentChunkStart)));&#xD;&#xA;    globalMap.put(&quot;api_endTime&quot;, TalendDate.formatDate(format, currentChunkEnd));&#xD;&#xA;&#xD;&#xA;    System.out.println(&quot;Iteration &quot; + (i+1) + &quot;: &quot; + (String)globalMap.get(&quot;api_startTime&quot;) + &quot; to &quot; + (String)globalMap.get(&quot;api_endTime&quot;));&#xD;&#xA;} &#xD;&#xA;else {&#xD;&#xA;    globalMap.put(&quot;api_startTime&quot;, &quot;&quot;);&#xD;&#xA;    globalMap.put(&quot;api_endTime&quot;, &quot;&quot;);&#xD;&#xA;}"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_3"/>
+  </node>
+  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="600" posY="280" sizeX="40" sizeY="41">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dA" show="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
@@ -264,7 +337,7 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="600" posY="240">
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="760" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1" show="false"/>
     <elementParameter field="TEXT" name="URL" value="context.solaredge_api_base + &quot;/site/&quot; + row1.SITE_ID + &quot;/energyDetails&quot;"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
@@ -338,7 +411,7 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="760" posY="240">
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="920" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_1" show="false"/>
     <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
     <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
@@ -389,7 +462,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="880" posY="240">
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1040" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_2" show="false"/>
     <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
     <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
@@ -448,7 +521,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="240">
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1160" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_3" show="false"/>
     <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
     <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
@@ -514,7 +587,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="240">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -551,7 +624,7 @@
       <column comment="" key="false" length="255" name="VALUE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="25" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="240">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1400" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -595,7 +668,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1360" posY="240">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1520" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -638,7 +711,7 @@
       <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" originalLength="25" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="1560" posY="240">
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="1720" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
@@ -703,14 +776,14 @@
       <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="120" posY="240" sizeX="121" sizeY="40">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="80" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="// get date now&#xD;&#xA;java.util.Date now = TalendDate.getCurrentDate();&#xD;&#xA;&#xD;&#xA;// endTime: now (formatted)&#xD;&#xA;globalMap.put(&quot;endTime&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, now));&#xD;&#xA;&#xD;&#xA;// startTime: now minus 28 days&#xD;&#xA;java.util.Date monthAgo = TalendDate.addDate(now, -28, &quot;dd&quot;);&#xD;&#xA;globalMap.put(&quot;startTime&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, monthAgo));&#xD;&#xA;&#xD;&#xA;context.startTime = ((String)globalMap.get(&quot;startTime&quot;));&#xD;&#xA;context.endTime = ((String)globalMap.get(&quot;endTime&quot;));&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Start time: &quot; + context.startTime);&#xD;&#xA;System.out.println(&quot;End time: &quot; + context.endTime);&#xD;&#xA;System.out.println(&quot;Time unit: &quot; + context.timeUnit);&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="System.out.println(&quot;Job start...&quot;);&#xD;&#xA;System.out.println(&quot;&quot;);&#xD;&#xA;System.out.println(&quot;isHistorical: &quot; + context.isHistorical);&#xD;&#xA;&#xD;&#xA;// initialization of global variables&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, 0);&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, 0);&#xD;&#xA;&#xD;&#xA;// if isHistorical &#xD;&#xA;if (context.isHistorical) {&#xD;&#xA;    &#xD;&#xA;    // parse dates&#xD;&#xA;    java.util.Date sDate = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.startTime);&#xD;&#xA;    java.util.Date eDate = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.endTime);&#xD;&#xA;&#xD;&#xA;    // calculate total days between&#xD;&#xA;    long diffInMillies = Math.abs(eDate.getTime() - sDate.getTime()); // get difference in millies&#xD;&#xA;    long diffInDays = java.util.concurrent.TimeUnit.DAYS.convert(diffInMillies, java.util.concurrent.TimeUnit.MILLISECONDS); // get difference in days&#xD;&#xA;    &#xD;&#xA;    System.out.println(&quot;diffInMillies: &quot; + diffInMillies);&#xD;&#xA;    System.out.println(&quot;diffInDays: &quot; + diffInDays);&#xD;&#xA;&#xD;&#xA;    // calculate how many 28-day chunks (using double to round up)&#xD;&#xA;    int iterations = (int) Math.ceil((double) (diffInDays + 1) / 28);&#xD;&#xA;    &#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, iterations);&#xD;&#xA;} &#xD;&#xA;else {&#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, 1);&#xD;&#xA;}&#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_2"/>
   </node>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tSetKeystore_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetKeystore_1" offsetLabelX="0" offsetLabelY="0" source="tSetKeystore_1" target="tDBConnection_1">
@@ -721,6 +794,23 @@
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBClose_1" offsetLabelX="0" offsetLabelY="0" source="tDBClose_1" target="tSetKeystore_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="rowLD" lineStyle="0" metaname="tSnowflakeInput_2" offsetLabelX="0" offsetLabelY="0" source="tSnowflakeInput_2" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="rowLD" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tSetKeystore_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tLoop_1" offsetLabelX="0" offsetLabelY="0" source="tLoop_1" target="tJava_3">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tJava_3" offsetLabelX="0" offsetLabelY="0" source="tJava_3" target="tSnowflakeInput_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tSnowflakeInput_1" offsetLabelX="0" offsetLabelY="0" source="tSnowflakeInput_1" target="tRESTClient_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -759,8 +849,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" source="tJava_2" target="tSnowflakeInput_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tJava_2" target="tSnowflakeInput_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="!context.isHistorical"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tJava_2" target="tLoop_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.isHistorical"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If2" show="false"/>
   </connection>
   <note opaque="true" posX="1000" posY="0" sizeHeight="81" sizeWidth="321" text="ALLOWS SAME startTime and endTime&#xD;&#xA;&#xD;&#xA;Inclusive of startTime, exclusive of endTime">
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
@@ -809,16 +904,26 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_1" show="false"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="get Site Energy: Detailed and ingest into snowflake table"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="get job START_TIME"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="set startTime, endTime, and timeUnit"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="initialization"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>

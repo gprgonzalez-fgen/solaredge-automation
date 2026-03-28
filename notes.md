@@ -12,7 +12,7 @@ Considerations:
 * Example for Components List, since it's not bulk, per request only returns count: 2-4 but target
 * How to handle process log for isHistorical/Looping since multiple request using trestclient, so multiple API\_STATUS\_CODE etc.
 
-  * do i only log the last iteration? or do i log per iteration? 
+  * do i only log the last iteration? or do i log per iteration?
   * for columns like API\_STATUS\_CODE, do i update it per request?
 * not all api endpoint requests return a "count" field. therefore, should i keep the count to 0?
 
@@ -69,10 +69,13 @@ Process log
   * (String)globalMap.get("tRESTClient\_1\_ERROR\_MESSAGE") - contains, for example, HTTP 401 Unauthorized/HTTP 400 Bad Request
   * globalMap.put("API\_STATUS\_CODE", rowASC.statusCode); - from response schema
   * even if globalMap.get("tRESTClient\_1\_ERROR\_MESSAGE") is present
-  * Questions: 
+  * Questions:
 
     * Should i kill the job as soon as there's an error on trestclient?
     * Since parallel execution is enabled, there's a chance na one of those executions has an error
+  * REMEMBER:
 
-
+    * Set tRestClient to NOT die on error
+    * Check tRestClient query parameters (specifically for startDate/startTime and endDate/endTime to use (String)globalMap.get("api\_startTime")/(String)globalMap.get("api\_endTime")
+    * Add: when both SOURCE\_ROW\_COUNT and TARGET\_ROW\_COUNT is 0, put unsuccessful
 
