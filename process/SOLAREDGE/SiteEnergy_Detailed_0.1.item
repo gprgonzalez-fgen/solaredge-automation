@@ -7,7 +7,7 @@
     <contextParameter comment="" name="solaredge_api_endpoint_SiteList" prompt="solaredge_api_endpoint_SiteList?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="/sites/list" internalId="_FmbzvR0kEfG1rIUtyb4OhQ"/>
     <contextParameter comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="https://monitoringapi.solaredge.com" internalId="_Fmbzvh0kEfG1rIUtyb4OhQ"/>
     <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2013-05-01 11:00:00" internalId="_GfmyYB1bEfGgGvbcRFChhQ"/>
-    <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2014-07-21 14:00:00" internalId="_GfmyYR1bEfGgGvbcRFChhQ"/>
+    <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2013-05-01 11:00:00" internalId="_GfmyYR1bEfGgGvbcRFChhQ"/>
     <contextParameter comment="Granularity" name="timeUnit" prompt="timeUnit?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="QUARTER_OF_AN_HOUR" internalId="_GfmyYh1bEfGgGvbcRFChhQ"/>
     <contextParameter comment="" name="conn_snowflake_userId" prompt="conn_snowflake_userId?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value="pi_energy_etl_user" internalId="_R7xsgB6UEfG21ZB4jusu4g"/>
     <contextParameter comment="" name="conn_snowflake_loginTimeout" prompt="conn_snowflake_loginTimeout?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_Integer" value="15" internalId="_R7xsgR6UEfG21ZB4jusu4g"/>
@@ -22,7 +22,7 @@
     <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_SITE_ENERGY_DETAILED" internalId="_A0pXYCFQEfGTI91mAoNfUg"/>
     <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_A0pXYSFQEfGTI91mAoNfUg"/>
     <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_cSOG0CFQEfGTI91mAoNfUg"/>
-    <contextParameter comment="" name="isHistorical" prompt="isHistorical?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="true" internalId="_Z6lkoCjxEfGunZ1iJI6g7g"/>
+    <contextParameter comment="" name="isHistorical" prompt="isHistorical?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="false" internalId="_Z6lkoCjxEfGunZ1iJI6g7g"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="Laptop">
     <contextParameter comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK" internalId="_IhL_ICG6EfGoPOZjltsGMA"/>
@@ -91,7 +91,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:mt6uNqYf15ORT3ewKRyvNFjt8eiR5MAWFOKtfyx0" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:EfSDBSvaaydU67i5lfvPqCT0o/YCWXo7QIu0ofzx" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -106,7 +106,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/gprgonzalez/repos/FGEN/solaredge-talend/.metadata&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/repos/FGEN/solaredge-talend/.metadata&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
@@ -126,7 +126,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:mecQIR1QVAvlUxrCoBh9WzsBeOvo/BG6uGXGFPz1" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:FUtjtc3t05HrAfYjcg4V0DZ3iwyCU6q1M7EuTEYd" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -227,7 +227,7 @@
     <elementParameter field="CHECK" name="USE_SSLCONTEXT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="160" posY="520">
+  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="120" posY="520">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_2" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dA" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -266,9 +266,9 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="440" posY="520">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="400" posY="520">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="globalMap.put(&quot;MAX_DATE&quot;, rowLD.MAX_DATE);&#xD;&#xA;System.out.println(&quot;Max date: &quot; + globalMap.get(&quot;MAX_DATE&quot;));&#xD;&#xA;&#xD;&#xA;String maxDate = (String)globalMap.get(&quot;MAX_DATE&quot;);&#xD;&#xA;Date today = TalendDate.getCurrentDate();&#xD;&#xA;System.out.println(&quot;Today: &quot; + today);&#xD;&#xA;&#xD;&#xA;//String api_startDate = TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, maxDate));&#xD;&#xA;String api_startTime = &quot;2026-03-20 01:00:00&quot;;&#xD;&#xA;String api_endTime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, today);&#xD;&#xA;System.out.println(&quot;End Time: &quot; + api_endTime);&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;api_startTime&quot;, api_startTime);&#xD;&#xA;globalMap.put(&quot;api_endTime&quot;, api_endTime);&#xD;&#xA;//context.startDate = api_startDate;&#xD;&#xA;//context.endDate = api_endDate;&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;IsHistorical: &quot; + context.isHistorical);&#xD;&#xA;System.out.println(&quot;Start Time: &quot; + (String)globalMap.get(&quot;api_startTime&quot;));&#xD;&#xA;System.out.println(&quot;End Time: &quot; + (String)globalMap.get(&quot;api_endTime&quot;));&#xD;&#xA;System.out.println(&quot;Time unit: &quot; + context.timeUnit);&#xD;&#xA;//// get date now&#xD;&#xA;//java.util.Date now = TalendDate.getCurrentDate();&#xD;&#xA;//System.out.println(&quot;now: &quot; + now);&#xD;&#xA;//// endTime: now (formatted)&#xD;&#xA;//globalMap.put(&quot;endDate&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, now));&#xD;&#xA;//&#xD;&#xA;//// startTime: now minus 28 days&#xD;&#xA;//java.util.Date monthAgo = TalendDate.addDate(now, -28, &quot;dd&quot;);&#xD;&#xA;//System.out.println(&quot;month Ago: &quot; + monthAgo);&#xD;&#xA;//globalMap.put(&quot;startDate&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, monthAgo));&#xD;&#xA;//&#xD;&#xA;//context.startDate = ((String)globalMap.get(&quot;startDate&quot;));&#xD;&#xA;//context.endDate = ((String)globalMap.get(&quot;endDate&quot;));&#xD;&#xA;//&#xD;&#xA;//System.out.println(&quot;Start Date: &quot; + context.startDate);&#xD;&#xA;//System.out.println(&quot;End Date: &quot; + context.endDate);&#xD;&#xA;//System.out.println(&quot;Time unit: &quot; + context.timeUnit);&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="globalMap.put(&quot;MAX_DATE&quot;, rowLD.MAX_DATE);&#xD;&#xA;System.out.println(&quot;Max date from Snowflake: &quot; + rowLD.MAX_DATE);&#xD;&#xA;&#xD;&#xA;// 1. Parse the dates for comparison&#xD;&#xA;java.util.Date lastDate = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, rowLD.MAX_DATE);&#xD;&#xA;java.util.Date today = new java.util.Date();&#xD;&#xA;&#xD;&#xA;// 2. Calculate the gap in days&#xD;&#xA;long diffInMillies = Math.abs(today.getTime() - lastDate.getTime());&#xD;&#xA;long diffInDays = java.util.concurrent.TimeUnit.DAYS.convert(diffInMillies, java.util.concurrent.TimeUnit.MILLISECONDS);&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Gap detected: &quot; + diffInDays + &quot; days.&quot;);&#xD;&#xA;&#xD;&#xA;// 3. Validation Logic&#xD;&#xA;if (diffInDays > 28) {&#xD;&#xA;    // Option: Use a tDie or throw an exception to stop the job&#xD;&#xA;    throw new RuntimeException(&quot;ERROR: The gap between Snowflake (&quot; + rowLD.MAX_DATE + &quot;) and today is &quot; + diffInDays + &quot; days. &quot; +&#xD;&#xA;        &quot;Detailed API limit is 28 days. Please run this job in 'isHistorical' mode to backfill this period.&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;// 4. If gap is safe (&lt;= 28 days), set the parameters for the API&#xD;&#xA;String api_startTime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, lastDate);&#xD;&#xA;String api_endTime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, today);&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;api_startTime&quot;, api_startTime);&#xD;&#xA;globalMap.put(&quot;api_endTime&quot;, api_endTime);&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Daily Mode safe to proceed. Range: &quot; + (String)globalMap.get(&quot;api_startTime&quot;) + &quot; to &quot; + (String)globalMap.get(&quot;api_endTime&quot;));"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1"/>
@@ -657,7 +657,7 @@
       <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" originalLength="25" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="SITE_ID" expression="row1.SITE_ID" type="id_String" nullable="true"/>
@@ -918,8 +918,8 @@
         <mapperTableEntries name="TABLE_NAME" expression="context.output_table" type="id_String" nullable="true"/>
         <mapperTableEntries name="SOURCE_ROW_COUNT" expression="globalMap.get(&quot;SOURCE_ROW_COUNT&quot;) == null ? &quot;0&quot; : globalMap.get(&quot;SOURCE_ROW_COUNT&quot;).toString() " type="id_String" nullable="true"/>
         <mapperTableEntries name="TARGET_ROW_COUNT" expression="globalMap.get(&quot;TARGET_ROW_COUNT&quot;) == null ? &quot;0&quot; : String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;)) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="API_STATUS_CODE" expression="globalMap.get(&quot;API_STATUS_CODE&quot;) == null ? String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;API_R_STATUS_CODE&quot;)) : String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;API_STATUS_CODE&quot;)) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="STATUS" expression="(globalMap.get(&quot;SOURCE_ROW_COUNT&quot;) != null &amp;&amp; globalMap.get(&quot;TARGET_ROW_COUNT&quot;) != null) &amp;&amp; ((Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;)).equals((Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;)) ? &quot;SUCCESS&quot; : &quot;FAILED&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="API_STATUS_CODE" expression="(globalMap.get(&quot;API_STATUS_CODE&quot;) == null &amp;&amp; globalMap.get(&quot;API_R_STATUS_CODE&quot;) == null) ? &quot;N/A&quot; : (globalMap.get(&quot;API_STATUS_CODE&quot;) != null &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;? String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;API_STATUS_CODE&quot;)) &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;: String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;API_R_STATUS_CODE&quot;))) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="STATUS" expression="(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;) == 0 &amp;&amp; (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;) == 0&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;) ? &quot;FAILED&quot; : &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(globalMap.get(&quot;SOURCE_ROW_COUNT&quot;) != null &amp;&amp; globalMap.get(&quot;TARGET_ROW_COUNT&quot;) != null &amp;&amp; &#x9;((Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;)).equals((Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;))) &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;? &quot;SUCCESS&quot; : &quot;FAILED&quot;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="ERROR_LOG" expression="(globalMap.get(&quot;API_ERROR_MESSAGE&quot;) == null &amp;&amp; Var.JAVA_ERROR == null) ? &quot;N/A&quot; :&#xD;&#xA;((globalMap.get(&quot;API_ERROR_MESSAGE&quot;) == null ? &quot;&quot; : &quot;API Error: HTTP &quot; + (String)globalMap.get(&quot;API_STATUS_CODE&quot;) + &quot; &quot; + (String)globalMap.get(&quot;API_ERROR_MESSAGE&quot;)) + &quot;\n&quot; + &#xD;&#xA;(Var.JAVA_ERROR == null ? &quot;&quot; : &quot;Java Exception Error: &quot; + Var.JAVA_ERROR)) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="FFI" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">

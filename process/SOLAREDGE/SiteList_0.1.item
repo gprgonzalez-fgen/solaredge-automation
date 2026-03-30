@@ -81,7 +81,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:mt6uNqYf15ORT3ewKRyvNFjt8eiR5MAWFOKtfyx0" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:EfSDBSvaaydU67i5lfvPqCT0o/YCWXo7QIu0ofzx" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -96,7 +96,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/gprgonzalez/repos/FGEN/solaredge-talend/.metadata&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/repos/FGEN/solaredge-talend/.metadata&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
@@ -116,7 +116,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:mecQIR1QVAvlUxrCoBh9WzsBeOvo/BG6uGXGFPz1" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:FUtjtc3t05HrAfYjcg4V0DZ3iwyCU6q1M7EuTEYd" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -1155,7 +1155,7 @@
       <column comment="" key="false" length="-1" name="ERROR_LOG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="JOB_END_TIME" expression="System.currentTimeMillis() " type="id_Long"/>
         <mapperTableEntries name="JAVA_ERROR" expression="logCatcher.message " type="id_String"/>
@@ -1169,8 +1169,8 @@
         <mapperTableEntries name="TABLE_NAME" expression="context.output_table" type="id_String" nullable="true"/>
         <mapperTableEntries name="SOURCE_ROW_COUNT" expression="globalMap.get(&quot;SOURCE_ROW_COUNT&quot;) == null ? &quot;0&quot; : String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="TARGET_ROW_COUNT" expression="globalMap.get(&quot;TARGET_ROW_COUNT&quot;) == null ? &quot;0&quot; : String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;)) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="API_STATUS_CODE" expression="globalMap.get(&quot;API_STATUS_CODE&quot;) == null ? String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;API_R_STATUS_CODE&quot;)) : String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;API_STATUS_CODE&quot;)) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="STATUS" expression="(globalMap.get(&quot;SOURCE_ROW_COUNT&quot;) != null &amp;&amp; globalMap.get(&quot;TARGET_ROW_COUNT&quot;) != null) &amp;&amp; ((Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;)).equals((Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;)) ? &quot;SUCCESS&quot; : &quot;FAILED&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="API_STATUS_CODE" expression="(globalMap.get(&quot;API_STATUS_CODE&quot;) == null &amp;&amp; globalMap.get(&quot;API_R_STATUS_CODE&quot;) == null) ? &quot;N/A&quot; : (globalMap.get(&quot;API_STATUS_CODE&quot;) != null &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;? String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;API_STATUS_CODE&quot;)) &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;: String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;API_R_STATUS_CODE&quot;))) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="STATUS" expression="(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;) == 0 &amp;&amp; (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;) == 0&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;) ? &quot;FAILED&quot; : &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(globalMap.get(&quot;SOURCE_ROW_COUNT&quot;) != null &amp;&amp; globalMap.get(&quot;TARGET_ROW_COUNT&quot;) != null &amp;&amp; &#x9;((Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;)).equals((Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;))) &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;? &quot;SUCCESS&quot; : &quot;FAILED&quot;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="ERROR_LOG" expression="(globalMap.get(&quot;API_ERROR_MESSAGE&quot;) == null &amp;&amp; Var.JAVA_ERROR == null) ? &quot;N/A&quot; :&#xD;&#xA;((globalMap.get(&quot;API_ERROR_MESSAGE&quot;) == null ? &quot;&quot; : &quot;API Error: &quot; + globalMap.get(&quot;API_ERROR_CODE&quot;).toString() + &quot;: &quot; + (String)globalMap.get(&quot;API_ERROR_MESSAGE&quot;)) + &quot;\n&quot; + &#xD;&#xA;(Var.JAVA_ERROR == null ? &quot;&quot; : &quot;Java Exception Error: &quot; + Var.JAVA_ERROR)) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="FFI" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
