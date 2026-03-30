@@ -29,9 +29,8 @@ SolarEdge\_SiteList\_Schema
 * publicSettings Snowflake column name, different in tables (DIM\_SOLAREDGE\_SITELIST v SOLAREDGE\_SITE\_DETAILS)
 * Site Data: Bulk	/sites/{siteIds}/dataPeriod - does this mean https://monitoringapi.solaredge.com/sites/{all siteids}/dataPeriod
 * Consult about connection context.
-* For Site Energy – Time Period, request timeframe limits is: "1 Year max (Daily)"
-
-
+* For Site Energy – Time Period, request timeframe limits is: "1 Year max (Daily)", meaning?
+* For reponses with the field "count", may times na "count" != output row count, i decided to get the output row count nalang
 
 
 
@@ -83,7 +82,10 @@ Process log
     * Rename row to rowED before tMap
     * Check tRestClient query parameters (specifically for startDate/startTime and endDate/endTime to use (String)globalMap.get("api\_startTime")/(String)globalMap.get("api\_endTime")
     * Add: when both SOURCE\_ROW\_COUNT and TARGET\_ROW\_COUNT is 0, put unsuccessful
-    * Add: consider using (String)globalMap.get("api\_startTime")/(String)globalMap.get("api\_endTime") instead of context.startDate/context.endDate for non-timeseries jobs 
+    * Add: consider using (String)globalMap.get("api\_startTime")/(String)globalMap.get("api\_endTime") instead of context.startDate/context.endDate for non-timeseries jobs
     * Improve DiffInDays for same day and/or same day different time
-* 
+* Update:
+
+  * STATUS
+  * API\_STATUS\_CODE
 
