@@ -31,6 +31,7 @@ SolarEdge\_SiteList\_Schema
 * Consult about connection context.
 * For Site Energy – Time Period, request timeframe limits is: "1 Year max (Daily)", meaning?
 * For reponses with the field "count", may times na "count" != output row count, i decided to get the output row count nalang
+* For Site Overview: Bulk, do i use SITE\_ID and LAST\_UPDATE\_TIME as primary\_key?
 
 
 
