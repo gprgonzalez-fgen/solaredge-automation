@@ -584,19 +584,19 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="SITE_ID" expression="rowED.SITE_ID " type="id_String" nullable="true"/>
-        <mapperTableEntries name="TF_ENERGY" expression="rowED.TF_ENERGY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="TF_UNIT" expression="rowED.TF_UNIT " type="id_String" nullable="true"/>
-        <mapperTableEntries name="TF_MEASURED_BY" expression="rowED.TF_MEASURED_BY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ST_DATE" expression="rowED.ST_DATE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ST_ENERGY" expression="rowED.ST_ENERGY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ST_UNIT" expression="rowED.ST_UNIT " type="id_String" nullable="true"/>
-        <mapperTableEntries name="END_DATE" expression="rowED.END_DATE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="END_ENERGY" expression="rowED.END_ENERGY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="END_UNIT" expression="rowED.END_UNIT " type="id_String" nullable="true"/>
+        <mapperTableEntries name="SITE_ID" expression="rowTM.SITE_ID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="TF_ENERGY" expression="rowTM.TF_ENERGY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="TF_UNIT" expression="rowTM.TF_UNIT " type="id_String" nullable="true"/>
+        <mapperTableEntries name="TF_MEASURED_BY" expression="rowTM.TF_MEASURED_BY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ST_DATE" expression="rowTM.ST_DATE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ST_ENERGY" expression="rowTM.ST_ENERGY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ST_UNIT" expression="rowTM.ST_UNIT " type="id_String" nullable="true"/>
+        <mapperTableEntries name="END_DATE" expression="rowTM.END_DATE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="END_ENERGY" expression="rowTM.END_ENERGY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="END_UNIT" expression="rowTM.END_UNIT " type="id_String" nullable="true"/>
         <mapperTableEntries name="SNOWFLAKE_DATE_CREATED" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="rowED" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="rowTM" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="SITE_ID" type="id_String" nullable="true"/>
         <mapperTableEntries name="TF_ENERGY" type="id_String" nullable="true"/>
         <mapperTableEntries name="TF_UNIT" type="id_String" nullable="true"/>
@@ -890,7 +890,7 @@
       <column comment="" key="false" length="-1" name="ERROR_LOG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="JOB_END_TIME" expression="System.currentTimeMillis() " type="id_Long"/>
         <mapperTableEntries name="JAVA_ERROR" expression="logCatcher.message " type="id_String"/>
@@ -1135,9 +1135,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="rowED" lineStyle="0" metaname="tLogRow_2" offsetLabelX="0" offsetLabelY="0" source="tLogRow_2" target="tMap_1">
+  <connection connectorName="FLOW" label="rowTM" lineStyle="0" metaname="tLogRow_2" offsetLabelX="0" offsetLabelY="0" source="tLogRow_2" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="rowED" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="rowTM" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
