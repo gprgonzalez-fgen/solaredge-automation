@@ -19,7 +19,6 @@
     <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_COMPONENTS" internalId="_FpyE4CFREfGTI91mAoNfUg"/>
     <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_FpyE4SFREfGTI91mAoNfUg"/>
     <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_FpyE4iFREfGTI91mAoNfUg"/>
-    <contextParameter comment="" name="status" prompt="status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="FAILED" internalId="_FpyE4yFREfGTI91mAoNfUg"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="Laptop">
     <contextParameter comment="" name="solaredge_api_key" prompt="solaredge_api_key?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="RQV3CFF6ZJZSQ671FSY09GVVT2AVWFUK" internalId="_IZv6YCG6EfGoPOZjltsGMA"/>
@@ -38,7 +37,6 @@
     <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_COMPONENTS" internalId="_FpyE4CFREfGTI91mAoNfUg"/>
     <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_FpyE4SFREfGTI91mAoNfUg"/>
     <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_FpyE4iFREfGTI91mAoNfUg"/>
-    <contextParameter comment="" name="status" prompt="status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="FAILED" internalId="_FpyE4yFREfGTI91mAoNfUg"/>
     <contextParameter comment="" name="snowflake_keystore_jks" prompt="snowflake_keystore_jks?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_String" value="&quot;D:/gprgonzalez/keystores/PI_SOLAREDGE/keystore.jks&quot;" internalId="_IZv6bSG6EfGoPOZjltsGMA"/>
     <contextParameter comment="" name="snowflake_keystore_password" prompt="snowflake_keystore_password?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_Password" value="enc:system.encryption.key.v1:nJiCznuuhZ5Q/3/CNlCKGma3jtZXi3oOc+jcIqrDKJWEnwoTQg==" internalId="_IZv6biG6EfGoPOZjltsGMA"/>
   </context>
@@ -284,7 +282,7 @@
     <elementParameter field="TEXT" name="CORRELATION_VALUE" value="&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="CHECK_SERVER_IDENTITY" value="true"/>
     <elementParameter field="CHECK" name="REUSE_SSL_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
     <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
     <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" value="false" show="false"/>
@@ -469,7 +467,7 @@
       <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" originalLength="20" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="SITE_ID" expression="row1.SITE_ID" type="id_String" nullable="true"/>
@@ -710,7 +708,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_Tvq-MCLVEfGyZ7Xm8w07DQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PAQz4BmBEfGE-vukTPVQsQ-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
@@ -733,7 +731,7 @@
       <column comment="" key="false" length="-1" name="ERROR_LOG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="JOB_END_TIME" expression="System.currentTimeMillis() " type="id_Long"/>
         <mapperTableEntries name="JAVA_ERROR" expression="logCatcher.message " type="id_String"/>

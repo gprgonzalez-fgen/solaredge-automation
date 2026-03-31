@@ -662,40 +662,40 @@
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
-        <mapperTableEntries name="SITE_ID" expression="row4.SITE_ID " type="id_String" nullable="true"/>
-        <mapperTableEntries name="CUST_NAME" expression="row4.CUST_NAME " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ACCOUNT_ID" expression="row4.ACCOUNT_ID " type="id_String" nullable="true"/>
-        <mapperTableEntries name="STATUS" expression="row4.STATUS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="PEAK_POWER" expression="row4.PEAK_POWER " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LAST_UPDATE_TIME" expression="row4.LAST_UPDATE_TIME " type="id_String" nullable="true"/>
-        <mapperTableEntries name="CURRENCY" expression="row4.CURRENCY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="INSTALL_DATE" expression="row4.INSTALL_DATE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="PTO_DATE" expression="row4.PTO_DATE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="NOTES" expression="row4.NOTES " type="id_String" nullable="true"/>
-        <mapperTableEntries name="TYPE" expression="row4.TYPE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_COUNTRY" expression="row4.LOC_COUNTRY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_CITY" expression="row4.LOC_CITY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_ADDR1" expression="row4.LOC_ADDR1 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_ADDR2" expression="row4.LOC_ADDR2 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_ZIP" expression="row4.LOC_ZIP " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_TIMEZONE" expression="row4.LOC_TIMEZONE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="LOC_CNTRYCODE" expression="row4.LOC_CNTRYCODE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ALERT_QTY" expression="row4.ALERT_QTY " type="id_String" nullable="true"/>
-        <mapperTableEntries name="HIGHEST_IMPACT" expression="row4.HIGHEST_IMPACT " type="id_String" nullable="true"/>
-        <mapperTableEntries name="MANUFACTURER_NAME" expression="row4.MANUFACTURER_NAME " type="id_String" nullable="true"/>
-        <mapperTableEntries name="MODEL_NAME" expression="row4.MODEL_NAME " type="id_String" nullable="true"/>
-        <mapperTableEntries name="MAX_POWER" expression="row4.MAX_POWER " type="id_String" nullable="true"/>
-        <mapperTableEntries name="TEMP_COEF" expression="row4.TEMP_COEF " type="id_String" nullable="true"/>
-        <mapperTableEntries name="URIS_SITE_IMAGE" expression="row4.URIS_SITE_IMAGE " type="id_String" nullable="true"/>
-        <mapperTableEntries name="URIS_DATA_PD" expression="row4.URIS_DATA_PD " type="id_String" nullable="true"/>
-        <mapperTableEntries name="URIS_DETAILS" expression="row4.URIS_DETAILS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="URIS_OVERVIEW" expression="row4.URIS_OVERVIEW " type="id_String" nullable="true"/>
-        <mapperTableEntries name="URIS_PUBLIC_URL" expression="row4.URIS_PUBLIC_URL " type="id_String" nullable="true"/>
-        <mapperTableEntries name="PUBLIC_SETTINGS_IS_PUBLIC" expression="row4.PUBLIC_SETTINGS_IS_PUBLIC " type="id_String" nullable="true"/>
-        <mapperTableEntries name="PUBLIC_SETTINGS_NAME" expression="row4.PUBLIC_SETTINGS_NAME " type="id_String" nullable="true"/>
+        <mapperTableEntries name="SITE_ID" expression="rowTM.SITE_ID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CUST_NAME" expression="rowTM.CUST_NAME " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ACCOUNT_ID" expression="rowTM.ACCOUNT_ID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="STATUS" expression="rowTM.STATUS " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PEAK_POWER" expression="rowTM.PEAK_POWER " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LAST_UPDATE_TIME" expression="rowTM.LAST_UPDATE_TIME " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CURRENCY" expression="rowTM.CURRENCY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="INSTALL_DATE" expression="rowTM.INSTALL_DATE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PTO_DATE" expression="rowTM.PTO_DATE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="NOTES" expression="rowTM.NOTES " type="id_String" nullable="true"/>
+        <mapperTableEntries name="TYPE" expression="rowTM.TYPE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_COUNTRY" expression="rowTM.LOC_COUNTRY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_CITY" expression="rowTM.LOC_CITY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_ADDR1" expression="rowTM.LOC_ADDR1 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_ADDR2" expression="rowTM.LOC_ADDR2 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_ZIP" expression="rowTM.LOC_ZIP " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_TIMEZONE" expression="rowTM.LOC_TIMEZONE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="LOC_CNTRYCODE" expression="rowTM.LOC_CNTRYCODE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ALERT_QTY" expression="rowTM.ALERT_QTY " type="id_String" nullable="true"/>
+        <mapperTableEntries name="HIGHEST_IMPACT" expression="rowTM.HIGHEST_IMPACT " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MANUFACTURER_NAME" expression="rowTM.MANUFACTURER_NAME " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MODEL_NAME" expression="rowTM.MODEL_NAME " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MAX_POWER" expression="rowTM.MAX_POWER " type="id_String" nullable="true"/>
+        <mapperTableEntries name="TEMP_COEF" expression="rowTM.TEMP_COEF " type="id_String" nullable="true"/>
+        <mapperTableEntries name="URIS_SITE_IMAGE" expression="rowTM.URIS_SITE_IMAGE " type="id_String" nullable="true"/>
+        <mapperTableEntries name="URIS_DATA_PD" expression="rowTM.URIS_DATA_PD " type="id_String" nullable="true"/>
+        <mapperTableEntries name="URIS_DETAILS" expression="rowTM.URIS_DETAILS " type="id_String" nullable="true"/>
+        <mapperTableEntries name="URIS_OVERVIEW" expression="rowTM.URIS_OVERVIEW " type="id_String" nullable="true"/>
+        <mapperTableEntries name="URIS_PUBLIC_URL" expression="rowTM.URIS_PUBLIC_URL " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PUBLIC_SETTINGS_IS_PUBLIC" expression="rowTM.PUBLIC_SETTINGS_IS_PUBLIC " type="id_String" nullable="true"/>
+        <mapperTableEntries name="PUBLIC_SETTINGS_NAME" expression="rowTM.PUBLIC_SETTINGS_NAME " type="id_String" nullable="true"/>
         <mapperTableEntries name="SNOWFLAKE_DATE_CREATED" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="rowTM" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="SITE_ID" type="id_String" nullable="true"/>
         <mapperTableEntries name="CUST_NAME" type="id_String" nullable="true"/>
         <mapperTableEntries name="ACCOUNT_ID" type="id_String" nullable="true"/>
@@ -1155,7 +1155,7 @@
       <column comment="" key="false" length="-1" name="ERROR_LOG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="JOB_END_TIME" expression="System.currentTimeMillis() " type="id_Long"/>
         <mapperTableEntries name="JAVA_ERROR" expression="logCatcher.message " type="id_String"/>
@@ -1398,9 +1398,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tMap_1">
+  <connection connectorName="FLOW" label="rowTM" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="rowTM" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
