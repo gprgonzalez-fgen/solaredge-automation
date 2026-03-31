@@ -18,6 +18,8 @@ Considerations:
 * For the daily mode, what's the maximum difference from today's date? 28 days?
 * ~~For snowflake tables that doesn't have a "Date" column (date value from api respone, not SNOWFLAKE\_DATE\_CREATED), what should i use to get the "max date" for daily mode?~~
 * For non-looping api endpoints, do i do a daily mode? or manually siya lalagyan ng date through contexts (startDate, endDate)
+* For Inventory API endpoint: what should be my keys? SITE\_ID and EQUIPMENT CATEGORY isn't enough
+* For Meters Data: should i improve logging to say "NO DATA RETRIEVED" (instead of "FAILED") for status when SOURCE\_ROW\_COUNT and TARGET\_ROW\_COUNT is equal to 0?
 
 Clarifications:
 
