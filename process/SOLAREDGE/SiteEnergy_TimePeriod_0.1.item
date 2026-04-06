@@ -18,9 +18,10 @@
     <contextParameter comment="" name="conn_snowflake_jdbcUrlSuffix" prompt="conn_snowflake_jdbcUrlSuffix?" promptNeeded="false" repositoryContextId="_YDFBkB5KEfGXkP-cdHyBXw" type="id_String" value=".snowflakecomputing.com" internalId="_c2Qx2R5MEfG3QbAgMyqCWQ"/>
     <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_SITE_ENERGY_TIME_PD" internalId="_6ApBUB5MEfG3QbAgMyqCWQ"/>
     <contextParameter comment="" name="input_table" prompt="input_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DIM_SOLAREDGE_SITELIST" internalId="_o7-f0CFUEfGTI91mAoNfUg"/>
-    <contextParameter comment="" name="startDate" prompt="startDate?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2013-05-01&#x9;" internalId="_xGo-sCFVEfGTI91mAoNfUg"/>
-    <contextParameter comment="" name="endDate" prompt="endDate?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2014-05-01" internalId="_xGo-sSFVEfGTI91mAoNfUg"/>
+    <contextParameter comment="" name="startDate" prompt="startDate?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2026-03-15&#x9;" internalId="_xGo-sCFVEfGTI91mAoNfUg"/>
+    <contextParameter comment="" name="endDate" prompt="endDate?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2026-03-29" internalId="_xGo-sSFVEfGTI91mAoNfUg"/>
     <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_ZIBFsCwGEfGYH6mG0hHQHA"/>
+    <contextParameter comment="" name="isHistorical" prompt="isHistorical?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="false" internalId="_SttHsDF3EfGPUZjbaTONAQ"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="Laptop">
     <contextParameter comment="" name="solaredge_api_base" prompt="solaredge_api_base?" promptNeeded="false" repositoryContextId="_V3b8IBk2EfGE-vukTPVQsQ" type="id_String" value="https://monitoringapi.solaredge.com" internalId="_IXhs0CG6EfGoPOZjltsGMA"/>
@@ -43,6 +44,7 @@
     <contextParameter comment="" name="snowflake_keystore_jks" prompt="snowflake_keystore_jks?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_String" value="&quot;D:/gprgonzalez/keystores/PI_SOLAREDGE/keystore.jks&quot;" internalId="_IXhs3SG6EfGoPOZjltsGMA"/>
     <contextParameter comment="" name="snowflake_keystore_password" prompt="snowflake_keystore_password?" promptNeeded="false" repositoryContextId="_3eSioBekEfGnmecgVvjMBQ" type="id_Password" value="enc:system.encryption.key.v1:nJiCznuuhZ5Q/3/CNlCKGma3jtZXi3oOc+jcIqrDKJWEnwoTQg==" internalId="_IXhs3iG6EfGoPOZjltsGMA"/>
     <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_ZIBFsSwGEfGYH6mG0hHQHA"/>
+    <contextParameter comment="" name="isHistorical" prompt="isHistorical?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="false" internalId="_SttHsTF3EfGPUZjbaTONAQ"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -502,18 +504,80 @@
       <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="120" posY="400">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
-    <elementParameter field="TABLE" name="VARIABLES">
-      <elementValue elementRef="KEY" value="&quot;SOURCE_ROW_COUNT&quot;" id="0"/>
-      <elementValue elementRef="VALUE" value="0" id="1"/>
-      <elementValue elementRef="KEY" value="&quot;TARGET_ROW_COUNT&quot;" id="2"/>
-      <elementValue elementRef="VALUE" value="0" id="3"/>
-    </elementParameter>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="80" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="System.out.println(&quot;Job start: SiteEnergy_TimePeriod&quot;);&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, 0);&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, 0);&#xD;&#xA;&#xD;&#xA;if (context.isHistorical) {&#xD;&#xA;    java.util.Date sDate = TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, context.startDate);&#xD;&#xA;    java.util.Date eDate = TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, context.endDate);&#xD;&#xA;&#xD;&#xA;    long diffInMillies = Math.abs(eDate.getTime() - sDate.getTime());&#xD;&#xA;    // Calculate total days (1 iteration per day)&#xD;&#xA;    int iterations = (int) java.util.concurrent.TimeUnit.DAYS.convert(diffInMillies, java.util.concurrent.TimeUnit.MILLISECONDS);&#xD;&#xA;    &#xD;&#xA;    // If the time difference is exactly on the day (e.g., 00:00 to 00:00), &#xD;&#xA;    // ensure we have at least 1 iteration if there's any time span.&#xD;&#xA;    if (iterations == 0 &amp;&amp; diffInMillies > 0) iterations = 1;&#xD;&#xA;&#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, iterations);&#xD;&#xA;    globalMap.put(&quot;loop_start_date&quot;, sDate);&#xD;&#xA;    globalMap.put(&quot;loop_end_date&quot;, eDate);&#xD;&#xA;} else {&#xD;&#xA;    // In Daily Mode, we don't know iterations yet. &#xD;&#xA;    // We set a placeholder; the MAX_DATE subjob will overwrite this.&#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, 1);&#xD;&#xA;}"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tSetGlobalVar_1"/>
+    <metadata connector="FLOW" name="tJava_2"/>
   </node>
-  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="440" posY="400">
+  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="120" posY="520">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_2" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dA" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_YUm2cB5KEfGXkP-cdHyBXw"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="QUERYSTORE_TYPE : &quot;BUILT_IN&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="SOLAREDGE_SITE_ENERGY_DETAILED"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.conn_snowflake_account" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="KEY_PAIR" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.conn_snowflake_userId" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.keyAlias" value="context.conn_snowflake_keyAlias" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.conn_snowflake_warehouse" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="context.conn_snowflake_dbSchema" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.conn_snowflake_database" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="context.output_table"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.manualQuery" value="true"/>
+    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT &#xD;&#xA;    COALESCE(TO_CHAR(MAX(\&quot;ST_DATE\&quot;), 'YYYY-MM-DD HH24:MI:SS.FF3'), '2023-01-01 00:00:00') as MAX_DATE &#xD;&#xA;FROM PI_ENERGY_DEV.RAW.&quot; + context.output_table"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="context.conn_snowflake_jdbcParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="context.conn_snowflake_loginTimeout" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.role" value="context.conn_snowflake_role" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value="context.conn_snowflake_jdbcUrlSuffix" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.useUnquotedObjectIdentifiers" value="true" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.useSessionTimezone" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tSnowflakeInput_2">
+      <column comment="" key="false" length="-1" name="MAX_DATE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="360" posY="520">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="java.util.Date lastDate = TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, rowLD.MAX_DATE);&#xD;&#xA;java.util.Date today = new java.util.Date();&#xD;&#xA;java.util.Date nextStartDate = TalendDate.addDate(lastDate, 1, &quot;dd&quot;);&#xD;&#xA;&#xD;&#xA;long diffInMillies = Math.abs(today.getTime() - lastDate.getTime());&#xD;&#xA;int iterations = (int) java.util.concurrent.TimeUnit.DAYS.convert(diffInMillies, java.util.concurrent.TimeUnit.MILLISECONDS);&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Daily Mode: Gap of &quot; + iterations + &quot; days detected.&quot;);&#xD;&#xA;&#xD;&#xA;// Safety Guard: Still keep a limit so you don't accidentally pull 10 years of daily calls&#xD;&#xA;if (iterations > 31) {&#xD;&#xA;     throw new RuntimeException(&quot;Daily gap too large (&quot; + iterations + &quot; days). Run Historical mode.&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;totalIterations&quot;, iterations &lt;= 0 ? 1 : iterations);&#xD;&#xA;globalMap.put(&quot;loop_start_date&quot;, nextStartDate);&#xD;&#xA;globalMap.put(&quot;loop_end_date&quot;, today);"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1"/>
+  </node>
+  <node componentName="tLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
+    <elementParameter field="RADIO" name="FORLOOP" value="true"/>
+    <elementParameter field="RADIO" name="WHILELOOP" value="false"/>
+    <elementParameter field="TEXT" name="FROM" value="1"/>
+    <elementParameter field="TEXT" name="TO" value="(Integer)globalMap.get(&quot;totalIterations&quot;)"/>
+    <elementParameter field="TEXT" name="STEP" value="1"/>
+    <elementParameter field="CHECK" name="INCREASE" value="true"/>
+    <elementParameter field="TEXT" name="DECLARATION" value="int i=0" show="false"/>
+    <elementParameter field="TEXT" name="CONDITION" value="i&lt;10" show="false"/>
+    <elementParameter field="TEXT" name="ITERATION" value="i++" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="720" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="int i = ((Integer)globalMap.get(&quot;tLoop_1_CURRENT_VALUE&quot;)) - 1;&#xD;&#xA;&#xD;&#xA;//Retrieve the start/end set by either Historical or Daily logic above&#xD;&#xA;java.util.Date globalStart = (java.util.Date)globalMap.get(&quot;loop_start_date&quot;);&#xD;&#xA;java.util.Date globalEnd = (java.util.Date)globalMap.get(&quot;loop_end_date&quot;);&#xD;&#xA;&#xD;&#xA;//1. Current Chunk Start = globalStart + i days&#xD;&#xA;java.util.Date currentChunkStart = TalendDate.addDate(globalStart, i, &quot;dd&quot;);&#xD;&#xA;&#xD;&#xA;//2. Current Chunk End = currentChunkStart + 1 day (Exactly 24 hours later)&#xD;&#xA;java.util.Date currentChunkEnd = TalendDate.addDate(currentChunkStart, 1, &quot;dd&quot;);&#xD;&#xA;&#xD;&#xA;//3. Boundary Guard: Don't go past the final end date&#xD;&#xA;if (currentChunkEnd.after(globalEnd)) {&#xD;&#xA; currentChunkEnd = globalEnd;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;//String format = &quot;yyyy-MM-dd HH:mm:ss&quot;;&#xD;&#xA;String format = &quot;yyyy-MM-dd&quot;;&#xD;&#xA;globalMap.put(&quot;api_startDate&quot;, TalendDate.formatDate(format, currentChunkStart));&#xD;&#xA;globalMap.put(&quot;api_endDate&quot;, TalendDate.formatDate(format, currentChunkEnd));&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Iteration &quot; + (i+1) + &quot;: &quot; + globalMap.get(&quot;api_startDate&quot;) + &quot; to &quot; + globalMap.get(&quot;api_endDate&quot;));&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;--- DEBUGGING API CALL ---&quot;);&#xD;&#xA;System.out.println(&quot;URL: &quot; + context.solaredge_api_base + &quot;/site/&quot; + &quot;SITE_ID&quot; + &quot;/timeFrameEnergy&quot;);&#xD;&#xA;System.out.println(&quot;apiKey: &quot; + context.solaredge_api_key);&#xD;&#xA;System.out.println(&quot;startDate: &quot; + (String)globalMap.get(&quot;api_startDate&quot;));&#xD;&#xA;System.out.println(&quot;endDate: &quot; + (String)globalMap.get(&quot;api_endDate&quot;));&#xD;&#xA;System.out.println(&quot;--------------------------&quot;);"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_3"/>
+  </node>
+  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="880" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dA" show="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
@@ -550,7 +614,7 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="400">
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1" show="false"/>
     <elementParameter field="TEXT" name="URL" value="context.solaredge_api_base + &quot;/site/&quot; + row1.SITE_ID + &quot;/timeFrameEnergy&quot;"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
@@ -558,12 +622,12 @@
     <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/xml" show="false"/>
     <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="application/json"/>
     <elementParameter field="TABLE" name="QUERY">
-      <elementValue elementRef="NAME" value="&quot;startDate&quot;" id="0"/>
-      <elementValue elementRef="VALUE" value="context.startDate" id="1"/>
-      <elementValue elementRef="NAME" value="&quot;endDate&quot;" id="2"/>
-      <elementValue elementRef="VALUE" value="context.endDate" id="3"/>
-      <elementValue elementRef="NAME" value="&quot;api_key&quot;" id="4"/>
-      <elementValue elementRef="VALUE" value="context.solaredge_api_key" id="5"/>
+      <elementValue elementRef="NAME" value="&quot;api_key&quot;" id="0"/>
+      <elementValue elementRef="VALUE" value="context.solaredge_api_key" id="1"/>
+      <elementValue elementRef="NAME" value="&quot;startDate&quot;" id="2"/>
+      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;api_startDate&quot;)" id="3"/>
+      <elementValue elementRef="NAME" value="&quot;endDate&quot;" id="4"/>
+      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;api_endDate&quot;)" id="5"/>
     </elementParameter>
     <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
     <elementParameter field="TEXT" name="SERVICE_NAMESPACE" value="&quot;&quot;" show="false"/>
@@ -604,7 +668,7 @@
     <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="enc:system.encryption.key.v1:ftxvywgHdgfgCwiQxbHDXJ2ij85tOKDie1nxGvFr" show="false"/>
     <elementParameter field="TEXT" name="ARRAY_KEYS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>Site Energy: Time Period&lt;/b>"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>Site Energy - Time Period&lt;/b>"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRESTClient_1">
       <column comment="" key="false" length="-1" name="SITE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -619,7 +683,7 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="400">
+  <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tReplicate_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tReplicate_1">
@@ -628,7 +692,7 @@
       <column key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="400">
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_QQkOoCFXEfGTI91mAoNfUg" show="false"/>
@@ -733,7 +797,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1160" posY="400">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -782,7 +846,7 @@
       <column comment="" key="false" length="255" name="END_UNIT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="400">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1720" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -838,7 +902,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1400" posY="400">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1840" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -893,7 +957,7 @@
       <column comment="" key="false" length="255" name="SNOWFLAKE_DATE_CREATED" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" originalLength="255" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="1560" posY="400">
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="2000" posY="360">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -964,34 +1028,34 @@
       <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="520">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="// code sample:&#xA;//&#xA;// multiply by 2 the row identifier&#xA;// output_row.id = input_row.id * 2;&#xA;//&#xA;// lowercase the name&#xA;// output_row.name = input_row.name.toLowerCase();&#xA;&#xA;if (rowSC.statusCode != null &amp;&amp; rowSC.statusCode >= 200 &amp;&amp; rowSC.statusCode &lt;= 299) {&#xD;&#xA;&#x9; &#xD;&#xA;&#x9;// convert to string and store&#xD;&#xA;&#x9;String statusStr = String.valueOf(rowSC.statusCode);&#xD;&#xA;&#x9;// success: store status code&#xD;&#xA;&#x9;globalMap.put(&quot;API_R_STATUS_CODE&quot;, rowSC.statusCode);&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;System.out.println(&quot;====RESPONSE====&quot;);&#xD;&#xA;&#x9;System.out.println(&quot;statusCode: &quot; + (Integer)globalMap.get(&quot;API_R_STATUS_CODE&quot;));&#xD;&#xA;&#x9;System.out.println(&quot;====RESPONSE END====&quot;);&#xD;&#xA;&#x9;System.out.println(&quot;&quot;);&#xD;&#xA;} "/>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//System.out.println(&quot;====RESPONSE====&quot;);&#xD;&#xA;//String errorMessage = ((String)globalMap.get(&quot;tRESTClient_1_ERROR_MESSAGE&quot;));&#xD;&#xA;//System.out.println(&quot;tREST Error message: &quot; + errorMessage);&#xD;&#xA;//&#xD;&#xA;//globalMap.put(&quot;API_STATUS_CODE&quot;, rowASC.statusCode);&#xD;&#xA;//System.out.println(&quot;Response Status (get) code: &quot; + (Integer)globalMap.get(&quot;API_STATUS_CODE&quot;));&#xD;&#xA;//System.out.println(&quot;Response Status code: &quot; + rowASC.statusCode);&#xD;&#xA;//System.out.println(&quot;====RESPONSE END====&quot;);&#xD;&#xA;//System.out.println(&quot;&quot;);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// check if the row is not null and status code is in the 200-299 range&#xD;&#xA;if (rowSC.statusCode != null &amp;&amp; rowSC.statusCode >= 200 &amp;&amp; rowSC.statusCode &lt;= 299) {&#xD;&#xA; &#xD;&#xA;&#x9;// convert to string and store&#xD;&#xA;&#x9;String statusStr = String.valueOf(rowSC.statusCode);&#xD;&#xA;&#x9;// success: store status code&#xD;&#xA;&#x9;globalMap.put(&quot;API_R_STATUS_CODE&quot;, rowSC.statusCode);&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;System.out.println(&quot;====RESPONSE====&quot;);&#xD;&#xA;&#x9;System.out.println(&quot;statusCode: &quot; + (Integer)globalMap.get(&quot;API_R_STATUS_CODE&quot;));&#xD;&#xA;&#x9;System.out.println(&quot;====RESPONSE END====&quot;);&#xD;&#xA;&#x9;System.out.println(&quot;&quot;);&#xD;&#xA;} "/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>get statusCode&lt;/b>"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJavaRow_1"/>
+    <metadata connector="FLOW" name="tJavaRow_2"/>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="240">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String fullError = (String)globalMap.get(&quot;tRESTClient_1_ERROR_MESSAGE&quot;);&#xD;&#xA;&#xD;&#xA;if (fullError != null &amp;&amp; !fullError.isEmpty()) {&#xD;&#xA;    // Example: &quot;HTTP 400 Bad Request&quot;&#xD;&#xA;    // Split by spaces: [0]=&quot;HTTP&quot;, [1]=&quot;400&quot;, [2..n]=&quot;Bad&quot;, &quot;Request&quot;&#xD;&#xA;    String[] parts = fullError.split(&quot; &quot;, 3); &#xD;&#xA;    &#xD;&#xA;    if (parts.length >= 2) {&#xD;&#xA;        globalMap.put(&quot;API_STATUS_CODE&quot;, parts[1]); // ex.&quot;400&quot;&#xD;&#xA;    }&#xD;&#xA;    if (parts.length >= 3) {&#xD;&#xA;        globalMap.put(&quot;API_ERROR_MESSAGE&quot;, parts[2]);  // ex. &quot;Bad Request&quot;&#xD;&#xA;    }&#xD;&#xA;    &#xD;&#xA;    System.out.println(&quot;====tJAVA====&quot;);&#xD;&#xA;    System.out.println(&quot;Part[1]: &quot; + parts[1]);&#xD;&#xA;    System.out.println(&quot;Part[2]: &quot; + parts[2]);&#xD;&#xA;    System.out.println(&quot;====END====&quot;);&#xD;&#xA;    System.out.println(&quot;&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;"/>
-    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJava_2"/>
-  </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1160" posY="240">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="int currentTotal = (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;);&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, currentTotal + (Integer)globalMap.get(&quot;tLogRow_1_NB_LINE&quot;));&#xD;&#xA;&#xD;&#xA;int currentChunkSuccess = (Integer)globalMap.get(&quot;tLogRow_1_NB_LINE&quot;); &#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Chunk finished. SOURCE_ROW_COUNT this chunk: &quot; + currentChunkSuccess + &quot; | Total so far: &quot; + (currentTotal + currentChunkSuccess));"/>
-    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJava_3"/>
-  </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1560" posY="240">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="200">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_4" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//1. Get the current running total&#xD;&#xA;int currentTotal = (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;);&#xD;&#xA;&#xD;&#xA;//2. Get the count from the current 28-day chunk&#xD;&#xA;int currentChunkSuccess = (Integer)globalMap.get(&quot;tSnowflakeOutput_1_NB_SUCCESS&quot;); &#xD;&#xA;&#xD;&#xA;//3. Add them together and save back to GlobalMap&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, currentTotal + currentChunkSuccess);&#xD;&#xA;System.out.println(&quot;Chunk finished. TARGET_ROW_COUNT this chunk: &quot; + currentChunkSuccess + &quot; | Total so far: &quot; + (currentTotal + currentChunkSuccess));&#xD;&#xA;&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//System.out.println(&quot;====tJAVA====&quot;);&#xD;&#xA;//String errorMessage = ((String)globalMap.get(&quot;tRESTClient_1_ERROR_MESSAGE&quot;));&#xD;&#xA;//System.out.println(&quot;tREST Error message (tJava): &quot; + errorMessage);&#xD;&#xA;//System.out.println(&quot;====END====&quot;);&#xD;&#xA;//System.out.println(&quot;&quot;);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;String fullError = (String)globalMap.get(&quot;tRESTClient_1_ERROR_MESSAGE&quot;);&#xD;&#xA;&#xD;&#xA;if (fullError != null &amp;&amp; !fullError.isEmpty()) {&#xD;&#xA;  // Example: &quot;HTTP 400 Bad Request&quot;&#xD;&#xA;  // Split by spaces: [0]=&quot;HTTP&quot;, [1]=&quot;400&quot;, [2..n]=&quot;Bad&quot;, &quot;Request&quot;&#xD;&#xA;  String[] parts = fullError.split(&quot; &quot;, 3); &#xD;&#xA;  &#xD;&#xA;  if (parts.length >= 2) {&#xD;&#xA;      globalMap.put(&quot;API_STATUS_CODE&quot;, parts[1]); // ex.&quot;400&quot;&#xD;&#xA;  }&#xD;&#xA;  if (parts.length >= 3) {&#xD;&#xA;      globalMap.put(&quot;API_ERROR_MESSAGE&quot;, parts[2]);  // ex. &quot;Bad Request&quot;&#xD;&#xA;  }&#xD;&#xA;  &#xD;&#xA;  System.out.println(&quot;====tJAVA====&quot;);&#xD;&#xA;  System.out.println(&quot;Part[1]: &quot; + parts[1]);&#xD;&#xA;  System.out.println(&quot;Part[2]: &quot; + parts[2]);&#xD;&#xA;  System.out.println(&quot;====END====&quot;);&#xD;&#xA;  System.out.println(&quot;&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_4"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_5" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="int currentTotal = (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;);&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, currentTotal + (Integer)globalMap.get(&quot;tLogRow_1_NB_LINE&quot;));"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_5"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="2000" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_6" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//1. Get the current running total&#xD;&#xA;int currentTotal = (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;);&#xD;&#xA;&#xD;&#xA;//2. Get the count from the current 28-day chunk&#xD;&#xA;int currentChunkSuccess = (Integer)globalMap.get(&quot;tSnowflakeOutput_1_NB_SUCCESS&quot;); &#xD;&#xA;&#xD;&#xA;//3. Add them together and save back to GlobalMap&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, currentTotal + currentChunkSuccess);&#xD;&#xA;System.out.println(&quot;Chunk finished. TARGET_ROW_COUNT this chunk: &quot; + currentChunkSuccess + &quot; | Total so far: &quot; + (currentTotal + currentChunkSuccess));&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_6"/>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
@@ -1007,6 +1071,9 @@
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tSetKeystore_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tJava_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk8" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="FFI" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1027,8 +1094,30 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSnowflakeOutput_3" offsetLabelX="0" offsetLabelY="0" source="tSnowflakeOutput_3" target="tSetKeystore_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk6" show="false"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tSnowflakeInput_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk4" show="false"/>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tJava_2" target="tSnowflakeInput_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="!context.isHistorical"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tJava_2" target="tLoop_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.isHistorical"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="rowLD" lineStyle="0" metaname="tSnowflakeInput_2" offsetLabelX="0" offsetLabelY="0" source="tSnowflakeInput_2" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="rowLD" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tLoop_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk7" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tLoop_1" offsetLabelX="0" offsetLabelY="0" source="tLoop_1" target="tJava_3">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tJava_3" offsetLabelX="0" offsetLabelY="0" source="tJava_3" target="tSnowflakeInput_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tSnowflakeInput_1" offsetLabelX="0" offsetLabelY="0" source="tSnowflakeInput_1" target="tRESTClient_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1038,14 +1127,14 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRESTClient_1" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_1" target="tJava_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk7" show="false"/>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRESTClient_1" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_1" target="tJava_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk11" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tReplicate_1" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="rowSC" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tReplicate_1" target="tJavaRow_1">
+  <connection connectorName="FLOW" label="rowSC" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tReplicate_1" target="tJavaRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="rowSC" show="false"/>
   </connection>
@@ -1057,8 +1146,8 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="rowTM" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tJava_3">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk8" show="false"/>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tJava_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk9" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1068,8 +1157,8 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSnowflakeOutput_1" offsetLabelX="0" offsetLabelY="0" source="tSnowflakeOutput_1" target="tJava_4">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk9" show="false"/>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSnowflakeOutput_1" offsetLabelX="0" offsetLabelY="0" source="tSnowflakeOutput_1" target="tJava_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk10" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
@@ -1127,36 +1216,42 @@
   </subjob>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
     <elementParameter field="TEXT" name="SUBJOB_TITLE" value="initialization"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_1" show="false"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="get Site Energy: Time Period and ingest into snowflake table"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_2" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="get max date and today's date for daily mode "/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="get Site Energy - Time Period and ingest into snowflake table"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_4" show="false"/>
     <elementParameter field="TEXT" name="SUBJOB_TITLE" value="get ERROR_MESSAGE"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_5" show="false"/>
     <elementParameter field="TEXT" name="SUBJOB_TITLE" value="aggregate SOURCE_ROW_COUNT"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="COLLAPSED" value="true" show="false"/>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_4" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_6" show="false"/>
     <elementParameter field="TEXT" name="SUBJOB_TITLE" value="aggregate TARGET_ROW_COUNT"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
