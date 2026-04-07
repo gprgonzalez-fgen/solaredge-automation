@@ -48,8 +48,9 @@ API Corrections
 * Site Energy: Bulk
 
   * startDate 2013-05-01 and endDate 2013-05-30 works but not 2014-02-25 to 2014-03-26 even if they have the same time/day difference
+* Inverter Technical Data
 
-
+  * sample output has incorrect json structure
 
 
 
@@ -84,4 +85,22 @@ Revisions
 * merge tExtractJSONField for SOURCE\_TARGET\_COUNT, with main row line
 * revise Inventory job -- make tExtractJSONField components in a singular flow
 * Site Energy: Time Period: Daily and isHistorical
+
+
+
+
+
+
+
+CHANGES
+
+* align
+
+  * 
+* GENERAL
+
+  * "SELECT DISTINCT SITE\_ID FROM " + context.input\_table
+* SiteDetails
+
+  * row > rowTM
 
