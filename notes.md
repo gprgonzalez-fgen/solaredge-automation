@@ -90,13 +90,30 @@ Revisions
 
 
 
+loops must account for
+
+* same startDate and endDate
+* when daily mode is ran twice
+
 
 
 CHANGES
 
 * align
 
-  * 
+  * initialization tjava
+  * MAX\_DATE subjob tjavarow
+  * inside-the-loop tjava
+  * get statusCode tjavarow
+  * aggregate SOURCE\_ROW\_COUNT tjava/tjavarow
+  * aggregate TARGET\_ROW\_COUNT tjava
+  * SOURCE\_ROW\_COUNT and TARGET\_ROW\_COUNT is equal to 0, set to 
+  * MAX\_DATE subjob
+
+&#x09;"SELECT COALESCE(TO\_CHAR(MAX(\\"DATE\\"), 'YYYY-MM-DD HH24:MI:SS.FF3'), '2023-01-01 00:00:00') as MAX\_DATE 
+
+&#x09;FROM " + context.output\_table
+
 * GENERAL
 
   * "SELECT DISTINCT SITE\_ID FROM " + context.input\_table

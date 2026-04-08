@@ -50,7 +50,7 @@
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="12" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="80" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
@@ -91,7 +91,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:EfSDBSvaaydU67i5lfvPqCT0o/YCWXo7QIu0ofzx" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:mt6uNqYf15ORT3ewKRyvNFjt8eiR5MAWFOKtfyx0" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -106,7 +106,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/repos/FGEN/solaredge-talend/.metadata&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/gprgonzalez/repos/FGEN/solaredge-talend/.metadata&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
@@ -126,7 +126,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:FUtjtc3t05HrAfYjcg4V0DZ3iwyCU6q1M7EuTEYd" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:mecQIR1QVAvlUxrCoBh9WzsBeOvo/BG6uGXGFPz1" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -146,11 +146,11 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
   </parameters>
-  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="120">
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="120">
+  <node componentName="tSetKeystore" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetKeystore_1" show="false"/>
     <elementParameter field="RADIO" name="SET_TRUSTSTORE" value="false"/>
     <elementParameter field="RADIO" name="NEED_CLIENT_AUTH" value="true"/>
@@ -165,7 +165,7 @@
     <elementParameter field="CHECK" name="USE_SSLCONTEXT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="SnowflakeConnection" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="560" posY="120" sizeX="81" sizeY="40">
+  <node componentName="SnowflakeConnection" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="520" posY="160" sizeX="81" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAConnection" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -194,7 +194,7 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="680">
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="40" posY="680">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
@@ -227,7 +227,7 @@
     <elementParameter field="CHECK" name="USE_SSLCONTEXT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="120" posY="520">
+  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="160" posY="520">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_2" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dA" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -266,14 +266,14 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="400" posY="520">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="440" posY="520">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="globalMap.put(&quot;MAX_DATE&quot;, rowLD.MAX_DATE);&#xD;&#xA;System.out.println(&quot;Max date from Snowflake: &quot; + rowLD.MAX_DATE);&#xD;&#xA;&#xD;&#xA;// 1. Parse the dates for comparison&#xD;&#xA;java.util.Date lastDate = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, rowLD.MAX_DATE);&#xD;&#xA;java.util.Date today = new java.util.Date();&#xD;&#xA;&#xD;&#xA;// 2. Calculate the gap in days&#xD;&#xA;long diffInMillies = Math.abs(today.getTime() - lastDate.getTime());&#xD;&#xA;long diffInDays = java.util.concurrent.TimeUnit.DAYS.convert(diffInMillies, java.util.concurrent.TimeUnit.MILLISECONDS);&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Gap detected: &quot; + diffInDays + &quot; days.&quot;);&#xD;&#xA;&#xD;&#xA;// 3. Validation Logic&#xD;&#xA;if (diffInDays > 28) {&#xD;&#xA;    // Option: Use a tDie or throw an exception to stop the job&#xD;&#xA;    throw new RuntimeException(&quot;ERROR: The gap between Snowflake (&quot; + rowLD.MAX_DATE + &quot;) and today is &quot; + diffInDays + &quot; days. &quot; +&#xD;&#xA;        &quot;Detailed API limit is 28 days. Please run this job in 'isHistorical' mode to backfill this period.&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;// 4. If gap is safe (&lt;= 28 days), set the parameters for the API&#xD;&#xA;String api_startTime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, lastDate);&#xD;&#xA;String api_endTime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, today);&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;api_startTime&quot;, api_startTime);&#xD;&#xA;globalMap.put(&quot;api_endTime&quot;, api_endTime);&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Daily Mode safe to proceed. Range: &quot; + (String)globalMap.get(&quot;api_startTime&quot;) + &quot; to &quot; + (String)globalMap.get(&quot;api_endTime&quot;));"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//get MAX_DATE from snowflake table&#xD;&#xA;globalMap.put(&quot;MAX_DATE&quot;, rowLD.MAX_DATE);&#xD;&#xA;//print MAX_DATE variable&#xD;&#xA;System.out.println(&quot;Max date from Snowflake: &quot; + rowLD.MAX_DATE);&#xD;&#xA;&#xD;&#xA;//1. parse dates&#xD;&#xA;java.util.Date lastDate = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, rowLD.MAX_DATE);&#xD;&#xA;java.util.Date today = new java.util.Date();&#xD;&#xA;&#xD;&#xA;//2. calculate gap in days&#xD;&#xA;long diffInMillies = Math.abs(today.getTime() - lastDate.getTime());&#xD;&#xA;long diffInDays = java.util.concurrent.TimeUnit.DAYS.convert(diffInMillies, java.util.concurrent.TimeUnit.MILLISECONDS);&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Gap detected: &quot; + diffInDays + &quot; days.&quot;);&#xD;&#xA;&#xD;&#xA;//3. validation logic&#xD;&#xA;if (diffInDays > 28) {&#xD;&#xA; // option: use a tDie or throw an exception to stop the job&#xD;&#xA; throw new RuntimeException(&quot;ERROR: The gap between Snowflake (&quot; + rowLD.MAX_DATE + &quot;) and today is &quot; + diffInDays + &quot; days. &quot; +&#xD;&#xA;     &quot;Detailed API limit is 28 days. Please run this job in 'isHistorical' mode to backfill this period.&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;//4. if gap is safe (&lt;= 28 days), set parameters for the API&#xD;&#xA;String api_startTime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, lastDate);&#xD;&#xA;String api_endTime = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, today);&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;api_startTime&quot;, api_startTime);&#xD;&#xA;globalMap.put(&quot;api_endTime&quot;, api_endTime);&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Daily Mode safe to proceed. Range: &quot; + (String)globalMap.get(&quot;api_startTime&quot;) + &quot; to &quot; + (String)globalMap.get(&quot;api_endTime&quot;));"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1"/>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="240" posY="120">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="200" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
     <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="globalMap.put(&quot;JOB_START_TIME&quot;, System.currentTimeMillis());&#xD;&#xA;System.out.println(&quot;JOB - START_TIME: &quot; + TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, new java.util.Date((Long)globalMap.get(&quot;JOB_START_TIME&quot;))));"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
@@ -295,7 +295,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="760" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="int i = ((Integer)globalMap.get(&quot;tLoop_1_CURRENT_VALUE&quot;)) - 1;&#xD;&#xA;java.util.Date globalStart = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.startTime);&#xD;&#xA;java.util.Date globalEnd = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.endTime);&#xD;&#xA;&#xD;&#xA;if (context.isHistorical) {&#xD;&#xA;    // 1. Calculate the start of this 28-day chunk&#xD;&#xA;    java.util.Date currentChunkStart = TalendDate.addDate(globalStart, (i * 28), &quot;dd&quot;);&#xD;&#xA;    &#xD;&#xA;    // 2. Calculate the end (Jump 28 days total from start)&#xD;&#xA;    // CHANGE: We calculate the start of the NEXT chunk, then subtract 1 second.&#xD;&#xA;    // This ensures Iteration 1 ends exactly where Iteration 2 begins (No Gaps).&#xD;&#xA;    java.util.Date nextChunkStart = TalendDate.addDate(currentChunkStart, 28, &quot;dd&quot;);&#xD;&#xA;    java.util.Date currentChunkEnd = TalendDate.addDate(nextChunkStart, -1, &quot;ss&quot;); &#xD;&#xA;&#xD;&#xA;    // 3. Boundary Guard: If the 28-day window exceeds context.endTime, cap it.&#xD;&#xA;    if (currentChunkEnd.after(globalEnd)) {&#xD;&#xA;        currentChunkEnd = globalEnd;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    String format = &quot;yyyy-MM-dd HH:mm:ss&quot;;&#xD;&#xA;&#xD;&#xA;    // Set Global Variables&#xD;&#xA;    // Use globalStart for i=0 to keep the specific starting hour (e.g., 11:00:00)&#xD;&#xA;    globalMap.put(&quot;api_startTime&quot;, TalendDate.formatDate(format, (i == 0 ? globalStart : currentChunkStart)));&#xD;&#xA;    globalMap.put(&quot;api_endTime&quot;, TalendDate.formatDate(format, currentChunkEnd));&#xD;&#xA;&#xD;&#xA;    System.out.println(&quot;Iteration &quot; + (i+1) + &quot;: &quot; + (String)globalMap.get(&quot;api_startTime&quot;) + &quot; to &quot; + (String)globalMap.get(&quot;api_endTime&quot;));&#xD;&#xA;} &#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//get current loop value minus 1&#xD;&#xA;int i = ((Integer)globalMap.get(&quot;tLoop_1_CURRENT_VALUE&quot;)) - 1;&#xD;&#xA;&#xD;&#xA;//get globalStart and globalEnd (startDate and endDate context values)&#xD;&#xA;java.util.Date globalStart = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.startTime);&#xD;&#xA;java.util.Date globalEnd = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.endTime);&#xD;&#xA;&#xD;&#xA;//FOR LOOPING&#xD;&#xA;if (context.isHistorical) {&#xD;&#xA; &#xD;&#xA;&#xD;&#xA; /**&#xD;&#xA;  * currentChunkStart&#xD;&#xA;  * &#xD;&#xA;  * current chunk start = global start + (i * 28 days)&#xD;&#xA;  * &#xD;&#xA;  * calculate start of 28-day chunk&#xD;&#xA;  */&#xD;&#xA; java.util.Date currentChunkStart = TalendDate.addDate(globalStart, (i * 28), &quot;dd&quot;);&#xD;&#xA; &#xD;&#xA;&#xD;&#xA; /**&#xD;&#xA;  * nextChunkStart&#xD;&#xA;  * &#xD;&#xA;  * calculate next start of 28-day chunk&#xD;&#xA;  * &#xD;&#xA;  * current chunk start + 28 days&#xD;&#xA;  */&#xD;&#xA; /**&#xD;&#xA;  * currentChunkEnd&#xD;&#xA;  * &#xD;&#xA;  * calculate end of 28-day chunk&#xD;&#xA;  * &#xD;&#xA;  * current chunk end = next chunk start - 1 second&#xD;&#xA;  */&#xD;&#xA; java.util.Date nextChunkStart = TalendDate.addDate(currentChunkStart, 28, &quot;dd&quot;);&#xD;&#xA; java.util.Date currentChunkEnd = TalendDate.addDate(nextChunkStart, -1, &quot;ss&quot;); &#xD;&#xA;&#xD;&#xA; // boundary guard: if the 28-day window is past context.endDate, set global end as current chunk end&#xD;&#xA; if (currentChunkEnd.after(globalEnd)) {&#xD;&#xA;     currentChunkEnd = globalEnd;&#xD;&#xA; }&#xD;&#xA;&#xD;&#xA; // set string format&#xD;&#xA; String format = &quot;yyyy-MM-dd HH:mm:ss&quot;;&#xD;&#xA;&#xD;&#xA; // set api parameters&#xD;&#xA; globalMap.put(&quot;api_startTime&quot;, TalendDate.formatDate(format, (i == 0 ? globalStart : currentChunkStart)));&#xD;&#xA; globalMap.put(&quot;api_endTime&quot;, TalendDate.formatDate(format, currentChunkEnd));&#xD;&#xA;&#xD;&#xA; // print iteration, api_startDate and api_endDate&#xD;&#xA; System.out.println(&quot;Iteration &quot; + (i+1) + &quot;: &quot; + (String)globalMap.get(&quot;api_startTime&quot;) + &quot; to &quot; + (String)globalMap.get(&quot;api_endTime&quot;));&#xD;&#xA;} &#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_3"/>
@@ -793,16 +793,16 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_2"/>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="80" posY="320">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="40" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="System.out.println(&quot;Job start...&quot;);&#xD;&#xA;System.out.println(&quot;&quot;);&#xD;&#xA;System.out.println(&quot;isHistorical: &quot; + context.isHistorical);&#xD;&#xA;&#xD;&#xA;// initialization of global variables&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, 0);&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, 0);&#xD;&#xA;&#xD;&#xA;// if isHistorical &#xD;&#xA;if (context.isHistorical) {&#xD;&#xA;    &#xD;&#xA;    // parse dates&#xD;&#xA;    java.util.Date sDate = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.startTime);&#xD;&#xA;    java.util.Date eDate = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.endTime);&#xD;&#xA;&#xD;&#xA;    // calculate total days between&#xD;&#xA;    long diffInMillies = Math.abs(eDate.getTime() - sDate.getTime()); // get difference in millies&#xD;&#xA;    long diffInDays = java.util.concurrent.TimeUnit.DAYS.convert(diffInMillies, java.util.concurrent.TimeUnit.MILLISECONDS); // get difference in days&#xD;&#xA;    &#xD;&#xA;    System.out.println(&quot;Processing: &quot; + sDate + &quot; to &quot; + eDate);&#xD;&#xA;    System.out.println(&quot;diffInMillies: &quot; + diffInMillies);&#xD;&#xA;    System.out.println(&quot;diffInDays: &quot; + diffInDays);&#xD;&#xA;&#xD;&#xA;    // calculate how many 28-day chunks (using double to round up)&#xD;&#xA;    int iterations = (int) Math.ceil((double) (diffInDays + 1) / 28);&#xD;&#xA;    &#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, iterations);&#xD;&#xA;} &#xD;&#xA;else {&#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, 1);&#xD;&#xA;}&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="System.out.println(&quot;Starting &quot; + jobName + &quot; job...&quot;);&#xD;&#xA;System.out.println(&quot;&quot;);&#xD;&#xA;System.out.println(&quot;isHistorical: &quot; + context.isHistorical);&#xD;&#xA;&#xD;&#xA;// initialization of global variables&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, 0);&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, 0);&#xD;&#xA;&#xD;&#xA;// if isHistorical &#xD;&#xA;if (context.isHistorical) {&#xD;&#xA;    &#xD;&#xA;    // parse dates&#xD;&#xA;    java.util.Date sDate = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.startTime);&#xD;&#xA;    java.util.Date eDate = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.endTime);&#xD;&#xA;&#xD;&#xA;    // calculate total days between&#xD;&#xA;    long diffInMillies = Math.abs(eDate.getTime() - sDate.getTime()); // get difference in millies&#xD;&#xA;    long diffInDays = java.util.concurrent.TimeUnit.DAYS.convert(diffInMillies, java.util.concurrent.TimeUnit.MILLISECONDS); // get difference in days&#xD;&#xA;    &#xD;&#xA;    System.out.println(&quot;Processing: &quot; + sDate + &quot; to &quot; + eDate);&#xD;&#xA;    System.out.println(&quot;diffInMillies: &quot; + diffInMillies);&#xD;&#xA;    System.out.println(&quot;diffInDays: &quot; + diffInDays);&#xD;&#xA;&#xD;&#xA;    // calculate how many 28-day chunks (using double to round up)&#xD;&#xA;    int iterations = (int) Math.ceil((double) (diffInDays + 1) / 28);&#xD;&#xA;    &#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, iterations);&#xD;&#xA;} &#xD;&#xA;else {&#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, 1);&#xD;&#xA;}&#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_2"/>
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_4" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//System.out.println(&quot;====tJAVA====&quot;);&#xD;&#xA;//String errorMessage = ((String)globalMap.get(&quot;tRESTClient_1_ERROR_MESSAGE&quot;));&#xD;&#xA;//System.out.println(&quot;tREST Error message (tJava): &quot; + errorMessage);&#xD;&#xA;//System.out.println(&quot;====END====&quot;);&#xD;&#xA;//System.out.println(&quot;&quot;);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;String fullError = (String)globalMap.get(&quot;tRESTClient_1_ERROR_MESSAGE&quot;);&#xD;&#xA;&#xD;&#xA;if (fullError != null &amp;&amp; !fullError.isEmpty()) {&#xD;&#xA;  // Example: &quot;HTTP 400 Bad Request&quot;&#xD;&#xA;  // Split by spaces: [0]=&quot;HTTP&quot;, [1]=&quot;400&quot;, [2..n]=&quot;Bad&quot;, &quot;Request&quot;&#xD;&#xA;  String[] parts = fullError.split(&quot; &quot;, 3); &#xD;&#xA;  &#xD;&#xA;  if (parts.length >= 2) {&#xD;&#xA;      globalMap.put(&quot;API_STATUS_CODE&quot;, parts[1]); // ex.&quot;400&quot;&#xD;&#xA;  }&#xD;&#xA;  if (parts.length >= 3) {&#xD;&#xA;      globalMap.put(&quot;API_ERROR_MESSAGE&quot;, parts[2]);  // ex. &quot;Bad Request&quot;&#xD;&#xA;  }&#xD;&#xA;  &#xD;&#xA;  System.out.println(&quot;====tJAVA====&quot;);&#xD;&#xA;  System.out.println(&quot;Part[1]: &quot; + parts[1]);&#xD;&#xA;  System.out.println(&quot;Part[2]: &quot; + parts[2]);&#xD;&#xA;  System.out.println(&quot;====END====&quot;);&#xD;&#xA;  System.out.println(&quot;&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String fullError = (String)globalMap.get(&quot;tRESTClient_1_ERROR_MESSAGE&quot;);&#xD;&#xA;&#xD;&#xA;if (fullError != null &amp;&amp; !fullError.isEmpty()) {&#xD;&#xA;  // sample: &quot;HTTP 400 Bad Request&quot;&#xD;&#xA;  // split by spaces: [0]=&quot;HTTP&quot;, [1]=&quot;400&quot;, [2..n]=&quot;Bad&quot;, &quot;Request&quot;&#xD;&#xA;  String[] parts = fullError.split(&quot; &quot;, 3); &#xD;&#xA;  &#xD;&#xA;  if (parts.length >= 2) {&#xD;&#xA;      globalMap.put(&quot;API_STATUS_CODE&quot;, parts[1]); // ex.&quot;400&quot;&#xD;&#xA;  }&#xD;&#xA;  if (parts.length >= 3) {&#xD;&#xA;      globalMap.put(&quot;API_ERROR_MESSAGE&quot;, parts[2]);  // ex. &quot;Bad Request&quot;&#xD;&#xA;  }&#xD;&#xA;  &#xD;&#xA;  System.out.println(&quot;====tJAVA====&quot;);&#xD;&#xA;  System.out.println(&quot;Part[1]: &quot; + parts[1]);&#xD;&#xA;  System.out.println(&quot;Part[2]: &quot; + parts[2]);&#xD;&#xA;  System.out.println(&quot;====END====&quot;);&#xD;&#xA;  System.out.println(&quot;&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_4"/>
@@ -815,7 +815,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="2080" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_5" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="int currentTotal = (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;);&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, currentTotal + (Integer)globalMap.get(&quot;tLogRow_1_NB_LINE&quot;));"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="// 1. get current total&#xD;&#xA;int currentTotal = (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;);&#xD;&#xA;&#xD;&#xA;// 2. get count from the current 28-day chunk&#xD;&#xA;int currentChunk = (Integer)globalMap.get(&quot;tLogRow_1_NB_LINE&quot;); &#xD;&#xA;&#xD;&#xA;// 3. sum current total and count from current 28-day chunk&#xD;&#xA;System.out.println(&quot;Chunk finished. SOURCE_ROW_COUNT this chunk: &quot; + currentChunk + &quot; | Total so far: &quot; + (currentTotal + currentChunk));"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_5"/>
@@ -827,7 +827,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_6"/>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="680">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="240" posY="680">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
@@ -876,7 +876,7 @@
       <column comment="" key="false" length="-1" name="ERROR_LOG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="440" posY="680">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="400" posY="680">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -951,7 +951,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tLogCatcher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="440" posY="800">
+  <node componentName="tLogCatcher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="400" posY="800">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogCatcher_1" show="false"/>
     <elementParameter field="CHECK" name="CATCH_JAVA_EXCEPTION" value="true"/>
     <elementParameter field="CHECK" name="CATCH_TDIE" value="true"/>
@@ -973,7 +973,7 @@
       <column defaultValue="" key="false" length="3" name="code" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="680">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="680">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_3" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -1028,7 +1028,7 @@
       <column comment="" key="false" length="-1" name="ERROR_LOG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="840" posY="680">
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="800" posY="680">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeOutput_2" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -1300,8 +1300,10 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSleep_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="10 second sleep"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>

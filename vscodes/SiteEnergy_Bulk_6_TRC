@@ -1,0 +1,9 @@
+// 1. get current total
+int currentTotal = (Integer)globalMap.get("TARGET_ROW_COUNT");
+
+// 2. get count from the current 28-day chunk
+int currentChunkSuccess = (Integer)globalMap.get("tSnowflakeOutput_1_NB_SUCCESS"); 
+
+// 3. sum current total and count from current 28-day chunk
+globalMap.put("TARGET_ROW_COUNT", currentTotal + currentChunkSuccess);
+System.out.println("Chunk finished. TARGET_ROW_COUNT this chunk: " + currentChunkSuccess + " | Total so far: " + (currentTotal + currentChunkSuccess));

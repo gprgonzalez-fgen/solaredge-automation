@@ -1,0 +1,13 @@
+// check if the row is not null and status code is in the 200-299 range
+if (rowSC.statusCode != null && rowSC.statusCode >= 200 && rowSC.statusCode <= 299) {
+ 
+	// convert to string and store
+	String statusStr = String.valueOf(rowSC.statusCode);
+	// success: store status code
+	globalMap.put("API_R_STATUS_CODE", rowSC.statusCode);
+	
+	System.out.println("====RESPONSE====");
+	System.out.println("statusCode: " + (Integer)globalMap.get("API_R_STATUS_CODE"));
+	System.out.println("====RESPONSE END====");
+	System.out.println("");
+} 

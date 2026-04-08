@@ -1,0 +1,53 @@
+// get current loop value minus 1
+int i = ((Integer)globalMap.get("tLoop_1_CURRENT_VALUE")) - 1;
+
+// get globalStart and globalEnd (startDate and endDate context values)
+java.util.Date globalStart = TalendDate.parseDate("yyyy-MM-dd HH:mm:ss", context.startTime);
+java.util.Date globalEnd = TalendDate.parseDate("yyyy-MM-dd HH:mm:ss", context.endTime);
+
+// FOR LOOPING
+if (context.isHistorical) {
+    
+
+    /**
+     * currentChunkStart
+     * 
+     * current chunk start = global start + (i * 28 days)
+     * 
+     * calculate start of 28-day chunk
+     */
+    java.util.Date currentChunkStart = TalendDate.addDate(globalStart, (i * 28), "dd");
+    
+
+    /**
+     * nextChunkStart
+     * 
+     * calculate next start of 28-day chunk
+     * 
+     * current chunk start + 28 days
+     */
+    /**
+     * currentChunkEnd
+     * 
+     * calculate end of 28-day chunk
+     * 
+     * current chunk end = next chunk start - 1 second
+     */
+    java.util.Date nextChunkStart = TalendDate.addDate(currentChunkStart, 28, "dd");
+    java.util.Date currentChunkEnd = TalendDate.addDate(nextChunkStart, -1, "ss"); 
+
+    // boundary guard: if the 28-day window is past context.endDate, set global end as current chunk end
+    if (currentChunkEnd.after(globalEnd)) {
+        currentChunkEnd = globalEnd;
+    }
+
+    // set string format
+    String format = "yyyy-MM-dd HH:mm:ss";
+
+    // set api parameters
+    globalMap.put("api_startTime", TalendDate.formatDate(format, (i == 0 ? globalStart : currentChunkStart)));
+    globalMap.put("api_endTime", TalendDate.formatDate(format, currentChunkEnd));
+
+    // print iteration, api_startDate and api_endDate
+    System.out.println("Iteration " + (i+1) + ": " + (String)globalMap.get("api_startTime") + " to " + (String)globalMap.get("api_endTime"));
+} 

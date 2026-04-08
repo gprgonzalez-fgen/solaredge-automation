@@ -1,0 +1,10 @@
+// 1. get current total
+int currentTotal = (Integer)globalMap.get("SOURCE_ROW_COUNT");
+
+// 2. get count from the current 28-day chunk
+int currentChunk = (Integer)globalMap.get("tLogRow_2_NB_LINE"); 
+
+// 3. sum current total and count from current 28-day chunk
+globalMap.put("SOURCE_ROW_COUNT", currentTotal + currentChunk);
+
+System.out.println("Chunk finished. SOURCE_ROW_COUNT this chunk: " + currentChunk + " | Total so far: " + (currentTotal + currentChunk));
