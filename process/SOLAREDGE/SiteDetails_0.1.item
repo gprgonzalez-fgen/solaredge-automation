@@ -83,7 +83,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:mt6uNqYf15ORT3ewKRyvNFjt8eiR5MAWFOKtfyx0" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:EfSDBSvaaydU67i5lfvPqCT0o/YCWXo7QIu0ofzx" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -98,7 +98,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/gprgonzalez/repos/FGEN/solaredge-talend/.metadata&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/repos/FGEN/solaredge-talend/.metadata&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
@@ -118,7 +118,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:mecQIR1QVAvlUxrCoBh9WzsBeOvo/BG6uGXGFPz1" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:FUtjtc3t05HrAfYjcg4V0DZ3iwyCU6q1M7EuTEYd" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -988,7 +988,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="760" posY="520">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//System.out.println(&quot;====RESPONSE====&quot;);&#xD;&#xA;//String errorMessage = ((String)globalMap.get(&quot;tRESTClient_1_ERROR_MESSAGE&quot;));&#xD;&#xA;//System.out.println(&quot;tREST Error message: &quot; + errorMessage);&#xD;&#xA;//&#xD;&#xA;//globalMap.put(&quot;API_STATUS_CODE&quot;, rowASC.statusCode);&#xD;&#xA;//System.out.println(&quot;Response Status (get) code: &quot; + (Integer)globalMap.get(&quot;API_STATUS_CODE&quot;));&#xD;&#xA;//System.out.println(&quot;Response Status code: &quot; + rowASC.statusCode);&#xD;&#xA;//System.out.println(&quot;====RESPONSE END====&quot;);&#xD;&#xA;//System.out.println(&quot;&quot;);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// check if the row is not null and status code is in the 200-299 range&#xD;&#xA;if (rowSC.statusCode != null &amp;&amp; rowSC.statusCode >= 200 &amp;&amp; rowSC.statusCode &lt;= 299) {&#xD;&#xA; &#xD;&#xA;&#x9;// convert to string and store&#xD;&#xA;&#x9;String statusStr = String.valueOf(rowSC.statusCode);&#xD;&#xA;&#x9;// success: store status code&#xD;&#xA;&#x9;globalMap.put(&quot;API_R_STATUS_CODE&quot;, rowSC.statusCode);&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;System.out.println(&quot;====RESPONSE====&quot;);&#xD;&#xA;&#x9;System.out.println(&quot;statusCode: &quot; + (Integer)globalMap.get(&quot;API_R_STATUS_CODE&quot;));&#xD;&#xA;&#x9;System.out.println(&quot;====RESPONSE END====&quot;);&#xD;&#xA;&#x9;System.out.println(&quot;&quot;);&#xD;&#xA;} "/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="// check if the row is not null and status code is in the 200-299 range&#xD;&#xA;if (rowSC.statusCode != null &amp;&amp; rowSC.statusCode >= 200 &amp;&amp; rowSC.statusCode &lt;= 299) {&#xD;&#xA; &#xD;&#xA;&#x9;// convert to string and store&#xD;&#xA;&#x9;String statusStr = String.valueOf(rowSC.statusCode);&#xD;&#xA;&#x9;// success: store status code&#xD;&#xA;&#x9;globalMap.put(&quot;API_R_STATUS_CODE&quot;, rowSC.statusCode);&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;System.out.println(&quot;====RESPONSE====&quot;);&#xD;&#xA;&#x9;System.out.println(&quot;statusCode: &quot; + (Integer)globalMap.get(&quot;API_R_STATUS_CODE&quot;));&#xD;&#xA;&#x9;System.out.println(&quot;====RESPONSE END====&quot;);&#xD;&#xA;&#x9;System.out.println(&quot;&quot;);&#xD;&#xA;} "/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>get statusCode&lt;/b>"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -1333,7 +1333,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1880" posY="400">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_4" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//1. Get the current running total&#xD;&#xA;int currentTotal = (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;);&#xD;&#xA;&#xD;&#xA;//2. Get the count from the current 28-day chunk&#xD;&#xA;int currentChunkSuccess = (Integer)globalMap.get(&quot;tSnowflakeOutput_1_NB_SUCCESS&quot;); &#xD;&#xA;&#xD;&#xA;//3. Add them together and save back to GlobalMap&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, currentTotal + currentChunkSuccess);&#xD;&#xA;System.out.println(&quot;Chunk finished. Rows this chunk: &quot; + currentChunkSuccess + &quot; | Total so far: &quot; + (currentTotal + currentChunkSuccess));&#xD;&#xA;&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//1. get current total&#xD;&#xA;int currentTotal = (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;);&#xD;&#xA;&#xD;&#xA;//2. get count from current chunk&#xD;&#xA;int currentChunkSuccess = (Integer)globalMap.get(&quot;tSnowflakeOutput_1_NB_SUCCESS&quot;); &#xD;&#xA;&#xD;&#xA;//3. sum current total and current chunk&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, currentTotal + currentChunkSuccess);&#xD;&#xA;System.out.println(&quot;Chunk finished. TARGET_ROW_COUNT this chunk: &quot; + currentChunkSuccess + &quot; | Total TARGET_ROW_COUNT: &quot; + (currentTotal + currentChunkSuccess));&#xD;&#xA;&#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_4"/>
