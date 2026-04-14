@@ -20,7 +20,7 @@
     <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_INVERTER_TECHDATA" internalId="_weKsIC0fEfGCo54AaYaY6w"/>
     <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2026-03-01 09:00:00" internalId="_weKsIS0fEfGCo54AaYaY6w"/>
     <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2026-04-01 17:00:00" internalId="_weKsIi0fEfGCo54AaYaY6w"/>
-    <contextParameter comment="" name="isHistorical" prompt="isHistorical?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="false" internalId="_az_JsDIkEfGZvNiboNzZjA"/>
+    <contextParameter comment="" name="isHistorical" prompt="isHistorical?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="true" internalId="_az_JsDIkEfGZvNiboNzZjA"/>
     <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_cjat4DJOEfGi2JRKt8LI4Q"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="Laptop">
@@ -89,7 +89,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:mt6uNqYf15ORT3ewKRyvNFjt8eiR5MAWFOKtfyx0" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:EfSDBSvaaydU67i5lfvPqCT0o/YCWXo7QIu0ofzx" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -104,7 +104,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/gprgonzalez/repos/FGEN/solaredge-talend/.metadata&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/repos/FGEN/solaredge-talend/.metadata&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
@@ -124,7 +124,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:mecQIR1QVAvlUxrCoBh9WzsBeOvo/BG6uGXGFPz1" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:FUtjtc3t05HrAfYjcg4V0DZ3iwyCU6q1M7EuTEYd" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -201,7 +201,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="40" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="System.out.println(&quot;Job start: Inverter_TechData&quot;);&#xD;&#xA;System.out.println(&quot;&quot;);&#xD;&#xA;System.out.println(&quot;isHistorical: &quot; + context.isHistorical);&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, 0);&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, 0);&#xD;&#xA;&#xD;&#xA;if (context.isHistorical) {&#xD;&#xA;    java.util.Date sDate = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.startTime);&#xD;&#xA;    java.util.Date eDate = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, context.endTime);&#xD;&#xA;&#xD;&#xA;    // Calculate total days between&#xD;&#xA;    long diffInMillies = Math.abs(eDate.getTime() - sDate.getTime());&#xD;&#xA;    long diffInDays = java.util.concurrent.TimeUnit.DAYS.convert(diffInMillies, java.util.concurrent.TimeUnit.MILLISECONDS);&#xD;&#xA;    &#xD;&#xA;    // We use 6-day chunks to be safe (API limit is 7)&#xD;&#xA;    int iterations = (int) Math.ceil((double) (diffInDays + 1) / 5);&#xD;&#xA;    &#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, iterations);&#xD;&#xA;    globalMap.put(&quot;loop_start_datetime&quot;, sDate);&#xD;&#xA;    globalMap.put(&quot;loop_end_datetime&quot;, eDate);&#xD;&#xA;    &#xD;&#xA;    System.out.println(&quot;Historical Mode: &quot; + iterations + &quot; chunks of 6 days planned.&quot;);&#xD;&#xA;} else {&#xD;&#xA;    // Placeholder for Daily Mode (will be set by max_date subjob)&#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, 1);&#xD;&#xA;}&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//--- MANUAL SETTINGS PER JOB ---&#xD;&#xA;String format = &quot;yyyy-MM-dd HH:mm:ss&quot;;&#xD;&#xA;int chunkLength = 6; &#xD;&#xA;int minIntervalSeconds = 2;&#xD;&#xA;//-------------------------------&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Initializing Job: &quot; + jobName);&#xD;&#xA;globalMap.put(&quot;API_DATE_FORMAT&quot;, format);&#xD;&#xA;globalMap.put(&quot;CHUNK_LENGTH&quot;, chunkLength);&#xD;&#xA;globalMap.put(&quot;MIN_INTERVAL&quot;, minIntervalSeconds);&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, 0);&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, 0);&#xD;&#xA;&#xD;&#xA;if (context.isHistorical) {&#xD;&#xA;java.util.Date sDate = TalendDate.parseDate(format, context.startTime);&#xD;&#xA;java.util.Date eDate = TalendDate.parseDate(format, context.endTime);&#xD;&#xA;&#xD;&#xA;// VALIDATION: if start >= end, throw runtime exception&#xD;&#xA;if (!sDate.before(eDate)) {&#xD;&#xA;   throw new RuntimeException(&quot;CONFIG ERROR: Start Date must be before End Date.&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;// calculate difference in days&#xD;&#xA;long diffInDays = java.util.concurrent.TimeUnit.DAYS.convert(Math.abs(eDate.getTime() - sDate.getTime()), java.util.concurrent.TimeUnit.MILLISECONDS);&#xD;&#xA;&#xD;&#xA;// calculate number of iterations&#xD;&#xA;int iterations = (int) Math.ceil((double) (diffInDays + 1) / chunkLength);&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;totalIterations&quot;, iterations);&#xD;&#xA;globalMap.put(&quot;loop_start_datetime&quot;, sDate);&#xD;&#xA;globalMap.put(&quot;loop_end_datetime&quot;, eDate);&#xD;&#xA;} else {&#xD;&#xA;globalMap.put(&quot;totalIterations&quot;, 1); &#xD;&#xA;}"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_2"/>
@@ -212,7 +212,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSleep_1"/>
   </node>
-  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="160" posY="640">
+  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="80" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSnowflakeInput_2" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dA" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -251,9 +251,9 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="400" posY="640">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="java.util.Date lastDate = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, rowLD.MAX_DATE);&#xD;&#xA;java.util.Date now = new java.util.Date();&#xD;&#xA;&#xD;&#xA;// 1. Normalize to yyyy-MM-dd for &quot;Already Up-to-Date&quot; check&#xD;&#xA;String lastDateStr = TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, lastDate);&#xD;&#xA;String todayStr = TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, now);&#xD;&#xA;&#xD;&#xA;if (lastDateStr.equals(todayStr)) {&#xD;&#xA;    System.out.println(&quot;SKIPPING: Database is already up to date (&quot; + lastDateStr + &quot;).&quot;);&#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, 0);&#xD;&#xA;} else {&#xD;&#xA;    // 2. Add 1 second to start exactly after the last record&#xD;&#xA;    java.util.Date nextStart = TalendDate.addDate(lastDate, 1, &quot;ss&quot;);&#xD;&#xA;    &#xD;&#xA;    // 3. Check the gap for the 6-day limit&#xD;&#xA;    long diffInDays = TalendDate.diffDate(now, nextStart, &quot;dd&quot;);&#xD;&#xA;    &#xD;&#xA;    if (diffInDays > 6) {&#xD;&#xA;        System.err.println(&quot;CRITICAL: Gap is &quot; + diffInDays + &quot; days. API limit is 7.&quot;);&#xD;&#xA;        // Cancel the job flow&#xD;&#xA;        globalMap.put(&quot;totalIterations&quot;, 0);&#xD;&#xA;        throw new RuntimeException(&quot;Daily gap too large. Please use isHistorical mode to backfill.&quot;);&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, 1);&#xD;&#xA;    globalMap.put(&quot;loop_start_datetime&quot;, nextStart);&#xD;&#xA;    globalMap.put(&quot;loop_end_datetime&quot;, now);&#xD;&#xA;    &#xD;&#xA;    System.out.println(&quot;Daily Mode safe. Range: &quot; + nextStart + &quot; to &quot; + now);&#xD;&#xA;}"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String format = (String)globalMap.get(&quot;API_DATE_FORMAT&quot;);&#xD;&#xA;int chunkLength = (Integer)globalMap.get(&quot;CHUNK_LENGTH&quot;);&#xD;&#xA;int minInterval = (Integer)globalMap.get(&quot;MIN_INTERVAL&quot;);&#xD;&#xA;&#xD;&#xA;java.util.Date lastDate = TalendDate.parseDate(format, rowLD.MAX_DATE);&#xD;&#xA;&#xD;&#xA;// set globalEnd to yesterday at 23:59:59&#xD;&#xA;java.util.Date yesterdayEnd = TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, &#xD;&#xA;    TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, new java.util.Date()) + &quot; 00:00:00&quot;);&#xD;&#xA;yesterdayEnd = TalendDate.addDate(yesterdayEnd, -1, &quot;ss&quot;); &#xD;&#xA;&#xD;&#xA;// calculate API start (lastDate + 1 ss/dd)&#xD;&#xA;java.util.Date nextStart = format.contains(&quot;HH:mm:ss&quot;) ? &#xD;&#xA;                           TalendDate.addDate(lastDate, 1, &quot;ss&quot;) : &#xD;&#xA;                           TalendDate.addDate(lastDate, 1, &quot;dd&quot;);&#xD;&#xA;&#xD;&#xA;// if up-to-date (Is nextStart + minInterval past yesterdayEnd?)&#xD;&#xA;java.util.Date minRequiredEnd = TalendDate.addDate(nextStart, minInterval, &quot;ss&quot;);&#xD;&#xA;&#xD;&#xA;// if minRequiredEnd > yesterdayEnd&#xD;&#xA;if (minRequiredEnd.after(yesterdayEnd)) {&#xD;&#xA;    System.out.println(&quot;Database is already up to date for &quot; + context.output_table + &quot;. Skipping.&quot;);&#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, 0);&#xD;&#xA;} else {&#xD;&#xA;    long diffInDays = TalendDate.diffDate(yesterdayEnd, nextStart, &quot;dd&quot;);&#xD;&#xA;    if (diffInDays > chunkLength) {&#xD;&#xA;        throw new RuntimeException(&quot;Daily gap (&quot; + diffInDays + &quot; days) exceeds limit. Run Historical.&quot;);&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    globalMap.put(&quot;totalIterations&quot;, 1);&#xD;&#xA;    globalMap.put(&quot;loop_start_datetime&quot;, nextStart);&#xD;&#xA;    globalMap.put(&quot;loop_end_datetime&quot;, yesterdayEnd);&#xD;&#xA;}"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1"/>
@@ -273,7 +273,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="int i = ((Integer)globalMap.get(&quot;tLoop_1_CURRENT_VALUE&quot;)) - 1;&#xD;&#xA;int chunkDays = 6; // Set to 28 for Bulk/Detailed, or 6 for Inverter Tech&#xD;&#xA;&#xD;&#xA;java.util.Date globalStart = (java.util.Date)globalMap.get(&quot;loop_start_datetime&quot;);&#xD;&#xA;java.util.Date globalEnd = (java.util.Date)globalMap.get(&quot;loop_end_datetime&quot;);&#xD;&#xA;&#xD;&#xA;// 1. Calculate the Start of this specific iteration&#xD;&#xA;java.util.Date currentChunkStart = TalendDate.addDate(globalStart, (i * chunkDays), &quot;dd&quot;);&#xD;&#xA;&#xD;&#xA;// 2. SAFETY GATE: If the calculated start is already past the global end, &#xD;&#xA;// this is an empty loop iteration. We handle it silently.&#xD;&#xA;if (currentChunkStart.after(globalEnd)) {&#xD;&#xA;    // We set dummy values that will result in 0 records from the API&#xD;&#xA;    // without using specific &quot;SKIP&quot; strings that might break your URL concatenation&#xD;&#xA;    globalMap.put(&quot;api_startTime&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, globalEnd));&#xD;&#xA;    globalMap.put(&quot;api_endTime&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, globalEnd));&#xD;&#xA;} else {&#xD;&#xA;    // 3. Calculate the End (Next Start - 1 second)&#xD;&#xA;    java.util.Date nextStart = TalendDate.addDate(currentChunkStart, chunkDays, &quot;dd&quot;);&#xD;&#xA;    java.util.Date currentChunkEnd = TalendDate.addDate(nextStart, -1, &quot;ss&quot;);&#xD;&#xA;&#xD;&#xA;    // 4. Boundary Guard: Never overshoot the globalEnd&#xD;&#xA;    if (currentChunkEnd.after(globalEnd)) {&#xD;&#xA;        currentChunkEnd = globalEnd;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    String format = &quot;yyyy-MM-dd HH:mm:ss&quot;;&#xD;&#xA;    globalMap.put(&quot;api_startTime&quot;, TalendDate.formatDate(format, currentChunkStart));&#xD;&#xA;    globalMap.put(&quot;api_endTime&quot;, TalendDate.formatDate(format, currentChunkEnd));&#xD;&#xA;&#xD;&#xA;    System.out.println(&quot;Iteration &quot; + (i+1) + &quot; | START: &quot; + globalMap.get(&quot;api_startTime&quot;) + &quot; | END: &quot; + globalMap.get(&quot;api_endTime&quot;));&#xD;&#xA;}"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="int i = ((Integer)globalMap.get(&quot;tLoop_1_CURRENT_VALUE&quot;)) - 1;&#xD;&#xA;int chunkLength = (Integer)globalMap.get(&quot;CHUNK_LENGTH&quot;);&#xD;&#xA;int minInterval = (Integer)globalMap.get(&quot;MIN_INTERVAL&quot;);&#xD;&#xA;String format = (String)globalMap.get(&quot;API_DATE_FORMAT&quot;);&#xD;&#xA;&#xD;&#xA;java.util.Date globalStart = (java.util.Date)globalMap.get(&quot;loop_start_datetime&quot;);&#xD;&#xA;java.util.Date globalEnd = (java.util.Date)globalMap.get(&quot;loop_end_datetime&quot;);&#xD;&#xA;&#xD;&#xA;java.util.Date currentChunkStart = TalendDate.addDate(globalStart, (i * chunkLength), &quot;dd&quot;);&#xD;&#xA;&#xD;&#xA;if (currentChunkStart.after(globalEnd)) {&#xD;&#xA;    // force 0 loop&#xD;&#xA;    globalMap.put(&quot;api_startTime&quot;, TalendDate.formatDate(format, globalEnd));&#xD;&#xA;    globalMap.put(&quot;api_endTime&quot;, TalendDate.formatDate(format, globalEnd));&#xD;&#xA;} else {&#xD;&#xA;    java.util.Date nextStart = TalendDate.addDate(currentChunkStart, chunkLength, &quot;dd&quot;);&#xD;&#xA;    java.util.Date currentChunkEnd = TalendDate.addDate(nextStart, -1, &quot;ss&quot;);&#xD;&#xA;&#xD;&#xA;    // boundary &amp; min interval guard&#xD;&#xA;    if (currentChunkEnd.after(globalEnd)) {&#xD;&#xA;        currentChunkEnd = globalEnd;&#xD;&#xA;    }&#xD;&#xA;    &#xD;&#xA;    // ensure start and end meet the API minimum gap requirement&#xD;&#xA;    long actualGap = (currentChunkEnd.getTime() - currentChunkStart.getTime()) / 1000;&#xD;&#xA;    if (actualGap &lt; minInterval) {&#xD;&#xA;        currentChunkEnd = TalendDate.addDate(currentChunkStart, minInterval, &quot;ss&quot;);&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    globalMap.put(&quot;api_startTime&quot;, TalendDate.formatDate(format, currentChunkStart));&#xD;&#xA;    globalMap.put(&quot;api_endTime&quot;, TalendDate.formatDate(format, currentChunkEnd));&#xD;&#xA;&#xD;&#xA;    System.out.println(&quot;Iteration &quot; + (i+1) + &quot; | &quot; + globalMap.get(&quot;api_startTime&quot;) + &quot; to &quot; + globalMap.get(&quot;api_endTime&quot;));&#xD;&#xA;}"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_3"/>
@@ -361,6 +361,7 @@
     <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="enc:system.encryption.key.v1:T5CTHw5eDHRkIFlmg3ihJ7hHkIqhCPNsz7n43hO4" show="false"/>
     <elementParameter field="TEXT" name="ARRAY_KEYS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>Inverter Technical Data&lt;/b>"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRESTClient_1">
       <column comment="" key="false" length="-1" name="SITE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1662,8 +1663,10 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSleep_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="10 second sleep"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
@@ -1674,8 +1677,10 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="get Inverter Technical Data and ingest into snowflake table"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>

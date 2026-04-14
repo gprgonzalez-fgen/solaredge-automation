@@ -985,7 +985,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="920" posY="520">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="// 1. get current total&#xD;&#xA;int currentTotal = (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;);&#xD;&#xA;&#xD;&#xA;// 2. get count from current source&#xD;&#xA;int currentSource = rowESRC.COUNT;&#xD;&#xA;&#xD;&#xA;// 3. sum current total and count from current source&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, currentTotal + currentSource);&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;SOURCE_ROW_COUNT retrieved from JSON: &quot; + currentSource + &quot; | Total SOURCE_ROW_COUNT: &quot; + (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;));"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="// get current total&#xD;&#xA;int currentTotal = (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;);&#xD;&#xA;&#xD;&#xA;// get count from current source&#xD;&#xA;int currentSource = rowESRC.COUNT;&#xD;&#xA;&#xD;&#xA;// sum current total and count from current source&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, currentTotal + currentSource);&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;SOURCE_ROW_COUNT retrieved from JSON: &quot; + currentSource + &quot; | Total SOURCE_ROW_COUNT: &quot; + (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;));"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_2"/>
