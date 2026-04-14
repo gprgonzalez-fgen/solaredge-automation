@@ -20,8 +20,8 @@
     <contextParameter comment="" name="output_table" prompt="output_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_METERS_DATA" internalId="_18v6sCzdEfGCo54AaYaY6w"/>
     <contextParameter comment="" name="process_log_table" prompt="process_log_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SOLAREDGE_ETL_PROCESS_LOG" internalId="_18v6sSzdEfGCo54AaYaY6w"/>
     <contextParameter comment="" name="isHistorical" prompt="isHistorical?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="true" internalId="_-3bhMCzeEfGCo54AaYaY6w"/>
-    <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2013-05-01 11:00:00" internalId="_-3bhMSzeEfGCo54AaYaY6w"/>
-    <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2013-07-21 14:00:00" internalId="_-3bhMizeEfGCo54AaYaY6w"/>
+    <contextParameter comment="" name="startTime" prompt="startTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2026-02-01 11:00:00" internalId="_-3bhMSzeEfGCo54AaYaY6w"/>
+    <contextParameter comment="" name="endTime" prompt="endTime?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="2026-03-28 14:00:00" internalId="_-3bhMizeEfGCo54AaYaY6w"/>
     <contextParameter comment="" name="timeUnit" prompt="timeUnit?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="QUARTER_OF_AN_HOUR" internalId="_iSICwCzgEfGCo54AaYaY6w"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="Laptop">
@@ -903,7 +903,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_XCicUBlBEfGE-vukTPVQsQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_P3fa0CzdEfGCo54AaYaY6w-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
@@ -1157,6 +1157,20 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_2"/>
   </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1840" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_5" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="// 1. get current total&#xD;&#xA;int currentTotal = (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;);&#xD;&#xA;&#xD;&#xA;// 2. get count from the current 28-day chunk&#xD;&#xA;int currentChunk = (Integer)globalMap.get(&quot;tLogRow_1_NB_LINE&quot;); &#xD;&#xA;&#xD;&#xA;// 3. sum current total and count from current 28-day chunk&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, currentTotal + currentChunk);&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Chunk finished. SOURCE_ROW_COUNT this chunk: &quot; + currentChunk + &quot; | Total so far: &quot; + (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;));"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_5"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="2400" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_6" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//1. get current total&#xD;&#xA;int currentTotal = (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;);&#xD;&#xA;&#xD;&#xA;//2. get count from current chunk&#xD;&#xA;int currentChunkSuccess = (Integer)globalMap.get(&quot;tSnowflakeOutput_1_NB_SUCCESS&quot;); &#xD;&#xA;&#xD;&#xA;//3. sum current total and current chunk&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, currentTotal + currentChunkSuccess);&#xD;&#xA;System.out.println(&quot;Chunk finished. TARGET_ROW_COUNT this chunk: &quot; + currentChunkSuccess + &quot; | Total TARGET_ROW_COUNT: &quot; + (currentTotal + currentChunkSuccess));&#xD;&#xA;&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_6"/>
+  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
@@ -1214,6 +1228,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="rowTM" show="false"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tJava_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk10" show="false"/>
+  </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="out1" show="false"/>
@@ -1221,6 +1238,9 @@
   <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tLogRow_3" offsetLabelX="0" offsetLabelY="0" source="tLogRow_3" target="tSnowflakeOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSnowflakeOutput_1" offsetLabelX="0" offsetLabelY="0" source="tSnowflakeOutput_1" target="tJava_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk9" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="rowLD" lineStyle="0" metaname="tSnowflakeInput_2" offsetLabelX="0" offsetLabelY="0" source="tSnowflakeInput_2" target="tJavaRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1346,6 +1366,20 @@
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
     <elementParameter field="TEXT" name="SUBJOB_TITLE" value="initialization"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_5" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="aggregate SOURCE_ROW_COUNT"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_6" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="aggregate TARGET_ROW_COUNT"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
