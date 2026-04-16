@@ -309,7 +309,7 @@
       <column comment="" key="false" length="-1" name="ERROR_LOG" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="JOB_END_TIME" expression="System.currentTimeMillis() " type="id_Long"/>
         <mapperTableEntries name="JAVA_ERROR" expression="logCatcher.message " type="id_String"/>
@@ -321,7 +321,7 @@
         <mapperTableEntries name="RUN_DURATION" expression="globalMap.get(&quot;JOB_START_TIME&quot;) == null ? &quot;0.00&quot; : String.format(&quot;%.2f&quot;, (double)((System.currentTimeMillis() - (Long)globalMap.get(&quot;JOB_START_TIME&quot;)) / 1000.00)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="SCHEMA" expression="context.conn_snowflake_dbSchema" type="id_String" nullable="true"/>
         <mapperTableEntries name="TABLE_NAME" expression="context.output_table" type="id_String" nullable="true"/>
-        <mapperTableEntries name="SOURCE_ROW_COUNT" expression="globalMap.get(&quot;SOURCE_ROW_COUNT&quot;) == null ? &quot;0&quot; : globalMap.get(&quot;SOURCE_ROW_COUNT&quot;).toString() " type="id_String" nullable="true"/>
+        <mapperTableEntries name="SOURCE_ROW_COUNT" expression="globalMap.get(&quot;SOURCE_ROW_COUNT&quot;) == null ? &quot;0&quot; : String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="TARGET_ROW_COUNT" expression="globalMap.get(&quot;TARGET_ROW_COUNT&quot;) == null ? &quot;0&quot; : String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="API_STATUS_CODE" expression="(globalMap.get(&quot;API_STATUS_CODE&quot;) == null &amp;&amp; globalMap.get(&quot;API_R_STATUS_CODE&quot;) == null) ? &quot;N/A&quot; : (globalMap.get(&quot;API_STATUS_CODE&quot;) != null &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;? String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;API_STATUS_CODE&quot;)) &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;: String.format(&quot;%d&quot;, (Integer)globalMap.get(&quot;API_R_STATUS_CODE&quot;))) " type="id_String" nullable="true"/>
         <mapperTableEntries name="STATUS" expression="(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;) == 0 &amp;&amp; (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;) == 0&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;) ? &quot;FAILED&quot; : &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(globalMap.get(&quot;SOURCE_ROW_COUNT&quot;) != null &amp;&amp; globalMap.get(&quot;TARGET_ROW_COUNT&quot;) != null &amp;&amp; &#x9;((Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;)).equals((Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;))) &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;? &quot;SUCCESS&quot; : &quot;FAILED&quot;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;) " type="id_String" nullable="true"/>
@@ -940,35 +940,29 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="560">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//System.out.println(&quot;====RESPONSE====&quot;);&#xD;&#xA;//String errorMessage = ((String)globalMap.get(&quot;tRESTClient_1_ERROR_MESSAGE&quot;));&#xD;&#xA;//System.out.println(&quot;tREST Error message: &quot; + errorMessage);&#xD;&#xA;//&#xD;&#xA;//globalMap.put(&quot;API_STATUS_CODE&quot;, rowASC.statusCode);&#xD;&#xA;//System.out.println(&quot;Response Status (get) code: &quot; + (Integer)globalMap.get(&quot;API_STATUS_CODE&quot;));&#xD;&#xA;//System.out.println(&quot;Response Status code: &quot; + rowASC.statusCode);&#xD;&#xA;//System.out.println(&quot;====RESPONSE END====&quot;);&#xD;&#xA;//System.out.println(&quot;&quot;);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// check if the row is not null and status code is in the 200-299 range&#xD;&#xA;if (rowSC.statusCode != null &amp;&amp; rowSC.statusCode >= 200 &amp;&amp; rowSC.statusCode &lt;= 299) {&#xD;&#xA; &#xD;&#xA;&#x9;// convert to string and store&#xD;&#xA;&#x9;String statusStr = String.valueOf(rowSC.statusCode);&#xD;&#xA;&#x9;// success: store status code&#xD;&#xA;&#x9;globalMap.put(&quot;API_R_STATUS_CODE&quot;, rowSC.statusCode);&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;System.out.println(&quot;====RESPONSE====&quot;);&#xD;&#xA;&#x9;System.out.println(&quot;statusCode: &quot; + (Integer)globalMap.get(&quot;API_R_STATUS_CODE&quot;));&#xD;&#xA;&#x9;System.out.println(&quot;====RESPONSE END====&quot;);&#xD;&#xA;&#x9;System.out.println(&quot;&quot;);&#xD;&#xA;} "/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//check if the row is not null and status code is in the 200-299 range&#xD;&#xA;if (rowSC.statusCode != null &amp;&amp; rowSC.statusCode >= 200 &amp;&amp; rowSC.statusCode &lt;= 299) {&#xD;&#xA;&#xD;&#xA;&#x9;// convert to string and store&#xD;&#xA;&#x9;String statusStr = String.valueOf(rowSC.statusCode);&#xD;&#xA;&#x9;// success: store status code&#xD;&#xA;&#x9;globalMap.put(&quot;API_R_STATUS_CODE&quot;, rowSC.statusCode);&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;System.out.println(&quot;====RESPONSE====&quot;);&#xD;&#xA;&#x9;System.out.println(&quot;statusCode: &quot; + (Integer)globalMap.get(&quot;API_R_STATUS_CODE&quot;));&#xD;&#xA;&#x9;System.out.println(&quot;====RESPONSE END====&quot;);&#xD;&#xA;&#x9;System.out.println(&quot;&quot;);&#xD;&#xA;} "/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br>&lt;b>get statusCode&lt;/b>"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_2"/>
   </node>
-  <node componentName="tSleep" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1040" posY="240">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSleep_1" show="false"/>
-    <elementParameter field="TEXT" name="PAUSE" value="10"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tSleep_1"/>
-  </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1200" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_4" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//System.out.println(&quot;====tJAVA====&quot;);&#xD;&#xA;//String errorMessage = ((String)globalMap.get(&quot;tRESTClient_1_ERROR_MESSAGE&quot;));&#xD;&#xA;//System.out.println(&quot;tREST Error message (tJava): &quot; + errorMessage);&#xD;&#xA;//System.out.println(&quot;====END====&quot;);&#xD;&#xA;//System.out.println(&quot;&quot;);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;String fullError = (String)globalMap.get(&quot;tRESTClient_1_ERROR_MESSAGE&quot;);&#xD;&#xA;&#xD;&#xA;if (fullError != null &amp;&amp; !fullError.isEmpty()) {&#xD;&#xA;  // Example: &quot;HTTP 400 Bad Request&quot;&#xD;&#xA;  // Split by spaces: [0]=&quot;HTTP&quot;, [1]=&quot;400&quot;, [2..n]=&quot;Bad&quot;, &quot;Request&quot;&#xD;&#xA;  String[] parts = fullError.split(&quot; &quot;, 3); &#xD;&#xA;  &#xD;&#xA;  if (parts.length >= 2) {&#xD;&#xA;      globalMap.put(&quot;API_STATUS_CODE&quot;, parts[1]); // ex.&quot;400&quot;&#xD;&#xA;  }&#xD;&#xA;  if (parts.length >= 3) {&#xD;&#xA;      globalMap.put(&quot;API_ERROR_MESSAGE&quot;, parts[2]);  // ex. &quot;Bad Request&quot;&#xD;&#xA;  }&#xD;&#xA;  &#xD;&#xA;  System.out.println(&quot;====tJAVA====&quot;);&#xD;&#xA;  System.out.println(&quot;Part[1]: &quot; + parts[1]);&#xD;&#xA;  System.out.println(&quot;Part[2]: &quot; + parts[2]);&#xD;&#xA;  System.out.println(&quot;====END====&quot;);&#xD;&#xA;  System.out.println(&quot;&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String fullError = (String)globalMap.get(&quot;tRESTClient_1_ERROR_MESSAGE&quot;);&#xD;&#xA;&#xD;&#xA;if (fullError != null &amp;&amp; !fullError.isEmpty()) {&#xD;&#xA;  // sample: &quot;HTTP 400 Bad Request&quot;&#xD;&#xA;  // split by spaces: [0]=&quot;HTTP&quot;, [1]=&quot;400&quot;, [2..n]=&quot;Bad&quot;, &quot;Request&quot;&#xD;&#xA;  String[] parts = fullError.split(&quot; &quot;, 3); &#xD;&#xA;  &#xD;&#xA;  if (parts.length >= 2) {&#xD;&#xA;      globalMap.put(&quot;API_STATUS_CODE&quot;, parts[1]); // ex.&quot;400&quot;&#xD;&#xA;  }&#xD;&#xA;  if (parts.length >= 3) {&#xD;&#xA;      globalMap.put(&quot;API_ERROR_MESSAGE&quot;, parts[2]);  // ex. &quot;Bad Request&quot;&#xD;&#xA;  }&#xD;&#xA;  &#xD;&#xA;  System.out.println(&quot;====tJAVA====&quot;);&#xD;&#xA;  System.out.println(&quot;Part[1]: &quot; + parts[1]);&#xD;&#xA;  System.out.println(&quot;Part[2]: &quot; + parts[2]);&#xD;&#xA;  System.out.println(&quot;====END====&quot;);&#xD;&#xA;  System.out.println(&quot;&quot;);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_4"/>
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1640" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_5" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="int currentTotal = (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;);&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, currentTotal + (Integer)globalMap.get(&quot;tLogRow_2_NB_LINE&quot;));"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//get current total&#xD;&#xA;int currentTotal = (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;);&#xD;&#xA;&#xD;&#xA;//get count from the current chunk&#xD;&#xA;int currentChunk = (Integer)globalMap.get(&quot;tLogRow_2_NB_LINE&quot;); &#xD;&#xA;&#xD;&#xA;//sum current total and count from current chunk&#xD;&#xA;globalMap.put(&quot;SOURCE_ROW_COUNT&quot;, currentTotal + currentChunk);&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Chunk finished. SOURCE_ROW_COUNT this chunk: &quot; + currentChunk + &quot; | Total so far: &quot; + (Integer)globalMap.get(&quot;SOURCE_ROW_COUNT&quot;));"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_5"/>
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="2040" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_6" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//1. Get the current running total&#xD;&#xA;int currentTotal = (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;);&#xD;&#xA;&#xD;&#xA;//2. Get the count from the current 28-day chunk&#xD;&#xA;int currentChunkSuccess = (Integer)globalMap.get(&quot;tSnowflakeOutput_1_NB_SUCCESS&quot;); &#xD;&#xA;&#xD;&#xA;//3. Add them together and save back to GlobalMap&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, currentTotal + currentChunkSuccess);&#xD;&#xA;System.out.println(&quot;Chunk finished. TARGET_ROW_COUNT this chunk: &quot; + currentChunkSuccess + &quot; | Total so far: &quot; + (currentTotal + currentChunkSuccess));&#xD;&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//get current total&#xD;&#xA;int currentTotal = (Integer)globalMap.get(&quot;TARGET_ROW_COUNT&quot;);&#xD;&#xA;&#xD;&#xA;//get count from current chunk&#xD;&#xA;int currentChunkSuccess = (Integer)globalMap.get(&quot;tSnowflakeOutput_1_NB_SUCCESS&quot;); &#xD;&#xA;&#xD;&#xA;//sum current total and current chunk&#xD;&#xA;globalMap.put(&quot;TARGET_ROW_COUNT&quot;, currentTotal + currentChunkSuccess);&#xD;&#xA;System.out.println(&quot;Chunk finished. TARGET_ROW_COUNT this chunk: &quot; + currentChunkSuccess + &quot; | Total TARGET_ROW_COUNT: &quot; + (currentTotal + currentChunkSuccess));&#xD;&#xA;&#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_6"/>
@@ -1039,9 +1033,6 @@
   <connection connectorName="RESPONSE" label="row2" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_1" target="tReplicate_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
-  </connection>
-  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tRESTClient_1" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_1" target="tSleep_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentError1" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRESTClient_1" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_1" target="tJava_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk9" show="false"/>
@@ -1155,11 +1146,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
     <elementParameter field="TEXT" name="SUBJOB_TITLE" value="get Site Power and ingest into snowflake table"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSleep_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
